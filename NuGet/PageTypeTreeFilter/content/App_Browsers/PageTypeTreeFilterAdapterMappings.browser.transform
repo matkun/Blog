@@ -1,0 +1,10 @@
+<browsers>
+    <browser refID="Default">
+        <controlAdapters>
+            <adapter controlType="EPiServer.UI.Edit.PageExplorer"
+                     adapterType="PageTypeTreeFilter.PageExplorerAdapter" />
+            <adapter controlType="EPiServer.UI.WebControls.PageTreeView"
+                     adapterType="PageTypeTreeFilter.PageTreeViewAdapter" />
+        </controlAdapters>
+    </browser>
+</browsers>

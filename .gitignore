@@ -1,6 +1,9 @@
 *.user
 *.suo
 *.sln
+*.ini
+*.exe
+*.lnk
 *~
 ._*
 _ReSharper.*
@@ -8,6 +11,7 @@ _ReSharper.*
 VPP/
 SampleCode/
 epi5site/
+packages/
 
 */bin/*
 */obj/Debug/*
