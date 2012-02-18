@@ -1,0 +1,66 @@
+﻿.job-parameters-container {
+    background-color: #F9F9F9;
+    border: 1px solid #B4B4B4;
+    border-radius: 5px 5px 5px 5px;
+    margin: 14px 0 0;
+    padding: 7px 16px 9px;
+}
+
+.job-parameters-container legend {
+    margin: 0;
+    padding: 0 4px;
+}
+
+.job-parameters-container .parameter-control-container {
+    margin: 9px 0;
+}
+
+.job-parameters-container .control-without-label {
+    margin-left: 190px;
+}
+
+.job-parameters-container .control-container {
+    display: inline-block;
+}
+
+.job-parameters-container label {
+    width: 189px;
+    margin-right: 1px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.job-parameters-container input[type=checkbox] {
+    margin-right: 6px;
+}
+
+.job-parameters-container .save-and-reset-button-container {
+    border-top: 1px solid #BEBEBE;
+    margin-top: 10px;
+    padding-top: 12px;
+}
+
+.job-parameters-container .save-and-reset-button-container span {
+    float: right;
+}
+
+.job-parameters-container .save-and-reset-button-container span:hover {
+    background-color: #FFFFFF;
+    background-image: none;
+}
+
+.job-parameters-container .save-and-reset-button-container input[type=submit] {
+    height: 20px;
+    padding-left: 19px;
+    width: auto;
+}
+
+.job-parameters-container .save-and-reset-button-container .reset-button {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAmpJREFUOE9dUl1LFFEYPjNzZnZXgqJQY/okESsxPxMyS5QKqYQSy6z8ztHEXDWj0tSIJaKIKMjYSCqKboKu+hlddrPZhTWpq+66686ZmV2ino4zsFkvPLzn/XjOeQ/PS8gam6+Us5ZO+gKx7u2hxHARVhHv2RaKnPIGFqpldf4gFdb2k9kSSQjXeM+zkdLPybedSL27BDt4BqkpjtcXkHzZhJWBXCzWerT5Csklz+ylwlyFRzNGy5F8fhrW3TIYN4vAHtbDmtgNayyX+zzYj6p4fg8Wj3u0ucOKQPQSqsY6dsC+Xwk2nIMVfwFWzXw1gnj3LiR6N8McyITp3+RcEu/KRrhGVslClRKwbu+DObQV7EG9Q1q13ykLP798gvXxBeL+EhhdGWCaD+a1LYickAMkUr8+xPyZYH0b0qT/D78iOhKD+TDaZBgdXiw3ZoTIcsM6JzCaFRgX5TTHmjwLa7w4HSffT8BoEnmPiFiTAhKtk2C0SEg08qRTkJxmNpTt5O2pFidOfRiB0cp7uyXEGiWQpVopxPqpm2zjaOfo4Oh0YT5rdohWoIj/k8dXKZbqKEi4QgyYN2SwK5ysSWD8RqOH4zKfoktJj8queGEOUphjMhaqpSDRCyU1ek7i+ilgvMD6XBi9FIk7R1xpRrOcl6x7CmLNFHMHqEpm8qkwu1/S4v0y7McemLdkLg0nX98I+00DF5/rN85rTzxYGZQRPkQ1vUx2t+d7vijopaIWbaGwJ718g7zc+2A/9bnnoA/Rdoof5aKmF4j/7mtopyBM5xJ1plAI6kdFRFqpA/2YiG/FQvBrHlGnc/6S/gB1isH3hzYTwgAAAABJRU5ErkJggg==');
+    background-position: 3px 3px;
+    background-repeat: no-repeat;
+}
+
+.job-parameters-container .save-and-reset-button-container .save-button {
+    background-position: 1px -6841px;
+}
