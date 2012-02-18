@@ -13,3 +13,9 @@ http://blog.mathiaskunto.com/2012/02/06/allowing-web-editors-to-apply-pagetype-b
 
 Adds a DropDownList above the EPiServer Edit Mode page tree allowing web editors to filter the pages on PageType while keeping the structure intact.
 
+
+StylableFileUploadControl
+http://blog.mathiaskunto.com/2012/01/28/keeping-your-hair-from-turning-gray-or-how-to-style-the-aspfileupload-control-using-control-adapters/
+
+Transforms the rendering of all your existing ASP.NET FileUpload controls to a more stylable textbox and button instead of an input type file field without ugly CSS hacks.
+
