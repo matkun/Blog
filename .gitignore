@@ -1,0 +1,16 @@
+*.user
+*.suo
+*.sln
+*~
+._*
+_ReSharper.*
+
+VPP/
+SampleCode/
+epi5site/
+
+*/bin/*
+*/obj/Debug/*
+*/obj/Release/*
+
+readme_sample.txt
