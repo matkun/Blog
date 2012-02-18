@@ -1,0 +1,17 @@
+﻿.boldify-me {
+    font-weight: bold;
+}
+
+.page-type-filter-container {
+    border-bottom: 1px solid #8B8B8B;
+    padding: 2px 0 6px 1em;
+}
+
+.page-type-filter-container select {
+    border: 1px solid #8B8B8B;
+    cursor: default;
+    font-size: 10px;
+    height: 19px;
+    padding: 0;
+    width: 17em;
+}
