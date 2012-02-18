@@ -10,7 +10,7 @@ Usage
 * Include the PageTypeTreeFilter.csproj in your Visual Studio solution.
 * Reference it from your web project.
 * Make sure all EPiServer references are OK in the PageTypeTreeFilter project.
-* Add the adapter configuration below to your browser file, or drop the sample SampleAdapterMappings.browser file in your wwwroot App_Browser directory.
+* Add the adapter configuration below to your browser file, or drop the sample SampleAdapterMappings.browser file in your wwwroot App_Browsers directory.
 
 <adapter controlType="EPiServer.UI.Edit.PageExplorer" adapterType="PageTypeTreeFilter.PageExplorerAdapter" />
 <adapter controlType="EPiServer.UI.WebControls.PageTreeView" adapterType="PageTypeTreeFilter.PageTreeViewAdapter" />

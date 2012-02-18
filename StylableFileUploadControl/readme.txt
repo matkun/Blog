@@ -11,7 +11,7 @@ Usage
   - Hot linked example, <script type="text/javascript" language="javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 * Include the StylableFileUploadControl.csproj in your Visual Studio solution.
 * Reference it from your web project.
-* Add the adapter configuration below to your browser file, or drop the sample SampleAdapterMappings.browser file in your wwwroot App_Browser directory.
+* Add the adapter configuration below to your browser file, or drop the sample SampleAdapterMappings.browser file in your wwwroot App_Browsers directory.
 
 <adapter controlType="System.Web.UI.WebControls.FileUpload" adapterType="StylableFileUploadControl.FileUploadAdapter" />
 
