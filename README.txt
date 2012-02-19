@@ -13,6 +13,13 @@ NuGet packages mostly for the EPiServer functionality listed below; like PageTyp
 
 
 
+PageTreeExtended
+http://blog.mathiaskunto.com/2011/09/11/episerver-pagetree-with-itemdatabound-event/
+
+Adds an ItemDataBound event to the EPiServer PageTree.
+
+
+
 PageTypeTreeFilter
 http://blog.mathiaskunto.com/2012/02/06/allowing-web-editors-to-apply-pagetype-based-filtering-on-the-episerver-edit-mode-pagetree/
 
