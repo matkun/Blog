@@ -20,6 +20,12 @@ Adds a DropDownList above the EPiServer Edit Mode page tree allowing web editors
 
 
 
+SamplesAndExamples
+https://github.com/matkun/Blog/tree/master/SamplesAndExamples
+Contains examples, code snippets and samples that did not get their own projects and will not be compilable on their own. The directory readme file has information on individual code samples.
+
+
+
 ScheduledParameterJob
 http://blog.mathiaskunto.com/2012/02/13/supplying-episerver-scheduled-jobs-with-parameters-through-admin-mode/
 
