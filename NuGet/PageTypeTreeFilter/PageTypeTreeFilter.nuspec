@@ -13,7 +13,7 @@
     <copyright>Copyright 2012</copyright>
     <tags>EPiServer Filter PageType PageTree</tags>
     <dependencies>
-      <dependency id="EPiServer.CMS.Core" version="1.0" />
+      <dependency id="EPiServer.CMS.Core" version="1.0" /> <!-- EPiServer, EPiServer.BaseLibrary, EPiServer.UI, EPiServer.Web.WebControls -->
     </dependencies>
   </metadata>
 </package>
