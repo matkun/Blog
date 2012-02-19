@@ -8,6 +8,11 @@ Descriptions:
 
 *****************************************************************************
 
+NuGet
+NuGet packages mostly for the EPiServer functionality listed below; like PageTypeTreeFilter and ScheduledParameterJob.
+
+
+
 PageTypeTreeFilter
 http://blog.mathiaskunto.com/2012/02/06/allowing-web-editors-to-apply-pagetype-based-filtering-on-the-episerver-edit-mode-pagetree/
 

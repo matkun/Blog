@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ScheduledParameterJob</id>
+    <version>1.1.0.0</version>
+    <authors>Mathias Kunto</authors>
+    <owners>Mathias Kunto</owners>
+    <projectUrl>http://blog.mathiaskunto.com/2012/02/13/supplying-episerver-scheduled-jobs-with-parameters-through-admin-mode/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Allows developers to put arbitrary input parameter controls on the EPiServer scheduled job interface and the use the values while running the job.</description>
+	<summary>This package adds the possibility to put any type of input control on the EPiServer scheduled job interface, store the value and then use it while running the scheduled job. Values are persisted in the EPiServer DynmicDataStore and controls are inserted via an attribute and a definitions class. Example job is available through the GitHub link on the Project Information page.</summary>
+    <language>en-US</language>
+    <copyright>Copyright 2012</copyright>
+    <tags>EPiServer ScheduledJob InputParameter</tags>
+    <dependencies>
+      <dependency id="EPiServer.CMS.Core" version="1.0" /> <!-- EPiServer, EPiServer.UI -->
+	  <dependency id="EPiServer.Framework" version="1.0" /> <!-- EPiServer.Data -->
+    </dependencies>
+  </metadata>
+</package>
