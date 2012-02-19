@@ -8,6 +8,13 @@ Descriptions:
 
 *****************************************************************************
 
+Base54EmbeddedImage
+http://blog.mathiaskunto.com/2011/08/21/embedding-episerver-vpp-images-in-html-using-base64-encoding/
+
+Extends Image to allow for embedding base64 encoded images from the EPiServer VPP. Usage example is included in the UsageExample directory; this is not part of the droppable binary version.
+
+
+
 NuGet
 NuGet packages mostly for the EPiServer functionality listed below; like PageTypeTreeFilter and ScheduledParameterJob.
 
