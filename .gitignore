@@ -1,6 +1,5 @@
 *.user
 *.suo
-*.sln
 *.ini
 *.exe
 *.lnk
@@ -13,8 +12,8 @@ SampleCode/
 epi5site/
 packages/
 
-*/bin/*
-*/obj/Debug/*
-*/obj/Release/*
+bin/
+obj/
 
 readme_sample.txt
+AlloyTech.sln
