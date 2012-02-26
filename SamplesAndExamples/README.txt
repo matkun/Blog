@@ -8,6 +8,13 @@ Descriptions:
 
 *****************************************************************************
 
+EmbeddedEPiServerResources
+http://blog.mathiaskunto.com/2012/02/27/how-to-embed-episerver-resources-such-as-guiplugins-and-pages-together-with-images-javascripts-and-stylesheets-in-droppable-assembly-binaries/
+
+Example on how to embed EPiServer resources such as a GuiPlugIn or a page, as well as JavaScripts, Stylesheets and images.
+
+
+
 EPiServerJob_RunPowerShellScript
 http://blog.mathiaskunto.com/2012/02/03/making-the-episerver-scheduler-run-your-windows-powershell-scripts/
 

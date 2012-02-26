@@ -1,0 +1,8 @@
+﻿p.turn-blue {
+    color: blue;
+}
+
+div#add-text-here,
+div#embedded-image-container {
+    margin-bottom: 10px;
+}
