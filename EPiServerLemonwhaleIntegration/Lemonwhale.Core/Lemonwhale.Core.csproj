@@ -35,7 +35,9 @@
     <Compile Include="Bootstrap\Initializer.cs" />
     <Compile Include="Bootstrap\Registries\CoreRegistry.cs" />
     <Compile Include="Configuration.cs" />
+    <Compile Include="Framework\EPiServer\CustomProperties\LemonwhaleMediaSelector\LemonwhaleMediaSelector.cs" />
     <Compile Include="Framework\IoC\IoC.cs" />
+    <Compile Include="Framework\Lemonwhale\LemonwhaleMedia.cs" />
     <Compile Include="Presentation\IView.cs" />
     <Compile Include="Presentation\PresentedControlBase.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -145,10 +147,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Framework\EPiServer\CustomProperties\" />
-    <Folder Include="Framework\Lemonwhale\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
