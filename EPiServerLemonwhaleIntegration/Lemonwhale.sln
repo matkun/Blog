@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lemonwhale.Core", "Lemonwhale.Core\Lemonwhale.Core.csproj", "{3D199717-6420-476D-94DF-96A7557A88EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lemonwhale.Test.Unit", "Lemonwhale.Test.Unit\Lemonwhale.Test.Unit.csproj", "{F9C66DAF-6359-4019-8065-9E4A28BD9CA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D199717-6420-476D-94DF-96A7557A88EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D199717-6420-476D-94DF-96A7557A88EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D199717-6420-476D-94DF-96A7557A88EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D199717-6420-476D-94DF-96A7557A88EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9C66DAF-6359-4019-8065-9E4A28BD9CA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9C66DAF-6359-4019-8065-9E4A28BD9CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9C66DAF-6359-4019-8065-9E4A28BD9CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9C66DAF-6359-4019-8065-9E4A28BD9CA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
