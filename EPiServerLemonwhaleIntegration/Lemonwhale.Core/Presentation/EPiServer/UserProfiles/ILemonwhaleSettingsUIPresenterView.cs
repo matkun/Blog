@@ -5,7 +5,7 @@ namespace Lemonwhale.Core.Presentation.EPiServer.UserProfiles
         string PrivateApiKeyLabel { get; set; }
         string PrivateApiKey { get; set; }
 
-        event LemonwhaleSettingsEventHandler Save;
-        event LemonwhaleSettingsEventHandler Load;
+        event LemonwhaleSettingsEventHandler SaveLwSettings;
+        //event LemonwhaleSettingsEventHandler LoadLwSettings;
     }
 }

@@ -49,7 +49,8 @@
     <Compile Include="Framework\IoC\IoC.cs" />
     <Compile Include="Framework\Lemonwhale\LemonwhaleMedia.cs" />
     <Compile Include="Presentation\EPiServer\UserProfiles\ILemonwhaleSettingsUIPresenterView.cs" />
-    <Compile Include="Presentation\EPiServer\UserProfiles\LemonwhaleSettings.cs" />
+    <Compile Include="Presentation\EPiServer\UserProfiles\LemonwhaleCurrentUserProfile.cs" />
+    <Compile Include="Presentation\EPiServer\UserProfiles\LemonwhaleSettingKeys.cs" />
     <Compile Include="Presentation\EPiServer\UserProfiles\LemonwhaleSettingsEventHandler.cs" />
     <Compile Include="Presentation\EPiServer\UserProfiles\LemonwhaleSettingsEventHandlerArgs.cs" />
     <Compile Include="Presentation\EPiServer\UserProfiles\LemonwhaleSettingsUIPresenter.cs" />

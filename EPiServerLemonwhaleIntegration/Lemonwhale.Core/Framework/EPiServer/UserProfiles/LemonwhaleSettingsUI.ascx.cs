@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using EPiServer.Personalization;
 using EPiServer.PlugIn;
 using Lemonwhale.Core.Presentation;
@@ -16,8 +17,9 @@ namespace Lemonwhale.Core.Framework.EPiServer.UserProfiles
     {
         public bool SaveRequiresUIReload { get; set; }
 
-        public event LemonwhaleSettingsEventHandler Save;
-        public event LemonwhaleSettingsEventHandler Load;
+        public event LemonwhaleSettingsEventHandler SaveLwSettings;
+        //public event LemonwhaleSettingsEventHandler LoadLwSettings;
+        
 
         public string PrivateApiKeyLabel { get; set; }
 
@@ -35,23 +37,33 @@ namespace Lemonwhale.Core.Framework.EPiServer.UserProfiles
 
         public void LoadSettings(string userName, EPiServerProfile data)
         {
-            if(Load != null)
+            if(!IsPostBack)
             {
-                Load(this, new LemonwhaleSettingsEventHandlerArgs(userName, data));
+                PrivateApiKey = data[LemonwhaleSettingKeys.PrivateApiKey] as string;
             }
+            //if(LoadLwSettings != null)
+            //{
+            //    LoadLwSettings(this, new LemonwhaleSettingsEventHandlerArgs(userName, data));
+            //}
         }
 
         public void SaveSettings(string userName, EPiServerProfile data)
         {
-            if (Save != null)
+            if (SaveLwSettings != null)
             {
-                Save(this, new LemonwhaleSettingsEventHandlerArgs(userName, data));
+                SaveLwSettings(this, new LemonwhaleSettingsEventHandlerArgs(userName, data));
             }
         }
 
         public PlugInDescriptor[] List()
         {
             return new[] { PlugInDescriptor.Load(typeof(LemonwhaleSettingsUI)) };
+        }
+
+        protected void ValidatePrivateApiKey_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            Guid temp;
+            args.IsValid = Guid.TryParse(args.Value, out temp);
         }
     }
 }
