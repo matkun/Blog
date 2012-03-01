@@ -10,10 +10,16 @@ namespace Generic.Core.Presentation
     {
         private TPresenter _presenter;
 
+        protected override void OnInit(EventArgs e)
+        {
+            _presenter = CreatePresenter();
+            base.OnInit(e);
+            _presenter.Init();
+        }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            _presenter = CreatePresenter();
 
             if (!IsPostBack)
             {
