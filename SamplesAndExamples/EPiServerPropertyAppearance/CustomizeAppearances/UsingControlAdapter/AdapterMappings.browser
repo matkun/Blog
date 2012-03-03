@@ -1,0 +1,8 @@
+﻿<browsers>
+    <browser refID="Default">
+        <controlAdapters>
+            <adapter controlType="EPiServer.Web.PropertyControls.PropertyStringControl"
+                     adapterType="EPiServerBuiltInProperties.CustomizeAppearances.UsingControlAdapter.RenderingChangedAppearance" />
+        </controlAdapters>
+    </browser>
+</browsers>

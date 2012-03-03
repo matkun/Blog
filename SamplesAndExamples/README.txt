@@ -22,6 +22,13 @@ An example on how to have the EPiServer scheduler run Windows PowerShell scripts
 
 
 
+EPiServerPropertyAppearance
+http://blog.mathiaskunto.com/2012/03/05/being-friends-with-the-propertycontrolclassfactory-or-101-ways-to-change-episerver-built-in-property-appearances/
+
+Five examples on how it is possible to change appearance of built-in EPiServer properties using either the PropertyControlClassFactory class through web.config, an initialization module, a plugin attribute or global.asax, or a control adapter mapped through a browser file.
+
+
+
 GeoIPAutoUpdate_PowerShellScript
 http://blog.mathiaskunto.com/2012/01/15/geoip-database-update-in-multiple-webserver-environment-using-windows-powershell-scripting/
 
