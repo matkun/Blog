@@ -14,7 +14,7 @@ namespace PageTypeTreeFilter
             pageTypes.Insert(0, new ListItem
                                     {
                                         Text = "--- Show all pages ---",
-                                        Value = "show-all-pages"
+                                        Value = PageFilterConstants.ShowAllPageTypes
                                     });
             base.DataSource = pageTypes;
         }

@@ -19,14 +19,14 @@ namespace PageTypeTreeFilter
             return parent.FindParentControlOfType<T>();
         }
 
-        public static Control FindControlRecursively(this Control root, string controlId)
+        public static Control FindControlRecursive(this Control root, string controlId)
         {
             if (controlId.Equals(root.ID))
             {
                 return root;
             }
             return (from Control control in root.Controls
-                    select FindControlRecursively(control, controlId))
+                    select FindControlRecursive(control, controlId))
                 .FirstOrDefault(c => c != null);
         }
     }

@@ -37,10 +37,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlExtensions.cs" />
+    <Compile Include="FilterStrategy.cs" />
     <Compile Include="PageExplorerAdapter.cs" />
+    <Compile Include="PageFilterConstants.cs" />
+    <Compile Include="PageLocator.cs" />
     <Compile Include="PageTreeViewAdapter.cs" />
     <Compile Include="PageTypeSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyCriteriaGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EPiServer, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
