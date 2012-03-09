@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using EPiServer.Personalization;
 using EPiServer.PlugIn;
@@ -18,7 +17,7 @@ namespace Lemonwhale.Core.Framework.EPiServer.UserProfiles
         public bool SaveRequiresUIReload { get; set; }
 
         public event LemonwhaleSettingsEventHandler SaveLwSettings;
-       public event LemonwhaleSettingsEventHandler LoadLwSettings;
+        public event LemonwhaleSettingsEventHandler LoadLwSettings;
         
 
         public string PrivateApiKeyLabel { get; set; }
@@ -37,10 +36,6 @@ namespace Lemonwhale.Core.Framework.EPiServer.UserProfiles
 
         public void LoadSettings(string userName, EPiServerProfile data)
         {
-            //if(!IsPostBack)
-            //{
-            //    PrivateApiKey = data[LemonwhaleSettingKeys.PrivateApiKey] as string;
-            //}
             if (LoadLwSettings != null)
             {
                 LoadLwSettings(this, new LemonwhaleSettingsEventHandlerArgs(userName, data));

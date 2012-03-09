@@ -8,6 +8,7 @@ namespace Lemonwhale.Core.Presentation.EPiServer.UserProfiles
 {
     public class LemonwhaleSettingsUIPresenter : PresenterBase
     {
+        private bool _firstTimeInit;
         // EPiServer.Personalization.EPiServerProfile.Current["foo"]
         // EPiServer.Personalization.EPiServerProfile.Current.Email
         private readonly ILemonwhaleSettingsUIPresenterView _view;
@@ -25,6 +26,12 @@ namespace Lemonwhale.Core.Presentation.EPiServer.UserProfiles
             _view.SaveLwSettings += HandleSaveSettings;
         }
 
+        public override void FirstTimeInit()
+        {
+            base.FirstTimeInit();
+            _firstTimeInit = true;
+        }
+
         public override void Load()
         {
             base.Load();
@@ -33,8 +40,10 @@ namespace Lemonwhale.Core.Presentation.EPiServer.UserProfiles
 
         private void HandleLoadSettings(object sender, LemonwhaleSettingsEventHandlerArgs args)
         {
-            // Only first time init
-            _view.PrivateApiKey = args.Data[LemonwhaleSettingKeys.PrivateApiKey] as string;
+            if(_firstTimeInit)
+            {
+                _view.PrivateApiKey = args.Data[LemonwhaleSettingKeys.PrivateApiKey] as string;
+            }
         }
 
         private void HandleSaveSettings(object sender, LemonwhaleSettingsEventHandlerArgs args)

@@ -2,8 +2,9 @@
 {
     public abstract class PresenterBase
     {
+        public virtual void FirstTimeInit() {}
+        public virtual void FirstTimeLoad() {}
         public virtual void Load() {}
         public virtual void PreRender() {}
-        public virtual void FirstTimeInit() {}
     }
 }

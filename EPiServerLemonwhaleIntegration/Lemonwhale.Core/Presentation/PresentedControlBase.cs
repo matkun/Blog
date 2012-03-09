@@ -15,17 +15,19 @@ namespace Lemonwhale.Core.Presentation
         {
             _presenter = CreatePresenter();
             base.OnInit(e);
+            if (!IsPostBack)
+            {
+                _presenter.FirstTimeInit();
+            }
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-
             if (!IsPostBack)
             {
-                _presenter.FirstTimeInit();
+                _presenter.FirstTimeLoad();
             }
-
             _presenter.Load();
         }
 

@@ -25,10 +25,19 @@ namespace Lemonwhale.Core.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("79a53ed4-baeb-4c79-b47a-470e24c39351")]
         public global::System.Guid LemonwhalePrivateAPIKey {
             get {
                 return ((global::System.Guid)(this["LemonwhalePrivateAPIKey"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://web.lemonwhale.com/web/public/video/")]
+        public string LemonwhaleApiBaseUrl {
+            get {
+                return ((string)(this["LemonwhaleApiBaseUrl"]));
             }
         }
     }
