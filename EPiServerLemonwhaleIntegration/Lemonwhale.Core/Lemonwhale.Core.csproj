@@ -39,6 +39,8 @@
     <Compile Include="Framework\EmbeddedResources\EmbeddedResourceProvider.cs" />
     <Compile Include="Framework\EmbeddedResources\VirtualResourceFile.cs" />
     <Compile Include="Framework\EPiServer\CustomProperties\LemonwhaleMediaSelector\LemonwhaleMediaSelector.cs" />
+    <Compile Include="Framework\EPiServer\Language\ITranslator.cs" />
+    <Compile Include="Framework\EPiServer\Language\Translator.cs" />
     <Compile Include="Framework\EPiServer\UserProfiles\LemonwhaleSettingsUI.ascx.cs">
       <DependentUpon>LemonwhaleSettingsUI.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -47,7 +49,10 @@
       <DependentUpon>LemonwhaleSettingsUI.ascx</DependentUpon>
     </Compile>
     <Compile Include="Framework\IoC\IoC.cs" />
+    <Compile Include="Framework\Lemonwhale\IMediaMapper.cs" />
+    <Compile Include="Framework\Lemonwhale\ListService.cs" />
     <Compile Include="Framework\Lemonwhale\LemonwhaleMedia.cs" />
+    <Compile Include="Framework\Lemonwhale\MediaMapper.cs" />
     <Compile Include="Presentation\EPiServer\UserProfiles\ILemonwhaleSettingsUIPresenterView.cs" />
     <Compile Include="Presentation\EPiServer\UserProfiles\LemonwhaleCurrentUserProfile.cs" />
     <Compile Include="Presentation\EPiServer\UserProfiles\LemonwhaleSettingKeys.cs" />
@@ -149,6 +154,9 @@
       <Private>True</Private>
       <HintPath>..\packages\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.XmlRpc.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
     </Reference>
@@ -167,6 +175,12 @@
     <EmbeddedResource Include="Framework\EPiServer\UserProfiles\LemonwhaleSettingsUI.ascx">
       <SubType>ASPXCodeBehind</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lemonwhale_EN.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

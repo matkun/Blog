@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="English" id="en">
+    <Lemonwhale>
+      <UserSettings>
+        <PrivateApiKeyLabel>Private API key</PrivateApiKeyLabel>
+        <PrivateApiKeyDescription>Personal key granting you user specific access to the Lemonwhale API.</PrivateApiKeyDescription>
+      </UserSettings>
+    </Lemonwhale>
+  </language>
+</languages>

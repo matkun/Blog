@@ -7,8 +7,8 @@ namespace Lemonwhale.Core.Presentation.EPiServer.UserProfiles
     {
         public static Guid PrivateApiKey
         {
-            get { return new Guid(EPiServerProfile.Current[LemonwhaleSettingKeys.PrivateApiKey].ToString()); }
-            set { EPiServerProfile.Current[LemonwhaleSettingKeys.PrivateApiKey] = value.ToString(); }
+            get { return new Guid(EPiServerProfile.Current[LemonwhaleSettingKeys.PersonalApiKey].ToString()); }
+            set { EPiServerProfile.Current[LemonwhaleSettingKeys.PersonalApiKey] = value.ToString(); }
         }
     }
 }

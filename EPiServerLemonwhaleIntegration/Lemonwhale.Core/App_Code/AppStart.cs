@@ -16,5 +16,5 @@ namespace Lemonwhale.Core
 // Add to web.config
 // <profile enabled="true" defaultProvider="SqlProfile" automaticSaveEnabled="true">
 //    <properties>
-//       <add name="LemonwhalePrivateApiKey" type="System.String" />
+//       <add name="LemonwhalePersonalApiKey" type="System.String" />
 //    </properties>

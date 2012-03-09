@@ -25,19 +25,28 @@ namespace Lemonwhale.Core.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("79a53ed4-baeb-4c79-b47a-470e24c39351")]
-        public global::System.Guid LemonwhalePrivateAPIKey {
+        [global::System.Configuration.DefaultSettingValueAttribute("45069cd7-e3c6-43f3-8424-6f80ad0ed669")]
+        public global::System.Guid LemonwhaleSiteId {
             get {
-                return ((global::System.Guid)(this["LemonwhalePrivateAPIKey"]));
+                return ((global::System.Guid)(this["LemonwhaleSiteId"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://web.lemonwhale.com/web/public/video/")]
-        public string LemonwhaleApiBaseUrl {
+        [global::System.Configuration.DefaultSettingValueAttribute("ab3665df-ee18-4743-b99c-7643d1370169")]
+        public global::System.Guid LemonwhaleApiKey {
             get {
-                return ((string)(this["LemonwhaleApiBaseUrl"]));
+                return ((global::System.Guid)(this["LemonwhaleApiKey"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://ljsp.lwcdn.com/web/public/site/{0}/videos.json")]
+        public string LemonwhaleListBaseUrl {
+            get {
+                return ((string)(this["LemonwhaleListBaseUrl"]));
             }
         }
     }

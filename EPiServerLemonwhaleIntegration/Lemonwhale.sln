@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lemonwhale.Core", "Lemonwha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lemonwhale.Test.Unit", "Lemonwhale.Test.Unit\Lemonwhale.Test.Unit.csproj", "{F9C66DAF-6359-4019-8065-9E4A28BD9CA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlloyTech", "..\SampleCode\AlloyTech.csproj", "{86592C94-5E09-417B-B1E2-AFDB757B24D4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -19,13 +19,19 @@ namespace Lemonwhale.Core.Framework.EPiServer.UserProfiles
         public event LemonwhaleSettingsEventHandler SaveLwSettings;
         public event LemonwhaleSettingsEventHandler LoadLwSettings;
         
-
-        public string PrivateApiKeyLabel { get; set; }
-
-        public string PrivateApiKey
+        public string PersonalApiKeyLabel { get; set; }
+        public string PersonalApiKeyDescription { get; set; }
+        
+        public string PersonalApiKeyValidatorErrorMessage
         {
-            get { return tbPrivateApiKey.Text; }
-            set { tbPrivateApiKey.Text = value; }
+            get { return PersonalApiKeyValidator.ErrorMessage; }
+            set { PersonalApiKeyValidator.ErrorMessage = value; }
+        }
+
+        public string PersonalApiKey
+        {
+            get { return PersonalApiKeyTextBox.Text; }
+            set { PersonalApiKeyTextBox.Text = value; }
         }
 
         protected override void OnLoad(EventArgs e)
@@ -55,7 +61,7 @@ namespace Lemonwhale.Core.Framework.EPiServer.UserProfiles
             return new[] { PlugInDescriptor.Load(typeof(LemonwhaleSettingsUI)) };
         }
 
-        protected void ValidatePrivateApiKey_ServerValidate(object source, ServerValidateEventArgs args)
+        protected void ValidatePersonalApiKey_ServerValidate(object source, ServerValidateEventArgs args)
         {
             Guid temp;
             args.IsValid = Guid.TryParse(args.Value, out temp);
