@@ -1,5 +1,4 @@
 ﻿using System.Web;
-using Lemonwhale.Core.Framework;
 using Lemonwhale.Core.Framework.IoC;
 
 namespace Lemonwhale.Core.Bootstrap

@@ -13,8 +13,7 @@ namespace Lemonwhale.Core.Framework.EPiServer.Language
 
         public string Translate(string xPath)
         {
-            var aaa =  LanguageManager.Instance.Translate(xPath);
-            return aaa;
+            return LanguageManager.Instance.Translate(xPath);
         }
     }
 }

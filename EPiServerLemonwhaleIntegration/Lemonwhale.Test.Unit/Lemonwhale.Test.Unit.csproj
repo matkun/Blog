@@ -31,16 +31,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Framework\Lemonwhale\ListServiceSpecification.cs" />
+    <Compile Include="DataAccess\Lemonwhale\LemonwhaleUriBuilderSpecification.cs" />
+    <Compile Include="DataAccess\Lemonwhale\QueryCollectionGeneratorSpecification.cs" />
+    <Compile Include="Extensions\DictionaryExtensionsSpecification.cs" />
+    <Compile Include="Extensions\EnumExtensionsSpecification.cs" />
+    <Compile Include="Extensions\JArrayExtensionSpecification.cs" />
+    <Compile Include="Framework\Lemonwhale\CategoryParserSpecification.cs" />
+    <Compile Include="Framework\Lemonwhale\LemonwhaleFacadeSpecification.cs" />
     <Compile Include="Framework\Lemonwhale\MediaMapperSpecification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestHelpers\AutoMockedTestBase.cs" />
+    <Compile Include="TestHelpers\FakeUser.cs" />
     <Compile Include="TestHelpers\TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AutoMoq">
       <HintPath>..\packages\AutoMoq.1.6.1\lib\AutoMoq.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\Unity.2.0\lib\20\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -59,13 +67,17 @@
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.0.2.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

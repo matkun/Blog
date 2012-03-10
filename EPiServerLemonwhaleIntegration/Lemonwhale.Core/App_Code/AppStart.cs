@@ -18,3 +18,7 @@ namespace Lemonwhale.Core
 //    <properties>
 //       <add name="LemonwhalePersonalApiKey" type="System.String" />
 //    </properties>
+
+//<system.webServer>
+//  <modules runAllManagedModulesForAllRequests="true">
+//    <add name="LemonwhaleInitializer" type="Lemonwhale.Core.Bootstrap.Initializer" />

@@ -11,7 +11,7 @@ namespace Lemonwhale.Core.Framework.EmbeddedResources
         public override CacheDependency GetCacheDependency(string virtualPath, IEnumerable virtualPathDependencies, DateTime utcStart)
         {
             return IsEmbeddedResourcePath(virtualPath) ?
-                null :
+                null : 
                 base.GetCacheDependency(virtualPath, virtualPathDependencies, utcStart);
         }
 

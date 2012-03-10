@@ -31,11 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AdapterPattern\IWebClientWrapper.cs" />
+    <Compile Include="AdapterPattern\WebClientWrapper.cs" />
     <Compile Include="App_Code\AppStart.cs" />
     <Compile Include="Bootstrap\Bootstrapper.cs" />
     <Compile Include="Bootstrap\Initializer.cs" />
     <Compile Include="Bootstrap\Registries\CoreRegistry.cs" />
     <Compile Include="Configuration.cs" />
+    <Compile Include="DataAccess\Lemonwhale\ILemonwhaleUriBuilder.cs" />
+    <Compile Include="DataAccess\Lemonwhale\IQueryCollectionGenerator.cs" />
+    <Compile Include="DataAccess\Lemonwhale\LemonwhaleUriBuilder.cs" />
+    <Compile Include="DataAccess\Lemonwhale\QueryCollectionGenerator.cs" />
+    <Compile Include="DataAccess\Lemonwhale\QueryParameterKeys.cs" />
+    <Compile Include="DataAccess\Lemonwhale\SortBy.cs" />
+    <Compile Include="DataAccess\Lemonwhale\SortOrder.cs" />
+    <Compile Include="Extensions\JArrayExtension.cs" />
     <Compile Include="Framework\EmbeddedResources\EmbeddedResourceProvider.cs" />
     <Compile Include="Framework\EmbeddedResources\VirtualResourceFile.cs" />
     <Compile Include="Framework\EPiServer\CustomProperties\LemonwhaleMediaSelector\LemonwhaleMediaSelector.cs" />
@@ -48,11 +58,24 @@
     <Compile Include="Framework\EPiServer\UserProfiles\LemonwhaleSettingsUI.ascx.designer.cs">
       <DependentUpon>LemonwhaleSettingsUI.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Framework\CustomAttributes\StringValueAttribute.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Framework\IoC\IoC.cs" />
+    <Compile Include="Framework\Lemonwhale\CategoryParser.cs" />
+    <Compile Include="Framework\Lemonwhale\ICategoryParser.cs" />
     <Compile Include="Framework\Lemonwhale\IMediaMapper.cs" />
-    <Compile Include="Framework\Lemonwhale\ListService.cs" />
-    <Compile Include="Framework\Lemonwhale\LemonwhaleMedia.cs" />
+    <Compile Include="Framework\Lemonwhale\LemonwhaleFacade.cs" />
+    <Compile Include="Domain\Lemonwhale\LemonwhaleMedia.cs" />
     <Compile Include="Framework\Lemonwhale\MediaMapper.cs" />
+    <Compile Include="Framework\Logging\Log.cs" />
+    <Compile Include="Presentation\EPiServer\Plugin\Edit\LemonwhaleMediaSelectorEditControl.ascx.cs">
+      <DependentUpon>LemonwhaleMediaSelectorEditControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentation\EPiServer\Plugin\Edit\LemonwhaleMediaSelectorEditControl.ascx.designer.cs">
+      <DependentUpon>LemonwhaleMediaSelectorEditControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\EPiServer\UserProfiles\ILemonwhaleSettingsUIPresenterView.cs" />
     <Compile Include="Presentation\EPiServer\UserProfiles\LemonwhaleCurrentUserProfile.cs" />
     <Compile Include="Presentation\EPiServer\UserProfiles\LemonwhaleSettingKeys.cs" />
@@ -154,8 +177,12 @@
       <Private>True</Private>
       <HintPath>..\packages\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.XmlRpc.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.4.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="StructureMap">
       <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
@@ -178,6 +205,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lemonwhale_EN.xml" />
+    <Content Include="Styles\Images\EPiServerCancelIcon.png" />
+    <Content Include="Styles\Images\EPiServerSelectIcon.png" />
+    <Content Include="Styles\Images\EPiServerToolButtonBg.gif" />
+    <Content Include="Styles\interface_mockup.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <EmbeddedResource Include="Styles\MediaSelector.css" />
+    <EmbeddedResource Include="Presentation\EPiServer\Plugin\Edit\LemonwhaleMediaSelectorEditControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />

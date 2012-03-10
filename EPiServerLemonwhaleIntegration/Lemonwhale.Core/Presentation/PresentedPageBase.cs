@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Web;
 using System.Web.UI;
-using Lemonwhale.Core.Framework;
 using Lemonwhale.Core.Framework.IoC;
 
 namespace Lemonwhale.Core.Presentation

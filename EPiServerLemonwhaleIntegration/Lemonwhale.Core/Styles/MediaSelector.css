@@ -1,0 +1,150 @@
+﻿body {
+    background-color: #E3E3E3;
+    color: #000000;
+    font: 75%/1.231 "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 6px;
+    margin-top: 0;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 1.7em;
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+.media-selector-container {
+    margin: 8px 15px 8px;
+}
+
+.media-selector-container fieldset {
+    width: 757px;
+}
+
+.media-selector-container fieldset div {
+    width: 100%;
+}
+
+.media-selector-container fieldset div label {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+}
+
+.media-selector-container .section {
+    width: 290px;
+    margin-left: 10px;
+    margin-top: 5px;
+    float: left;
+}
+
+.media-selector-container .categories-section {
+    width: 310px;
+    margin-left: 60px;
+}
+
+.media-selector-container .input-container {
+    margin: 3px 0;
+}
+
+.media-selector-container select,
+.media-selector-container input[type="text"] {
+    background-color: #FFFFFF;
+    border: 1px solid #B4B4B4;
+    color: #000000;
+    width: 180px;
+}
+
+.media-selector-container .multiselect-categories {
+    width: 180px;
+}
+
+.media-selector-container .buttons {
+    margin-top: 8px;
+    text-align: right;
+}
+
+#Result {
+    margin: 15px 3px;
+}
+
+#Result ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+#Result ul li {
+    clear: left;
+    display: block;
+    height: 77px;
+    margin-bottom: 5px;
+    width: 760px;
+    padding: 7px;
+}
+
+#Result ul li:hover {
+    background-color: #FBFBFB;
+}
+
+#Result .thumbnail,
+#Result .info,
+#Result .select-button {
+    float: left;
+}
+
+#Result .thumbnail{
+    margin-right: 15px;
+    margin-top: 2px;
+    width: 124px;
+    height: 70px;
+}
+
+#Result .info {
+    margin-right: 15px;
+    width: 580px;
+    height: 75px;
+    overflow: hidden;
+}
+
+.button-container {
+    background-image: url("/EPiServerToolButtonBg.gif");
+    background-position: left top;
+    background-repeat: repeat-x;
+    border: 1px solid #8D8D8D;
+    display: inline-block;
+    height: 20px;
+    padding: 2px;
+    width: 20px;
+}
+
+.buttons .cancel {
+    width: auto;
+    margin-right: 6px;
+}
+
+.button-container:hover {
+    background-color: #FBFBFB;
+    background-image: none;
+}
+
+.button-container input[type=submit] {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0 none;
+}
+
+.button-container .select-button {
+    background-image: url("/EPiServerSelectIcon.png");
+    background-position: 3px 4px;
+}
+
+.button-container .cancel-button {
+    background-image: url("/EPiServerCancelIcon.png");
+    background-position: 3px 4px;
+    padding-left: 20px;
+    padding-right: 1px;
+    padding-top: 1px;
+}
