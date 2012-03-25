@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+    <language name="English" id="en">
+        <PageTypeTreeFilter>
+            <GlobalSettings>
+                <AllowUserSettingsDescription>Enables users to override the global available page type settings defining their own set in the PageTypeTreeFilter tab of their user settings.</AllowUserSettingsDescription>
+                <AllowUserSettingsLabel>Allow users to override the global available page types settings</AllowUserSettingsLabel>
+                <Heading>Global PageTypeTreeFilter Settings</Heading>
+                <ResetDescription>Resets the values to the default ones; all page types are allowed and users may override at their discresion.</ResetDescription>
+                <ResetLabel>Reset to default</ResetLabel>
+                <ResetSuccessfulMessage>The settings were successfully reset to their default values. Please refresh web browser (F5) to see them in effect.</ResetSuccessfulMessage>
+                <SaveDescription>Click to save your global PageTypeTreeFilter settings.</SaveDescription>
+                <SaveLabel>Save</SaveLabel>
+                <SaveSuccessfulMessage>Your changes were saved successfully. Please refresh web browser (F5) to see them in effect.</SaveSuccessfulMessage>
+            </GlobalSettings>
+            <PageExplorerAdapter>
+                <FilterSelectorLabel>Filter on Page Type:</FilterSelectorLabel>
+                <SettingsLinkText>Settings</SettingsLinkText>
+                <SettingsLinkTooltip>Global settings for the PageTypeTreeFilter functionality. Only available to web administrators.</SettingsLinkTooltip>
+            </PageExplorerAdapter>
+            <PageTypeSelector>
+                <ShowAllText>--- Show all pages ---</ShowAllText>
+            </PageTypeSelector>
+            <Units>
+                <PageTypePicker>
+                    <AddPageTypeToolTip>Add page type</AddPageTypeToolTip>
+                    <AvailableDescription>These are all of the page types in the system.</AvailableDescription>
+                    <AvailableLabel>Available page types</AvailableLabel>
+                    <Description>Please select the page types that you wish to make available in the edit mode PageTypeTreeFilter functionality.</Description>
+                    <RemovePageTypeToolTip>Remove page type</RemovePageTypeToolTip>
+                    <SelectedDescription>These are the page types that you have selected to be shown in the PageTypeTreeFilter drop down list in edit mode.</SelectedDescription>
+                    <SelectedLabel>Selected page types</SelectedLabel>
+                </PageTypePicker>
+            </Units>
+            <UserSettings>
+                <EnablePersonalSelectionDescription>Check to enable your own personal selection of page types for the PageTypeTreeFilter functionality drop down list.</EnablePersonalSelectionDescription>
+                <EnablePersonalSelectionLabel>Use personal selection</EnablePersonalSelectionLabel>
+                <GuiPlugIn>
+                    <description>User specific PageTypeTreeFilter settings</description>
+                    <displayname>PageTypeTreeFilter</displayname>
+                </GuiPlugIn>
+                <UserSettingsDisabledMessage>User specific page type selection has been disabled globally. If this is a problem for you, please ask your web administrator to enable the settings, or change the available page types globally.</UserSettingsDisabledMessage>
+            </UserSettings>
+        </PageTypeTreeFilter>
+    </language>
+
+    <language name="svenska" id="sv">
+        <PageTypeTreeFilter>
+            <GlobalSettings>
+                <AllowUserSettingsDescription>Tillåt användare att själva bestämma vilka sidtyper som de ska kunna filtrera på i PageTypeTreeFilter-fliken i de användarspecifika inställningarna.</AllowUserSettingsDescription>
+                <AllowUserSettingsLabel>Tillåt användarspecifika inställningar för tillgängliga sidtyper</AllowUserSettingsLabel>
+                <Heading>Globala PageTypeTreeFilter-inställningar</Heading>
+                <ResetDescription>Återställer standardvärdena; alla sidtyper går att filtrera på, och användare får göra egna inställningar om de vill.</ResetDescription>
+                <ResetLabel>Återställ standardvärden</ResetLabel>
+                <ResetSuccessfulMessage>Inställningarna har återställts till sina standardvärden. Vänligen uppdatera sidan i din webbläsare (F5) för att kunna använda dem.</ResetSuccessfulMessage>
+                <SaveDescription>Klicka för att spara dina globala PageTypeTreeFilter-inställningar.</SaveDescription>
+                <SaveLabel>Spara</SaveLabel>
+                <SaveSuccessfulMessage>Dina inställningar har sparats. Vänligen uppdatera sidan i din webbläsare (F5) för att kunna använda dem.</SaveSuccessfulMessage>
+            </GlobalSettings>
+            <PageExplorerAdapter>
+                <FilterSelectorLabel>Filtrera på sidtyp:</FilterSelectorLabel>
+                <SettingsLinkText>Inställningar</SettingsLinkText>
+                <SettingsLinkTooltip>Globala inställningar för sidträdets sidtypsfiltrering. Denna länk visas endast för användare som har administratorbehörighet.</SettingsLinkTooltip>
+            </PageExplorerAdapter>
+            <PageTypeSelector>
+                <ShowAllText>--- Visa alla sidor ---</ShowAllText>
+            </PageTypeSelector>
+            <Units>
+                <PageTypePicker>
+                    <AddPageTypeToolTip>Lägg till sidtyp</AddPageTypeToolTip>
+                    <AvailableDescription>Detta är alla sidtyper som finns i systemet.</AvailableDescription>
+                    <AvailableLabel>Tillgängliga sidtyper</AvailableLabel>
+                    <Description>Vänligen välj de sidtyper som du önskar göra tillgängliga för filtrering i EPiServers sidträd.</Description>
+                    <RemovePageTypeToolTip>Ta bort sidtyp</RemovePageTypeToolTip>
+                    <SelectedDescription>Detta är de sidtyper som användaren kommer att kunna filtrera på i EPiServers sidträd.</SelectedDescription>
+                    <SelectedLabel>Valda sidtyper</SelectedLabel>
+                </PageTypePicker>
+            </Units>
+            <UserSettings>
+                <EnablePersonalSelectionDescription>Markera för att använda dina egna inställningar för vilka sidtyper som ska vara tillgängliga, istället för de globalt valda.</EnablePersonalSelectionDescription>
+                <EnablePersonalSelectionLabel>Använd egenvalda sidtyper</EnablePersonalSelectionLabel>
+                <GuiPlugIn>
+                    <description>Användarspecifika inställningar för sidträdsfiltreringen.</description>
+                    <displayname>PageTypeTreeFilter</displayname>
+                </GuiPlugIn>
+                <UserSettingsDisabledMessage>Användarspecifika inställningar har avaktiverats globalt. Om detta är ett problem för dig, vänligen be din webbadministratör att tillåta detta, eller byta de tillgängliga sidtyperna globalt.</UserSettingsDisabledMessage>
+            </UserSettings>
+        </PageTypeTreeFilter>
+    </language> 
+</languages>

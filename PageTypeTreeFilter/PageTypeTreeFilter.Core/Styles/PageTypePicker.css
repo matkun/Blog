@@ -1,0 +1,32 @@
+﻿#page-type-picker-container {
+    width: 680px;
+}
+
+#page-type-picker-description {
+    margin-bottom: 10px;
+}
+
+#page-type-picker-container select {
+    height: 300px;
+    width: 230px;
+}
+
+#available-page-types label,
+#selected-page-types label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#arrow-container {
+    width: 24px;
+}
+
+#arrow-container .upper-button {
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+.clear-left {
+    clear: left;
+}

@@ -1,12 +1,12 @@
 *.user
 *.suo
 *.ini
-*.exe
 *.lnk
 *~
 ._*
 _ReSharper.*
 
+NuGet/*.exe
 VPP/
 SampleCode/
 epi5site/

@@ -1,0 +1,18 @@
+﻿#page-type-filter-user-settings {
+    display: block;
+}
+
+#user-settings-container {
+    margin: 0.5em 0;
+}
+
+#user-settings-container input[type=checkbox] {
+    margin-right: 5px;
+}
+
+#user-settings-container .disabled-message {
+    color: #FF0000;
+    display: block;
+    margin-bottom: 15px;
+}
+

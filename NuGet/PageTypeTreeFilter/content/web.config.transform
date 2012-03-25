@@ -1,0 +1,27 @@
+<configuration>
+  <configSections>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+      <section name="PageTypeTreeFilter.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <applicationSettings>
+    <PageTypeTreeFilter.Properties.Settings>
+      <setting name="GlobalSettingsRoles" serializeAs="String">
+        <value>WebAdmins, Administrators</value>
+      </setting>
+    </PageTypeTreeFilter.Properties.Settings>
+  </applicationSettings>
+  <system.webServer>
+    <modules>
+	  <add name="PageTypeTreeFilterInitializer" type="PageTypeTreeFilter.Bootstrap.Initializer" />
+	</modules>
+  </system.webServer>
+  <system.web>
+    <profile>
+	  <properties>
+        <add name="PTTF_UserPageTypes" type="System.String" />
+        <add name="PTTF_EnableUsersPageTypes" type="System.Boolean" />
+	  </properties>
+	</profile>
+  </system.web>
+</configuration>

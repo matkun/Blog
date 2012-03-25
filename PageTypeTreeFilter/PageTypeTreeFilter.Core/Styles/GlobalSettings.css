@@ -1,0 +1,16 @@
+﻿#page-type-filter-global-settings {
+    display: block;
+}
+
+#global-settings-container {
+    margin: 0;
+}
+
+#global-settings-container input[type=checkbox] {
+    margin-right: 5px;
+}
+
+#button-container .epi-cmsButton:hover {
+    background-color: #FFFFFF;
+    background-image: none;
+}

@@ -2,18 +2,21 @@
 <package >
   <metadata>
     <id>PageTypeTreeFilter</id>
-    <version>1.1.2.0</version>
+    <version>1.1.3.0</version>
     <authors>Mathias Kunto</authors>
     <owners>Mathias Kunto</owners>
     <projectUrl>http://blog.mathiaskunto.com/2012/02/06/allowing-web-editors-to-apply-pagetype-based-filtering-on-the-episerver-edit-mode-pagetree/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Adds a DropDownList to the EPiServer Edit Mode page tree allowing web editors to filter the pages on PageType while keeping the structure intact.</description>
+    <description>Requires at least EPiServer CMS 6 R2. Adds a DropDownList to the EPiServer Edit Mode page tree allowing web editors to filter the pages on PageType while keeping the structure intact. Allows for global and user specific selection of page types that should be available for filtering.</description>
 	<summary>This package adds a DropDownList populated with all EPiServer PageTypes to the top of the PageExplorer control. It then filters the PageTreeView on the selected PageType marking the proper pages as bold to separate them from the ones needed to maintain tree structure. It works for all places where the EPiServer PageExplorer control is used; including the Structure tab, the Favorites tab as well as the page selector windows. Note: If you already have control adapters for EPiServer.UI.Edit.PageExplorer and EPiServer.UI.WebControls.PageTreeView you will have to solve this manually; for instance through inheritance, see comments on Project Information link for more information.</summary>
     <language>en-US</language>
     <copyright>Copyright 2012</copyright>
     <tags>EPiServer Filter PageType PageTree</tags>
     <dependencies>
-      <dependency id="EPiServer.CMS.Core" version="1.0" /> <!-- EPiServer, EPiServer.BaseLibrary, EPiServer.UI, EPiServer.Web.WebControls -->
+      <dependency id="EPiServer.CMS.Core" version="6.1.379.0" />
+	  <dependency id="EPiServer.Framework" version="6.2.267.1" />
+	  <dependency id="log4net" version="2.0.0" />
+	  <dependency id="structuremap" version="2.6.3" />
     </dependencies>
   </metadata>
 </package>
