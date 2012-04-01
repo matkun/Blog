@@ -89,6 +89,10 @@
       <Private>True</Private>
       <HintPath>..\packages\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Scheduler.WKTL.dll</HintPath>
     </Reference>
+    <Reference Include="EPiServer.UI, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\EPiServer\CMS\6.1.379.0\bin\EPiServer.UI.dll</HintPath>
+    </Reference>
     <Reference Include="EPiServer.Web.WebControls, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.Web.WebControls.dll</HintPath>
@@ -112,7 +116,14 @@
       <Private>True</Private>
       <HintPath>..\packages\EPiServer.CMS.Core.6.1.379.0\lib\EPiServer.XmlRpc.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.2.6.3\lib\StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -122,11 +133,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomProperties\XFlow\XFlowProperty.cs" />
+    <Compile Include="AdapterPattern\DataFactoryWrapper.cs" />
+    <Compile Include="AdapterPattern\IDataFactoryWrapper.cs" />
+    <Compile Include="AdapterPattern\IJsonConvertWrapper.cs" />
+    <Compile Include="AdapterPattern\IPageTypeWrapper.cs" />
+    <Compile Include="AdapterPattern\JsonConvertWrapper.cs" />
+    <Compile Include="AdapterPattern\PageTypeWrapper.cs" />
+    <Compile Include="Bootstrap\Bootstrapper.cs" />
+    <Compile Include="Bootstrap\Initializer.cs" />
+    <Compile Include="Bootstrap\Registries\CoreRegistry.cs" />
+    <Compile Include="Bootstrap\Registries\SystemRegistry.cs" />
+    <Compile Include="Extensions\ControlExtensions.cs" />
+    <Compile Include="Framework\ControlAdapters\XFormEditAdapter.cs" />
+    <Compile Include="Framework\ControlAdapters\XFormSelectAdapter.cs" />
+    <Compile Include="Framework\CustomProperties\XFlow\IPropertyXFormItemCollectionView.cs" />
+    <Compile Include="Framework\CustomProperties\XFlow\PropertyXFormItemCollection.cs" />
+    <Compile Include="Framework\CustomProperties\XFlow\PropertyXFormItemCollectionControl.cs" />
+    <Compile Include="Framework\CustomProperties\XFlow\XFormItem.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Framework\EmbeddedResources\EmbeddedResourceProvider.cs" />
+    <Compile Include="Framework\EmbeddedResources\IResourceHandler.cs" />
+    <Compile Include="Framework\EmbeddedResources\ResourceHandler.cs" />
+    <Compile Include="Framework\EmbeddedResources\VirtualResourceFile.cs" />
+    <Compile Include="Framework\IoC\IoC.cs" />
+    <Compile Include="Framework\Language\ITranslator.cs" />
+    <Compile Include="Framework\Language\Translator.cs" />
+    <Compile Include="Framework\Services\IPageLocatorService.cs" />
+    <Compile Include="Framework\Services\PageLocatorService.cs" />
+    <Compile Include="Presentation\XFlowCollectionControl\PropertyXFormItemCollectionControl.ascx.cs">
+      <DependentUpon>PropertyXFormItemCollectionControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Presentation\XFlowCollectionControl\PropertyXFormItemCollectionControl.ascx.designer.cs">
+      <DependentUpon>PropertyXFormItemCollectionControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Presentation\XFlowCollectionControl\PropertyXFormItemCollectionControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\XFlowEditModeCollectionControl.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\jquery.json-2.3.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
