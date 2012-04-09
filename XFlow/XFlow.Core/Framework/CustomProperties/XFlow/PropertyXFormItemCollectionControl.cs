@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
 using EPiServer.Web.PropertyControls;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -9,6 +11,11 @@ using XFlow.Core.Extensions;
 
 namespace XFlow.Core.Framework.CustomProperties.XFlow
 {
+    public interface IPropertyXFlowViewModeControlView
+    {
+        XFormItem[] XFormItems { get; set; }
+    }
+
     public class PropertyXFormItemCollectionControl : PropertyDataControl
     {
         //private readonly IJsonConvertWrapper _jsonConvert;
@@ -18,6 +25,19 @@ namespace XFlow.Core.Framework.CustomProperties.XFlow
         //    if (jsonConvert == null) throw new ArgumentNullException("jsonConvert");
         //    _jsonConvert = jsonConvert;
         //}
+
+        private IPropertyXFlowViewModeControlView _viewPropertyXFlowViewModeControlView;
+        public override void CreateDefaultControls()
+        {
+            if(!XFormItems.Any())
+            {
+                return;
+            }
+            var viewControl = Page.LoadControl("~/EmbeddedXFlowResources/XFlow.Core.dll/XFlow.Core.Presentation.XFlowCollectionControl.PropertyXFlowViewModeControl.ascx");
+            _viewPropertyXFlowViewModeControlView = (IPropertyXFlowViewModeControlView) viewControl;
+            _viewPropertyXFlowViewModeControlView.XFormItems = XFormItems;
+            Controls.Add(viewControl);
+        }
 
         private IPropertyXFormItemCollectionView _editPropertyXFormItemCollectionControl;
         public override void CreateEditControls()

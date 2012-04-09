@@ -11,24 +11,27 @@ Usage (or just get the NuGet package):
 * Add the adapter configuration below to your browser file, or drop the sample SampleAdapterMappings.browser file in your wwwroot App_Browsers directory.
 
 <adapter controlType="EPiServer.UI.Edit.XFormSelect" adapterType="XFlow.Core.Framework.ControlAdapters.XFormSelectAdapter" />
+<adapter controlType="EPiServer.UI.Edit.XFormEdit" adapterType="XFlow.Core.Framework.ControlAdapters.XFormEditAdapter" />
 
-
-
-
-
-
-
-
-
-
-
-
-
+<system.webServer>
+    <modules runAllManagedModulesForAllRequests="true">
+      <add name="XFlowInitializer" type="XFlow.Core.Bootstrap.Initializer, XFlow.Core" />
 
 * Move the PageTypeTreeFilter.Core\App_Code\AppStart.cs file to your web projects App_Code directory.
   - Uncomment the code and correct the namespace.
 
-* Move the PageTypeTreeFilter.Core\lang\PageTypeTreeFilter.xml file to your web project lang directory.
+  
+* Move the XFlow\lang\XFlow.xml file to your web project lang directory.
+
+
+
+
+
+
+
+
+
+
 
 * Add the PageTypeTreeFilterInitializer to your web.config file as below.
 
