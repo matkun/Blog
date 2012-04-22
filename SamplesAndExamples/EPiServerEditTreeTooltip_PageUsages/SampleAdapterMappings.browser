@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<browsers>
+  <browser refID="Default">
+    <controlAdapters>
+        <adapter controlType="EPiServer.UI.WebControls.PageTreeView" adapterType="EPiServer.CodeSample.EditTreeToolTip.PageTreeViewTooltipAdapter" />
+    </controlAdapters>
+  </browser>
+</browsers>

@@ -15,6 +15,13 @@ Example on how to embed EPiServer resources such as a GuiPlugIn or a page, as we
 
 
 
+EPiServerEditTreeTooltip_PageUsages
+http://blog.mathiaskunto.com/2012/04/22/visual-aid-for-finding-page-usages-directly-in-episerver-edit-mode-page-tree-extending-node-tooltips/
+
+Adding tooltip to the EPiServer edit mode page tree containing information on what pages are referencing the current page or one of its decending pages.
+
+
+
 EPiServerJob_RunPowerShellScript
 http://blog.mathiaskunto.com/2012/02/03/making-the-episerver-scheduler-run-your-windows-powershell-scripts/
 

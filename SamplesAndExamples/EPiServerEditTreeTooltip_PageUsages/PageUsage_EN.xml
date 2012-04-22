@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+    <language name="English" id="en">
+        <edit>
+            <pageexplorer>
+                <tooltip>
+                    Page Type: [PageTypeName]&lt;br/&gt;
+                    Created: [Created]&lt;br/&gt;
+                    Changed: [Changed]&lt;br/&gt;
+                    Page ID: [PageLink]&lt;br /&gt;
+                    Sort index: [PagePeerOrder][AdditionalInformation]&lt;br /&gt;
+                    Used on: [UsedOn]</tooltip>
+            </pageexplorer>
+        </edit>
+    </language>
+</languages>
