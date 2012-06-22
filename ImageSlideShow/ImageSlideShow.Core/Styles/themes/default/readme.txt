@@ -1,0 +1,1 @@
+﻿The images arrows.png, bullets.png and loading.gif from the default theme download package was base64 encoded using the online Base64 Image Converter at http://www.askapache.com/online-tools/base64-image-converter

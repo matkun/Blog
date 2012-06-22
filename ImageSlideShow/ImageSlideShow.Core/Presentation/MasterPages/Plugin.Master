@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Plugin.master.cs" Inherits="ImageSlideShow.Core.Presentation.MasterPages.Plugin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title>Stop complaining about my title element being empty.</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+        <script type='text/javascript' language="javascript">
+        <!--
+            function onNavigate(newPageLink) {
+                return -1;
+            }
+            function onCommand(newCommand) {
+                return -1;
+            }
+         // -->
+         </script>
+        <link type="text/css" rel="stylesheet" href="/App_Themes/Default/Styles/Toolbutton.css"/>
+    </head>
+    <body id="body" runat="server">
+        <div class="epi-contentContainer epi-padding">
+            <div class="epi-contentArea">
+                <form id="aspnetForm" runat="server">
+                    <asp:ContentPlaceHolder ID="FullRegion" runat="server"></asp:ContentPlaceHolder>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

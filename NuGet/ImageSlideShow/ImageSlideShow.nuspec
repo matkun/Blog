@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ImageSlideShow</id>
+    <version>1.0.0.0</version>
+    <authors>Mathias Kunto</authors>
+    <owners>Mathias Kunto</owners>
+    <projectUrl>http://blog.mathiaskunto.com/2012/06/24/episerver-customproperty-jquery-image-slide-show-with-html-captions-and-smooth-transitions-using-dev7studios-responsive-nivo-slider/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Adds a custom EPiServer property allowing you to add Nivo Slider jQuery image slide shows to any page type.</description>
+	<summary>This package adds a custom EPiServer property to your website allowing you to add image slide shows to your page types. It is based on the MIT-licensed jQuery plug-in Nivo Slider from Dev7Studios supporting for instance various smooth transitions between images and captions with and without HTML. Source code for this is available at GitHub; please see the project URL for mor information.</summary>
+    <language>en-US</language>
+    <copyright>Copyright 2012</copyright>
+    <tags>EPiServer jQuery NivoSlider Image Slide Show</tags>
+    <dependencies>
+      <dependency id="EPiServer.CMS.Core" version="6.1.379.0" />
+	  <dependency id="EPiServer.Framework" version="6.2.267.1" />
+	  <dependency id="log4net" version="2.0.0" />
+	  <dependency id="Newtonsoft.Json" version="4.5.7" />
+	  <dependency id="structuremap" version="2.6.3" />
+    </dependencies>
+  </metadata>
+</package>

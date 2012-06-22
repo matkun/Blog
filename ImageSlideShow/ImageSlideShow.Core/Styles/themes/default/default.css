@@ -1,0 +1,87 @@
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: flexible
+Description: The default skin for the Nivo Slider.
+Version: 1.2
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+.theme-default .nivoSlider {
+	position:relative;
+	background:#fff url('data:image/gif;base64,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') no-repeat 50% 50%;
+	/*margin-bottom:50px;*/
+    -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;
+}
+.theme-default .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.theme-default .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.theme-default .nivo-controlNav {
+	text-align: center;
+	padding: 20px 0;
+}
+.theme-default .nivo-controlNav a {
+	display:inline-block;
+	width:22px;
+	height:22px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAoCAYAAAD6xArmAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAASHSURBVHjatFdNSGNXFP7ue3n5cWInjGMXEqQGpbu2jgtFphibhYKBgD/goosGCy5mERetSEuXilAQhWy6kFEozaq4eHV+SBDBBK0/jWgliJpGhEaJQtIXqOPkvdvNfXJ9vmQcpnPg8N7j3vvdc0++890TQinF+zAB78ks5QYIIYT/ZK4bZQ7KHVlfQik1B+ZABYPrpulOCNGMG1SMGIDI3AJAYk/CIn0NoMSe+kaVc8yiFRioFUBVPB7/Ip/P/6Bp2mw+n/8+Ho97ATjYuAhAMKSu7I9HWIS2TCbzlaIoQb/f75EkiQQCgUZJkr4+Ojr6EoCdO8lNo5TecDbJCuB+JBL5fHNzUxZFUQZw7U6nUz44OJCnpqaaAVSz+YTHrBSx6PV6O2dmZqCq6o3BYrGIcDiMvr6+TpYK8lY8ttlszlwuZzpWKBQgSVKVaRreAKwdHx/v9vT0mA52d3cjnU7vMkbQu+ZYAlBdW1tbVyqV5P7+/hs5DoVCciaTGQPwIYB7bP6NHBOjVnB0kwDYFhcXH7W0tPiy2eyn6+vr6OjogMPhiC8sLLwcGRn5C8ArxmeNq8ayEetROwDcB1A7Ozvbur29PTg9Pf0ZgIcAPjDQrXLEXNR8oVhMSroEQNUjpZTSN2oFN0llx1PLiJCpTlTUCn2yLjKV5ryVbN5l8Z312KAj72TvjFTuQJb/YVN6l8XE5J3cAfT2NVUGqJwbwW455aqMfwpcYQiGb2LCYcrffzy4xeQmFrmKE7lvgQPWWNGo3LtekZQQQozAOoBF9729vd76+voBPrGqqiqhUOib+fn5PCtt/iQEAOXzxwNKAKzFYvHnra0tzM3NqYlEQs1ms9rjx49Fn88nDg8Pi7lc7qXH43kK4IptcK0fxJACiQP9ZWtrCx0dHZdmdPD7/WIkErEeHh4+bW5ufs7A9bZAAwdqZaL9YH9//8nKykpUF/bJycm9k5MTpVgsvl5aWvq7qakpCkAOBoMvFEWJAag1kdFrYBu7cR8qihIbHBx8DkCemJj4kxrs6OjoH7vdvghAPj09jYXD4UcAXEy/JQCCYMIKAQASiYQKAENDQx5jGjweT3V/f38NAKytrdHe3t5eo9gLxkLxer1WADg/PwcAuFwuq1mO6+rq7ACQy+U0h8PxUblb+rpylpeXXwFAe3u7CACrq6u37v9SqaTJsnwOAK2trUIqlfrVqBmCSe1rlNLLrq4uAQCCweBuOp1W9AlXV1fq2NjYTiqV+rezs1NsaGgg7e3tCUNpw8iKKgCu0dHRjxVFiQUCgWcAZLvdvjgwMLAaCoX+0BnhdDp/SyaTsWw2+yOAGvbD24ysELhbuRpATTqd/lZRlFgwGHzB9xQAZJ/P92xnZydWLBajjGouFpTefd5qsEW++pLJZFdjY2Pw8vKSbGxsqGdnZ7StrU10u90oFAq/u93uaa5PLnH6cSsdEiP5PUb4BwBqx8fHP8lkMt9dXFz8FI1Gu1gHVMMidXK9st4mEDMNFgwnECrIpmqQTc0om9TQjPCLSZk/N5qBCTeaw/8GANoRNx1/Nr/GAAAAAElFTkSuQmCC') no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin: 0 2px;
+}
+.theme-default .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.theme-default .nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAAeCAYAAABwmH1PAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAK+SURBVHja1Jmvc+JAFMc/ZJghLq5xOFCH67m6OHB1lefuv6q7unPg4loFDlTPxQWHSxUVvMykuWz27WZzM/dmMjAh5O13d7/f92Mn1+sVpcXAHTDv+O0CnIGScSwV30nHb4X4rjQvmiqeWQLf5NNmF+AIHLQDsEzwPbAyAG3bu/gt+h6a9KxwCmSGFbVZJc5fPcE+CNjY478FkJt2mwnwdwE71Ergt6y8xhLgUSZ7qOXAXgN4I9solFXAi4LfKfDkuaomOwLb5o2o9UAWGGzNxScLD5MRwCJYMhPgpWzlMSyWrWqyxxHANum5bAOOgbUHP11Dy4NBoNKRfa/rCa0BuypiLpertf0kcs9HkHLHHXZfA44dnW671M/VcYNjvlt53xYkzWRHwELptAKeRfmGCknXd18VflYmOTGwqAFrOPNCmNQxEc6mygwq5NgWkUIwQoKt7U6uUKYdYzq1zPKxhydn4JdCmTPDKvcJkm3g5x7K9SVOydQiCrmF08UIcbMc+N6tjK0zp4h6qp43/l97M+XvUY+w/AyUxP9rS2XsiWs9XOfAO6k1tfxs2sxjwBnwoUg8SkPtvu4Ls1Phy9ySA2874u/Ms1bGwlHNrpoZ4vvG5jdShptNoPq4qbLngO/LFGABygg4OVQdmwBVzbuoaGWgimuqunGo8k6RYxhYBahbD4bvvnX2yoFGZa3SLr2nFPjhqeBFa3ILz5jrM4bXZlgqHLdX4snpXHlPw9nEkUZFOw7v0Dfb8ARbGjKrfES/F8H2V+JRceswViM4PVpq6H2AstOU/n7B1NW1TCX2JoGc7h1WMCNcX+0iYL/sKlNfuu5xLQfO7s4j9FizJSVnd127dWI5W5pza7LNHYEeGHbcUreCXHtthaixUfknysO0lNv5Uor5MK0E/sgVSgdi6cgsejokhfg+abLGzwEA5nq5vbenPB4AAAAASUVORK5CYII=') no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.theme-default a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+.theme-default a.nivo-prevNav {
+	left:15px;
+}
+
+.theme-default .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-default .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-default .nivo-caption a:hover {
+    color:#fff;
+}
+
+.theme-default .nivo-controlNav.nivo-thumbs-enabled {
+	width: 100%;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled a {
+	width: auto;
+	height: auto;
+	background: none;
+	margin-bottom: 5px;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled img {
+	display: block;
+	/*width: 120px;*/
+	height: auto;
+}

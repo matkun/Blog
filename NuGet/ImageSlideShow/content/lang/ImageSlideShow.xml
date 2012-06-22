@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+    <language name="English" id="en">
+        <ImageSlideShow>
+            <EditModeProperty>
+                <AddButtonText>Add new slide</AddButtonText>
+                <GlobalSettings>
+                    <ForceManualTransitionText>Force manual transition</ForceManualTransitionText>
+                    <ForceManualTransitionTooltip>Check this if you would like to force the user to manually change slides.</ForceManualTransitionTooltip>
+                    <HideDirectionNavigationText>Show Next-Prev navigation on hover</HideDirectionNavigationText>
+                    <HideDirectionNavigationTooltip>Check this if you only want the Next and Previous navigation to be visible only when hovering.</HideDirectionNavigationTooltip>
+                    <NavigationNextText>Text for navigation: Next</NavigationNextText>
+                    <NavigationNextTooltip>The text for the navigation alternative Next.</NavigationNextTooltip>
+                    <NavigationPreviousText>Text for navigation: Previous</NavigationPreviousText>
+                    <NavigationPreviousTooltip>The text for the navigation alternative Previous.</NavigationPreviousTooltip>
+                    <NumberOfBoxColumnsText>Number of box columns (for box effects)</NumberOfBoxColumnsText>
+                    <NumberOfBoxColumnsTooltip>If you are using a box effect, this is where you enter the number of columns that you want.</NumberOfBoxColumnsTooltip>
+                    <NumberOfBoxRowsText>Number of box rows (for box effects)</NumberOfBoxRowsText>
+                    <NumberOfBoxRowsTooltip>If you are using a box effect, this is where you enter the number of rows that you want.</NumberOfBoxRowsTooltip>
+                    <NumberOfSlicesText>Number of slices (for slice effects)</NumberOfSlicesText>
+                    <NumberOfSlicesTooltip>If you are using a slice effect, this is where you enter the number of slices that you want.</NumberOfSlicesTooltip>
+                    <PauseOnHoverText>Pause animation while hovering</PauseOnHoverText>
+                    <PauseOnHoverTooltip>Check this if you would like to prevent the switching to the next image slide while hovering over the images.</PauseOnHoverTooltip>
+                    <RandomStartText>Start on a random slide</RandomStartText>
+                    <RandomStartTooltip>Check this if you would like to start the slide show on a random slide each time.</RandomStartTooltip>
+                    <SlidePauseText>Time to pause on each slide (ms)</SlidePauseText>
+                    <SlidePauseTooltip>The time that each image slide is shown before switching to the next one; entered in milliseconds.</SlidePauseTooltip>
+                    <StartSlideIndexText>Start on slide number (0 is first)</StartSlideIndexText>
+                    <StartSlideIndexTooltip>The index of the image slide to start from; it is zero based, meaning the first slide is number 0, the second is number 1, and so on.</StartSlideIndexTooltip>
+                    <ThemeTooltip>The slide show theme changes the appearance of the slide show when shown to the visitor. New themes can be added through the EPiServer Admin Mode.</ThemeTooltip>
+                    <ThemeText>Theme (only default available in this version)</ThemeText>
+                    <TransitionEffectText>Transition effect</TransitionEffectText>
+                    <TransitionEffectTooltip>The transition effect that transforms one image slide into the next one.</TransitionEffectTooltip>
+                    <TransitionSpeedText>Transition speed (ms)</TransitionSpeedText>
+                    <TransitionSpeedTooltip>The time it will take to finish the transition between image slides; entered in milliseconds.</TransitionSpeedTooltip>
+                    <UseDirectionNavigationText>Use Next-Prev navigation</UseDirectionNavigationText>
+                    <UseDirectionNavigationTooltip>Check this if you want to use the Next and Previous navigation.</UseDirectionNavigationTooltip>
+                    <UseIndexedNavigationText>Use indexed navigation</UseIndexedNavigationText>
+                    <UseIndexedNavigationTooltip>Check this if you want to use indexed navigation.</UseIndexedNavigationTooltip>
+                    <UseThumbnailsForIndexedNavigationText>Use thumbnails in indexed navigation</UseThumbnailsForIndexedNavigationText>
+                    <UseThumbnailsForIndexedNavigationTooltip>Check this if you would like to use thumbnails instead of digits in the indexed navigation.</UseThumbnailsForIndexedNavigationTooltip>
+                </GlobalSettings>
+                <ColumnNameHasCapition>Caption</ColumnNameHasCapition>
+                <ColumnNameHasLink>Linked</ColumnNameHasLink>
+                <ColumnNameHasThumbnail>Thumbnail</ColumnNameHasThumbnail>
+                <ColumnNameSlide>Slide image</ColumnNameSlide>                
+                <SlideEditor>
+                    <CancelButtonText>Cancel</CancelButtonText>
+                    <Image>Image</Image>
+                    <ImageCaption>Image caption (HTML is allowed, no caption if empty)</ImageCaption>
+                    <ImageLinksUrl>Image link URL (slide will not be linked if empty)</ImageLinksUrl>
+                    <SaveButtonText>Save</SaveButtonText>
+                    <Thumbnail>Thumbnail (used for thumbnail navigation)</Thumbnail>
+                    <Title>Image slide editor</Title>
+                </SlideEditor>
+            </EditModeProperty>
+        </ImageSlideShow>
+    </language>
+</languages>

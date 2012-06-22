@@ -22,6 +22,13 @@ A complete and concrete example of what a Visual Studio 2010 WebForms Model-View
 
 
 
+ImageSlideShow
+http://blog.mathiaskunto.com/2012/06/24/episerver-customproperty-jquery-image-slide-show-with-html-captions-and-smooth-transitions-using-dev7studios-responsive-nivo-slider/
+
+Adds a custom property to the EPiServer website allowing you to have jQuery Nivo Slider image slide shows on your page types. The Nivo Slider is MIT-licensed.
+
+
+
 NuGet
 https://github.com/matkun/Blog/tree/master/NuGet
 NuGet packages mostly for the EPiServer functionality listed below; like PageTypeTreeFilter and ScheduledParameterJob.

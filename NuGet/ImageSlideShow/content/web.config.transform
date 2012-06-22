@@ -1,0 +1,7 @@
+<configuration>
+  <system.webServer>
+    <modules>
+	  <add name="ImageSlideShowInitializer" type="ImageSlideShow.Core.Bootstrap.Initializer" />
+	</modules>
+  </system.webServer>
+</configuration>
