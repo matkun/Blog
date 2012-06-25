@@ -1,5 +1,5 @@
 EPiServer CustomProperty: jQuery image slide show with HTML captions and smooth transitions using Dev7studios Nivo Slider
-http://blog.mathiaskunto.com/2012/06/24/episerver-customproperty-jquery-image-slide-show-with-html-captions-and-smooth-transitions-using-dev7studios-responsive-nivo-slider/
+http://blog.mathiaskunto.com/2012/06/24/episerver-customproperty-jquery-image-slide-show-with-html-captions-and-smooth-transitions-using-dev7studios-nivo-slider/
 
 
 Version 1.0.0.0
