@@ -36,6 +36,13 @@ An example on how to have the EPiServer scheduler run Windows PowerShell scripts
 
 
 
+EPiServerPopupWindows
+http://blog.mathiaskunto.com/2012/07/14/how-to-open-those-episerver-edit-mode-selector-browser-popups-in-your-custom-properties/
+
+Examples on how to open the build-in EPiServer browser controls for the Date Selector (DateTime information), the FileSelector (Images or Documents from EPiServer VPP), the Page Selector (EPiServer Pages), the Url Selector (URLs to external websites, internal EPiServer pages, e-mails, files on network or other websites) as well as the XForm Selector. This is done manually without using server side EPiServer controls.
+
+
+
 EPiServerPropertyAppearance
 http://blog.mathiaskunto.com/2012/03/05/being-friends-with-the-propertycontrolclassfactory-or-101-ways-to-change-episerver-built-in-property-appearances/
 
