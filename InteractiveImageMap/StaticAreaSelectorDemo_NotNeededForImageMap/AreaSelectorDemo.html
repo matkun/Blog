@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Area selector demo for the EPiServer interactive image functionality</title>
+		<style type="text/css">
+			#image-map-container {
+				display: inline-block;
+				position: relative;
+			}
+			#image-map {
+				max-width: 600px;
+			}
+			.reserved-hot-spot-position {
+				border: 1px solid #ffffff;
+				background: url("/wp-content/uploads/2012/08/background-grey.png") repeat scroll 0 0 transparent;
+				z-index: 100;
+				position: absolute;
+			}
+		</style>
+    </head>
+    <body>
+        <div id="image-map-container">
+			<img id="image-map" name="image-map" src="/wp-content/uploads/2012/08/CatcollectionsPigalle.jpg">
+			<div class="reserved-hot-spot-position" style="left: 12px; top: 55.6px; width: 527px; height: 266px;" title="Catcollections Pigalle - The Sacred Birman."></div>
+			<div class="reserved-hot-spot-position" style="left: 404px; top: 350.6px; width: 30px; height: 30px;" title="The center of a flower on the table cloth."></div>
+			<div class="ui-boxer-box" title="A sacred cat paw" style="left: 19px; top: 232.6px; width: 99px; height: 78px; border: 1px solid white; background: url('/wp-content/uploads/2012/08/background-pink.png') repeat scroll 0pt 0pt transparent; z-index: 100; position: absolute;"></div>
+		</div>
+		
+		<script language="javascript" type="text/javascript" src="/wp-content/uploads/2012/08/jquery-1.7.2.min_.js"></script>
+		<script language="javascript" type="text/javascript" src="/wp-content/uploads/2012/08/jquery-ui-1.7.2.min_.js"></script>
+		<script language="javascript" type="text/javascript">
+			$.widget("ui.boxer", $.extend({}, $.ui.mouse, {
+
+			_init: function () {
+				this.element.addClass("ui-boxer");
+				this.dragged = false;
+				this._mouseInit();
+				this.helper = $(document.createElement('div'))
+					.css({ border: '1px dotted #ffffff', 'background-image': 'url("/wp-content/uploads/2012/08/background-pink.png") repeat scroll 0 0 transparent' })
+					.addClass("ui-boxer-helper");
+			},
+
+			destroy: function () {
+				this.element
+					.removeClass("ui-boxer ui-boxer-disabled")
+					.removeData("boxer")
+					.unbind(".boxer");
+				this._mouseDestroy();
+
+				return this;
+			},
+
+			_mouseStart: function (event) {
+				var offset = $("#image-map-container").offset();
+				var xCoordinate = event.pageX - offset.left;
+				var yCoordinate = event.pageY - offset.top;
+
+				this.opos = [xCoordinate, yCoordinate];
+				if (this.options.disabled) {
+					return;
+				}
+
+				this._trigger("start", event);
+				$("#image-map-container").append(this.helper);
+				this.helper.css({
+					"z-index": 100,
+					"position": "absolute",
+					"background": 'url("/wp-content/uploads/2012/08/background-pink.png") repeat scroll 0 0 transparent',
+					"left": xCoordinate,
+					"top": yCoordinate,
+					"width": 0,
+					"height": 0
+				});
+			},
+
+			_mouseDrag: function (event) {
+				this.dragged = true;
+
+				var offset = $("#image-map-container").offset();
+				var xCoordinate = event.pageX - offset.left;
+				var yCoordinate = event.pageY - offset.top;
+
+				if (this.options.disabled) {
+					return;
+				}
+
+				var x1 = this.opos[0], y1 = this.opos[1], x2 = xCoordinate, y2 = yCoordinate;
+				if (x1 > x2) { var tmp = x2; x2 = x1; x1 = tmp; }
+				if (y1 > y2) { var tmp = y2; y2 = y1; y1 = tmp; }
+				this.helper.css({ left: x1, top: y1, width: x2 - x1, height: y2 - y1 });
+
+				this._trigger("drag", event);
+
+				return false;
+			},
+
+			_mouseStop: function (event) {
+				this.dragged = false;
+				$('.ui-boxer-box').remove();
+				var position = this.helper.position();
+				var totalImageWidth = $('#image-map-container img').outerWidth();
+				var totalImageHeight = $('#image-map-container img').outerHeight();
+				var boxWidth = parseInt(this.helper.css('width'), 10);
+				var boxHeight = parseInt(this.helper.css('height'), 10);
+				var minWidth = 30;
+				var minHeight = 30;
+				
+				if (position.left < 0) {
+					boxWidth = boxWidth - Math.abs(position.left);
+					this.helper.css({ 'left': '0', 'width': boxWidth });
+				}
+				if (position.top < 0) {
+					boxHeight = boxHeight - Math.abs(position.top);
+					this.helper.css({ 'top': '0', 'height': boxHeight });
+				}
+				
+				var maxOffsetX = totalImageWidth - minWidth;
+				if(position.left > maxOffsetX) {
+					this.helper.css('left', maxOffsetX);
+				}
+				var maxOffsetY = totalImageHeight - minHeight;
+				if(position.top > maxOffsetY) {
+					this.helper.css('top', maxOffsetY);
+				}
+				
+				if (position.left + boxWidth > totalImageWidth) {
+					boxWidth = totalImageWidth - position.left;
+					this.helper.css('width', boxWidth);
+				}
+				if (position.top + boxHeight > totalImageHeight) {
+					boxHeight = totalImageHeight - position.top;
+					this.helper.css('height', boxHeight);
+				}
+				
+				if(boxWidth < minWidth) {
+					this.helper.css('width', minWidth);
+				}
+				if(boxHeight < minHeight) {
+					this.helper.css('height', minHeight);
+				}
+						
+				var clone = this.helper.clone()
+					.removeClass('ui-boxer-helper')
+					.addClass('ui-boxer-box')
+					.appendTo(this.element);
+
+				this._trigger("stop", event, { box: clone });
+				this.helper.remove();
+				return false;
+			}
+
+		}));
+		$.extend($.ui.boxer, {
+			defaults: $.extend({}, $.ui.mouse.defaults, {
+				appendTo: 'body',
+				distance: 0
+			})
+		});
+		$("document").ready(function() {
+			$('#image-map-container').boxer({
+				stop: function (event, ui) {
+					var position = ui.box.position();
+					ui.box.css({ border: '1px solid white', background: 'url("/wp-content/uploads/2012/08/background-pink.png") repeat scroll 0 0 transparent' });
+				}
+			});
+		});
+		</script>
+    </body>
+</html>

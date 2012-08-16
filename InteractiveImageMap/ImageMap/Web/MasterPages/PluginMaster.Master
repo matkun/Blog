@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PluginMaster.master.cs" Inherits="EPiServer.ImageMap.Web.MasterPages.PluginMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1" runat="server">
+        <title id="Title1" runat="server" />
+
+        <asp:PlaceHolder runat="server" id="cssLinkRegion" />
+        
+        <script type='text/javascript' language="javascript">
+        <!--
+            function onNavigate(newPageLink) {
+                return -1;
+            }
+            function onCommand(newCommand) {
+                return -1;
+            }
+         // -->
+         </script>
+         
+        <%-- TODO - Change paths to point to your own UI --%>
+        <link type="text/css" rel="stylesheet" href="/secure/ui/Shell/ClientResources/Shell.css" />
+        <link type="text/css" rel="stylesheet" href="/secure/ui/Shell/ClientResources/ShellLightTheme.css" />
+        <link type="text/css" rel="stylesheet" href="/secure/ui/CMS/ClientResources/Epi/Base/CMS.css" />
+        <link type="text/css" rel="stylesheet" href="/secure/ui/Shell/ClientResources/Epi/Shell/Shell.css" />
+        <link type="text/css" rel="stylesheet" href="/secure/ui/Shell/ClientResources/Epi/Shell/Light/Shell.css" />
+        <asp:ContentPlaceHolder runat="server" id="HeaderContentRegion" />
+    </head>
+    <body id="body" runat="server">
+        <div class="epi-contentContainer epi-padding">
+            <div class="epi-contentArea">
+                <form id="aspnetForm" runat="server">
+                    <asp:ContentPlaceHolder ID="FullRegion" runat="server">
+                    </asp:ContentPlaceHolder>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

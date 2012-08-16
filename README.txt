@@ -29,6 +29,13 @@ Adds a custom property to the EPiServer website allowing you to have jQuery Nivo
 
 
 
+InteractiveImageMap
+http://blog.mathiaskunto.com/2012/08/16/episerver-custom-property-allowing-web-editors-to-create-image-maps-with-flexible-hot-spot-areas/
+
+Adds a custom property to the EPiServer website allowing web editors to create interactive image maps with clickable hot spots of dynamic rectangular shape and size.
+
+
+
 NuGet
 https://github.com/matkun/Blog/tree/master/NuGet
 NuGet packages mostly for the EPiServer functionality listed below; like PageTypeTreeFilter and ScheduledParameterJob.
