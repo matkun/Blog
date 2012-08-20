@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Web;
 using System.Web.Hosting;
 using System.Web.UI;
@@ -30,7 +30,8 @@ namespace EPiServer.ImageMap.Web.ImageMapProperty
 
         private Image LoadImage()
         {
-            var unifiedFile = HostingEnvironment.VirtualPathProvider.GetFile(ImageMap.ImageUrl) as UnifiedFile;
+            var url = HttpUtility.UrlDecode(ImageMap.ImageUrl, System.Text.Encoding.GetEncoding("ISO-8859-1"));
+            var unifiedFile = HostingEnvironment.VirtualPathProvider.GetFile(url) as UnifiedFile;
             using (var stream = unifiedFile.Open())
             {
                 return Image.FromStream(stream);
