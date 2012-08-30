@@ -50,6 +50,13 @@ Five examples on how it is possible to change appearance of built-in EPiServer p
 
 
 
+FuBuMVC_RadioButtonList
+http://blog.mathiaskunto.com/2012/08/31/how-to-use-htmlconventions-to-create-a-radio-button-list-input-for-fubumvc/
+
+A way of rendering radio button lists in FuBuMVC from enums using FuBuMVC's HtmlConvention.
+
+
+
 GeoIPAutoUpdate_PowerShellScript
 http://blog.mathiaskunto.com/2012/01/15/geoip-database-update-in-multiple-webserver-environment-using-windows-powershell-scripting/
 
