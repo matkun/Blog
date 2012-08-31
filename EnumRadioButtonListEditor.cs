@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using FubuCore.Reflection;
@@ -30,12 +29,11 @@ namespace MyProject.Core.Infrastructure.Fubu.HtmlConventions
 
         private static HtmlTag ListItemFor(object enumValue, ElementRequest request)
         {
-            var propertyName = request.Accessor.Name;
-            var radioId = string.Format("{0}_{1}", propertyName, enumValue);
+            var radioId = string.Format("{0}_{1}", request.ElementId, enumValue);
 
             var radioButton = new HtmlTag("input")
                 .Attr("id", radioId)
-                .Attr("name", propertyName)
+                .Attr("name", request.ElementId)
                 .Attr("type", "radio")
                 .Attr("value", enumValue.ToString());
             if (enumValue.ToString() == request.StringValue())
