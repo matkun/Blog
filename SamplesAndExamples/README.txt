@@ -64,6 +64,13 @@ A script for automatically downloading and updating the MaxMind GeoIP database (
 
 
 
+ShowingHiddenEPiServerProperties
+http://blog.mathiaskunto.com/2013/01/16/simple-adapter-for-showing-hidden-episerver-properties-in-edit-mode-for-administrators
+
+A simple control adapter for giving access to hidden EPiServer properties (those with the 'Display in Edit Mode' option turned off in Admin Mode) to users belonging to certain roles; such as web administrators.
+
+
+
 StaticEPiServerErrorPages
 http://blog.mathiaskunto.com/2011/08/19/allowing-web-editors-to-customize-static-error-pages-in-episerver/
 
