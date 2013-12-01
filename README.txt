@@ -62,6 +62,13 @@ Contains examples, code snippets and samples that did not get their own projects
 
 
 
+ScheduledJobAuditLog
+http://blog.mathiaskunto.com/2013/12/01/please-explain-yourself-reasons-and-audit-logging-in-episerver-scheduled-jobs/
+
+Adds audit log functionality to the EPiServer scheduled jobs. Also a required field for giving reasons on why the action was taken.
+
+
+
 ScheduledParameterJob
 http://blog.mathiaskunto.com/2012/02/13/supplying-episerver-scheduled-jobs-with-parameters-through-admin-mode/
 
