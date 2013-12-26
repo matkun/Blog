@@ -15,6 +15,13 @@ Extends Image to allow for embedding base64 encoded images from the EPiServer VP
 
 
 
+BookmarkLinks
+http://blog.mathiaskunto.com/2013/12/26/insert-links-to-bookmarks-in-other-episerver-pages/
+
+Adds the possibility to create links to EPiServer's bookmarks in TinyMCE.
+
+
+
 ExampleMVPVisualStudio2010Solution
 http://blog.mathiaskunto.com/2012/02/27/complete-and-concrete-example-of-what-an-asp-net-webforms-model-view-presenter-project-may-look-like-using-structuremap-nunit-and-automoq/
 
