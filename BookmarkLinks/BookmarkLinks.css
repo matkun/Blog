@@ -1,0 +1,24 @@
+﻿#ddlBookmarkSelector {
+    margin-top: 3px;
+    width: 268px;
+}
+
+.bookmark-selector-label {
+    margin-top: 8px;
+}
+
+.error {
+    color: red;
+}
+
+#linkLanguageContainer {
+    display: block !important; /* Bad important is bad >_< */
+}
+
+#linkLanguageContainer label {
+    margin-top: 4px;
+}
+
+#linkLanguageContainer select {
+    width: 268px;
+}
