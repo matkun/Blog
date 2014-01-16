@@ -70,13 +70,13 @@ SampleCode.BookmarkLinks = function () {
         onClickAttrArr[7] = "SampleCode.BookmarkLinks.pageSelectorCallback";
         onClickAttribute = onClickAttrArr.join(',');
 		
-		// We cannot put it back in the onclick attribute since IE won't accept it, and nothing will happen when
-		// the button is pushed. globalEval here should be as dangerous as if someone changed the vanilla onclick
-		// string with FireBug.
-		pageSelectButton.removeAttr('onclick');
-		pageSelectButton.on('click', function () {
-			$.globalEval(onClickAttribute);
-		});
+        // We cannot put it back in the onclick attribute since IE won't accept it, and nothing will happen when
+        // the button is pushed. globalEval here should be as dangerous as if someone changed the vanilla onclick
+        // string with FireBug.
+        pageSelectButton.removeAttr('onclick');
+        pageSelectButton.on('click', function () {
+            $.globalEval(onClickAttribute);
+        });
     }
 
     return {
