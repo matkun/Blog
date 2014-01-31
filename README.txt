@@ -43,6 +43,13 @@ Adds a custom property to the EPiServer website allowing web editors to create i
 
 
 
+LanguageFileEditor
+http://blog.mathiaskunto.com/2011/09/04/allowing-web-administrators-to-dynamically-update-episerver-language-files/
+
+Allows web administrators to update EPiServer language files through admin mode.
+
+
+
 NuGet
 https://github.com/matkun/Blog/tree/master/NuGet
 NuGet packages mostly for the EPiServer functionality listed below; like PageTypeTreeFilter and ScheduledParameterJob.
