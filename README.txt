@@ -22,6 +22,13 @@ Adds the possibility to create links to EPiServer's bookmarks in TinyMCE.
 
 
 
+EPiServerLanguageScanner
+http://blog.mathiaskunto.com/
+
+Tool that looks through EPiServer style language files scanning your source code for the ones that are orphaned; i.e. are not used in your code.
+
+
+
 ExampleMVPVisualStudio2010Solution
 http://blog.mathiaskunto.com/2012/02/27/complete-and-concrete-example-of-what-an-asp-net-webforms-model-view-presenter-project-may-look-like-using-structuremap-nunit-and-automoq/
 
