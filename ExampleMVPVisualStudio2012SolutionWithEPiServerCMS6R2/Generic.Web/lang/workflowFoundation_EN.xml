@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="English" id="en">
+    <admin>
+      <plugin>
+        <activitypluginattribute>Custom Activities</activitypluginattribute>
+        <workflowtaskattribute>Handles Workflow-Related Tasks</workflowtaskattribute>
+      </plugin>
+      <workflowadmin>
+        <confirmdelete>Do you want to remove definition?</confirmdelete>
+        <count>Count</count>
+        <createnew>Create Definition</createnew>
+        <definitionname>Definition Name</definitionname>
+        <defs>Defined workflows:</defs>
+        <deftab>Definitions</deftab>
+        <delete>Delete</delete>
+        <description>Administer workflows</description>
+        <displayname>Workflows</displayname>
+        <edit>Edit</edit>
+        <eventlist>The number of instances (if any) waiting for each EPiServer CMS-related event.</eventlist>
+        <eventname>Event</eventname>
+        <fetchsystem>Get data</fetchsystem>
+        <filterondefinition>Filter on definition</filterondefinition>
+        <heading>Administration of Workflows</heading>
+        <info>Create and administer workflow definitions and instances.</info>
+        <running>Running workflows:</running>
+        <runningtab>Running Instances</runningtab>
+        <startevents>Triggering Event</startevents>
+        <systemtab>System Information</systemtab>
+        <type>Type</type>
+      </workflowadmin>
+      <workflowdefinitionedit>
+        <allpagetypes>All page types</allpagetypes>
+        <assemblyerror>Assembly must be given</assemblyerror>
+        <assemblyname>Assembly name</assemblyname>
+        <automaticstart>Automatic Start</automaticstart>
+        <basictab>General</basictab>
+        <cancel>Cancel</cancel>
+        <classerror>Class must be given</classerror>
+        <classname>Class name</classname>
+        <completedDefinition>Start next instance automatically</completedDefinition>
+        <configureparams>Configure start parameters</configureparams>
+        <confirmdelete>Do you want to remove definition?</confirmdelete>
+        <confirmuser>Do you want to remove selected user/group?</confirmuser>
+        <copy>Duplicate</copy>
+        <defname>Definition name</defname>
+        <delete>Delete</delete>
+        <description>Description</description>
+        <heading>Configuration of Definition</heading>
+        <info>It is possible to have several definitions based on the same class. Every definition must have a unique name.&lt;br/&gt;The class must be defined using its fully qualified name (including namespace).</info>
+        <layout>Layout file</layout>
+        <layoutfileloaded>Layout is uploaded</layoutfileloaded>
+        <multiplename>There is already a definition with specified name</multiplename>
+        <namecopy>Copy of</namecopy>
+        <nameerror>Name must be given</nameerror>
+        <namenumbercopy>Copy ({0}) of</namenumbercopy>
+        <nolayoutfileloaded>No layout is uploaded</nolayoutfileloaded>
+        <none>None</none>
+        <notworkflowtype>Type must inherit SequentialWorkflowActivity or StateMachineWorkflowActivity</notworkflowtype>
+        <noxomlfileloaded>No Xoml is uploaded</noxomlfileloaded>
+        <pageroot>Start page for the definition</pageroot>
+        <pagetypes>Apply to page types</pagetypes>
+        <running>Running workflows:</running>
+        <runningtab>Running Instances</runningtab>
+        <save>Save</save>
+        <securitytab>Security</securitytab>
+        <startevent>Event(s) to start instance</startevent>
+        <typenotloadable>Could not load given type, make sure it is deployed to bin directory</typenotloadable>
+        <view>Show workflow image</view>
+        <xoml>Xoml file</xoml>
+        <xomlfileloaded>Xoml is uploaded</xomlfileloaded>
+      </workflowdefinitionedit>
+      <workflowstartparams>
+        <cancel>Cancel</cancel>
+        <heading>Start Parameters</heading>
+        <noattribute>The defined workflow doesn't have WorkflowPlugInAttribute</noattribute>
+        <nointerface>The given control in WorkflowPlugInAttribute doesn't implement IWorkflowStartParameterHandler</nointerface>
+        <pathfailure>Could not load the given control from</pathfailure>
+        <save>Save</save>
+      </workflowstartparams>
+    </admin>
+    <workflow>
+      <edit>
+        <commandaction>
+          <tooltip>Start Workflow Instance</tooltip>
+        </commandaction>
+        <task>
+          <description>Workflow related tasks</description>
+          <displayname>Workflow tasks</displayname>
+          <notset>Not set</notset>
+        </task>
+        <taskcontrol>
+          <eventinvoked>Data sent to workflow</eventinvoked>
+          <eventinvokedtaskdeleted>Data sent to workflow, task deleted</eventinvokedtaskdeleted>
+          <instancenotfound>The workflow instance for this task could not be loaded (probably it has been terminated)</instancenotfound>
+          <invoke>Send</invoke>
+          <loaderror>Could not load specified user control, exception:</loaderror>
+          <nocontrolfound>There is no waiting activity with usercontrol registered</nocontrolfound>
+          <view>View</view>
+        </taskcontrol>
+        <workfloweditcontrol>
+          <displayname>Workflow</displayname>
+          <info>There are no instances or tasks related to this page available</info>
+          <selectdefinition>Select definition to start instance of</selectdefinition>
+          <startworkflow>Start</startworkflow>
+          <tasksforpage>Tasks related to page</tasksforpage>
+          <workflow>workflow</workflow>
+        </workfloweditcontrol>
+        <workflowhistory>
+          <details>Details</details>
+          <history>History</history>
+          <user>User</user>
+        </workflowhistory>
+        <workflowimage>
+          <generationerror>Could not generate the workflow image. Contact the system administrator.</generationerror>
+          <instancenotfound>Could not generate the workflow image. The requested workflow instance could not be found.</instancenotfound>
+          <title>Flow Chart</title>
+        </workflowimage>
+        <workflowinstance>
+          <page>
+            <description>Running workflows</description>
+            <displayname>Workflows</displayname>
+            <running>Running workflows:</running>
+          </page>
+          <start>
+            <definitiontostart>Create an instance of</definitiontostart>
+            <description>Create new workflow</description>
+            <displayname>Create workflow</displayname>
+            <instancestartcanceled>Start of instance was cancelled by an event handler, reason:</instancestartcanceled>
+            <instancestarted>An instance has started of definition</instancestarted>
+            <nodefinition>There are no workflow definitions available</nodefinition>
+            <selectdefinition>Select definition to start instance of</selectdefinition>
+            <start>Start</start>
+          </start>
+        </workflowinstance>
+        <workflowlist>
+          <confirmterminate>Do you want to terminate instance?</confirmterminate>
+          <confirmterminateall>Do you want to terminate instances?</confirmterminateall>
+          <count>Number of instances</count>
+          <definitionname>Definition name</definitionname>
+          <details>Details<definitionname>Definition name</definitionname><history>History</history><initiator>Creator</initiator><instanceid>Instance id</instanceid><page>Page</page><task>Current tasks</task><terminate>Terminate</terminate><type>Type</type><waitingevents>Waiting events</waitingevents><view>View</view></details>
+          <fetch>Show</fetch>
+          <initiator>Creator</initiator>
+          <missingdeleteaccess>There are some instances that you dont have terminate access to</missingdeleteaccess>
+          <terminateall>Terminate all</terminateall>
+          <type>Type</type>
+        </workflowlist>
+        <workflowtask>
+          <assignedto>Assigned to</assignedto>
+          <confirmdelete>Do you want to remove task?</confirmdelete>
+          <created>Created</created>
+          <description>Description</description>
+          <duedate>Due date</duedate>
+          <subject>Subject</subject>
+        </workflowtask>
+      </edit>
+      <runtime>
+        <adduserdata>
+          <description>Key:</description>
+          <subject>UserData added</subject>
+        </adduserdata>
+        <associatedwithpage>
+          <description>Page id:</description>
+          <subject>Associated with page</subject>
+        </associatedwithpage>
+        <definitionnotfound>The workflow definition could not be found.</definitionnotfound>
+        <instancenotfound>The workflow instance could not be found.</instancenotfound>
+        <instancestarted>
+          <description>Workflow instance started</description>
+          <subject>Workflow started</subject>
+        </instancestarted>
+        <taskcreated>
+          <description>Task description:</description>
+          <subject>Task created, subject:</subject>
+        </taskcreated>
+        <taskdeleted>
+          <description>Task id:</description>
+          <subject>Task deleted</subject>
+        </taskdeleted>
+        <taskupdated>
+          <description>Task description:</description>
+          <subject>Task updated, subject:</subject>
+        </taskupdated>
+      </runtime>
+      <translate>
+        <rangenumber>The number must be a positive number less than 2147483648.</rangenumber>
+      </translate>
+    </workflow>
+    <workflows>
+      <approval>
+        <approvaltask>
+          <pageheading>Approval Workflow for Page</pageheading>
+          <subject>Approve page</subject>
+        </approvaltask>
+        <approvedevent>
+          <approved>Approved</approved>
+          <approvedby>Page was approved by {0}</approvedby>
+          <comment>Comment</comment>
+          <notapproved>Not approved</notapproved>
+          <pageapproved>{0} was approved</pageapproved>
+        </approvedevent>
+        <history>
+          <approved>Page was approved</approved>
+          <notapproved>Page was not approved</notapproved>
+        </history>
+        <parallel>
+          <description>A parallel approval workflow</description>
+        </parallel>
+        <sequential>
+          <description>An sequential approval workflow</description>
+        </sequential>
+        <startparameters>
+          <approversvisible>Selection of approvers available in Edit mode</approversvisible>
+          <description>Description for approvers</description>
+          <isrole>Group</isrole>
+          <name>Name</name>
+          <noapprovers>At least one approver must be selected</noapprovers>
+          <noapproversvisible>At least one approver must be selected if approvers selection is not available in Edit mode</noapproversvisible>
+          <nopage>{PageName}</nopage>
+          <notnumber>Number of approvments must be a number</notnumber>
+          <notpublishrights>User {0} has not read or publish access for {1}</notpublishrights>
+          <notvalidpage>No valid page is selected for approval workflow</notvalidpage>
+          <numberofapprovers>Select minimum number that has to approve</numberofapprovers>
+          <numbersvisible>Selection of numbers of approvers available in Edit mode</numbersvisible>
+          <positivenumber>Number of approvments must be a positive number</positivenumber>
+          <publishedversion>Selected page version is already published</publishedversion>
+          <required>Required</required>
+          <selectapprovers>Select users/groups that should approve</selectapprovers>
+          <tolarge>Number of minimum approvers cant be larger than number of approvers</tolarge>
+        </startparameters>
+        <versioncontrol>
+          <changeddescription>Page version changed from {0} to {1}</changeddescription>
+          <changedsubject>Page version changed</changedsubject>
+          <differs>The loaded page version in edit panel differs from the page version in the workflow instance</differs>
+          <loadedversion>Version loaded in edit panel</loadedversion>
+          <selectversion>Choose page version that should be processed in approval workflow</selectversion>
+          <workflowversion>Version in workflow instance</workflowversion>
+        </versioncontrol>
+      </approval>
+      <feedbackrequest>
+        <description>Description for feedback</description>
+        <feedback>Feedback</feedback>
+        <feedbackposted>Feedback received</feedbackposted>
+        <finish>Complete workflow</finish>
+        <heading>Settings for request for feedback workflow</heading>
+        <nodescription>Description must be sent</nodescription>
+        <noowner>Owner must be set</noowner>
+        <nousers>No users selected</nousers>
+        <ownerdescription>Feedback from users</ownerdescription>
+        <ownerheading>Feedback for request</ownerheading>
+        <ownersubject>Feedback</ownersubject>
+        <pageroot>Select page</pageroot>
+        <plugin>
+          <description>A request for feedback workflow</description>
+        </plugin>
+        <post>Send</post>
+        <selectusers>Select users/groups that you want feedback from</selectusers>
+        <subject>Feedback request</subject>
+        <timetolive>Set time for feedback (hours)</timetolive>
+        <userheading>Please send feedback</userheading>
+      </feedbackrequest>
+      <translate>
+        <addtranslator>Add translator for</addtranslator>
+        <cancelled>There is already a workflow of this type running for this page</cancelled>
+        <completedescription>has been translated to</completedescription>
+        <completesubject>Page was fully translated</completesubject>
+        <fallback>Translator for not specified languages</fallback>
+        <forpage>for page</forpage>
+        <heading>Configure translators for translation notification workflow</heading>
+        <hours>hour</hours>
+        <initialdelay>Start delay</initialdelay>
+        <initialdescription>Please translate</initialdescription>
+        <initialsubject>Translate page</initialsubject>
+        <language>Language</language>
+        <minutes>minutes</minutes>
+        <notcompletedescription>has not been translated to</notcompletedescription>
+        <notcompletesubject>A page has not been fully translated</notcompletesubject>
+        <owner>Process owner</owner>
+        <plugin>
+          <description>A translation notification workflow</description>
+        </plugin>
+        <positivenumber>Must be a positive number</positivenumber>
+        <publishneeded>Language version should be published</publishneeded>
+        <reminder>Time before reminder is sent</reminder>
+        <terminate>Time for translation</terminate>
+        <to>to</to>
+        <translators>Translators</translators>
+      </translate>
+    </workflows>
+  </language>
+</languages>

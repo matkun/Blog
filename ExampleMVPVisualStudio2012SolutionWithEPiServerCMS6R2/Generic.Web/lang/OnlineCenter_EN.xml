@@ -1,0 +1,799 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="English" id="en">
+    <enums>
+      <episerver>
+        <personalization>
+          <visitorgroups>
+            <criteria>
+              <comparisontype>
+                <equal>Equal</equal>
+                <less>Less than</less>
+                <more>More than</more>
+              </comparisontype>
+              <distanceunit>
+                <kilometers>Kilometers</kilometers>
+                <miles>Miles</miles>
+              </distanceunit>
+              <matchstringtype>
+                <contains>Contains</contains>
+                <endswith>Ends with</endswith>
+                <equals>Equals</equals>
+                <startswith>Starts with</startswith>
+              </matchstringtype>
+              <referrertype>
+                <hostname>Host name</hostname>
+                <url>URL</url>
+              </referrertype>
+              <timeframe>
+                <since>Since</since>
+                <total>In total</total>
+                <within>Within</within>
+              </timeframe>
+              <timeperiod>
+                <day>Days</day>
+                <month>Month (30 days)</month>
+                <week>Weeks</week>
+                <year>Years</year>
+              </timeperiod>
+              <visitorgroupmembershipstatus>
+                <member>Member of</member>
+                <notmember>Not a member of</notmember>
+              </visitorgroupmembershipstatus>
+            </criteria>
+            <matchstringtype>
+              <contains>Contains</contains>
+              <endswith>Ends with</endswith>
+              <equals>Equals</equals>
+              <startswith>Starts with</startswith>
+            </matchstringtype>
+          </visitorgroups>
+        </personalization>
+      </episerver>
+    </enums>
+    <reportcenter>
+      <report name="linkstatus">
+        <caption>Link Status</caption>
+        <description>Displays links in the content of the site that are not working.</description>
+        <heading>Link Status</heading>
+        <info>This report displays links in the content of the site that are not working. Select a page from the list of report results to open it in Edit mode.</info>
+      </report>
+    </reportcenter>
+    <shell>
+      <cms>
+        <brokenlinks>
+          <controller>
+            <tooltip>Page Type: {0}, Page ID: {1}</tooltip>
+            <webExceptions>
+              <fallback>Connection Error</fallback>
+              <status name="1">
+                <fallback>Name resolution failure</fallback>
+              </status>
+              <status name="2">
+                <fallback>Connection failure</fallback>
+              </status>
+              <status name="7">
+                <fallback>Server Error</fallback>
+                <httpStatus name="400">Bad Request</httpStatus>
+                <httpStatus name="404">Not Found</httpStatus>
+                <httpStatus name="503">Gateway Timeout</httpStatus>
+              </status>
+            </webExceptions>
+          </controller>
+          <index>
+            <info>This report displays links that could not be reached. This could for example be due to a page being moved, or a site shut down, or that the target link cannot be read at the moment.</info>
+            <itemsperpage>Items per Page</itemsperpage>
+            <name>Link Status</name>
+            <recheck>Recheck</recheck>
+            <showreport>Show Report</showreport>
+            <table>
+              <brokensince>Broken Since</brokensince>
+              <brokenurl>Broken URL</brokenurl>
+              <lastchecked>Last Checked</lastchecked>
+              <linkstatus>Link Status</linkstatus>
+              <pagename>Page Name</pagename>
+            </table>
+            <working>Working...</working>
+          </index>
+        </brokenlinks>
+        <directoryselector>
+          <directorylisting>
+            <directorytype>Directory</directorytype>
+          </directorylisting>
+          <folderselector>
+            <emptyfolder>This folder is empty.</emptyfolder>
+            <favoritesheading>Favorites</favoritesheading>
+            <startingpointsheading>Starting Points</startingpointsheading>
+            <wherelabel>Where</wherelabel>
+          </folderselector>
+          <index>
+            <nameheading>Name</nameheading>
+            <sizeheading>Size</sizeheading>
+            <typeheading>Type</typeheading>
+          </index>
+        </directoryselector>
+        <errordialog>
+          <description>The page may not function properly until it has reloaded. Click the button below to reload the page now.</description>
+          <heading>An unhandled error has occured in a background request.</heading>
+          <reloadtext>Reload</reloadtext>
+          <title>A background request has failed.</title>
+        </errordialog>
+        <externallinks>
+          <common>
+            <hits>Number of Links</hits>
+            <host>Web Address</host>
+          </common>
+          <details>
+            <link>Web Address</link>
+            <page>Page</page>
+          </details>
+          <errors>
+            <pagenumber>Page number must be positive</pagenumber>
+            <pagesize>Page size must be positive</pagesize>
+          </errors>
+          <gadgettitle>External Links</gadgettitle>
+          <pager>
+            <info>Items: {0} - {1} out of {2}</info>
+            <next>&gt;&gt;</next>
+            <prev>&lt;&lt;</prev>
+            <split>...</split>
+          </pager>
+          <settings>
+            <legend>Settings</legend>
+            <pagesize>Number of items to display</pagesize>
+            <showdetails>Show details</showdetails>
+          </settings>
+        </externallinks>
+        <hosting>
+          <fileupload>
+            <conflictingdirectory>A folder with the same name as the new file already exists.</conflictingdirectory>
+            <fileexists>A file with the same name already exists and you don't have sufficient permission to replace the existing file.</fileexists>
+            <fileisnotimage>The selected file is not an image.</fileisnotimage>
+            <fileoverwriteconfirmation>A file with the same name already exists. Do you want to replace the existing file?</fileoverwriteconfirmation>
+            <invaliddirectory>The selected upload directory does not exist.</invaliddirectory>
+            <permissiondenied>You don't have sufficient permission to upload files in the selected folder.</permissiondenied>
+            <targetfilecheckedout>A file with the same name already exists and is checked out to another user.</targetfilecheckedout>
+          </fileupload>
+        </hosting>
+        <menu>
+          <admin>Admin Mode</admin>
+          <cms>CMS</cms>
+          <cmssettings>EPiServer CMS</cmssettings>
+          <edit>Edit Mode</edit>
+          <license>License Agreement</license>
+          <logout>Log out</logout>
+          <mysettings>My Settings</mysettings>
+          <reportcenter>Reports</reportcenter>
+          <selectasite>Select Site to Display in View Mode</selectasite>
+          <toviewmode>To View Mode [{0}]</toviewmode>
+        </menu>
+        <mytasks>
+          <assignedto>Assign To</assignedto>
+          <createnewtask>Create in Edit Mode</createnewtask>
+          <createnewtasktitle>Create Task from Edit Mode</createnewtasktitle>
+          <description>Description</description>
+          <duedate>Due Date</duedate>
+          <EmptySubjectWarning>Task subject is empty</EmptySubjectWarning>
+          <errors>
+            <settingsusergroupnames>Specify correct user groups names.</settingsusergroupnames>
+          </errors>
+          <IncorrectTaskStatusWarning>Specified status is not valid for task</IncorrectTaskStatusWarning>
+          <InvalidDueDate>Task due date is invalid</InvalidDueDate>
+          <legend>Add Task</legend>
+          <mygroups>My groups (delimited with comma)</mygroups>
+          <pagetasks>Page Tasks</pagetasks>
+          <quickadd>Quick Add</quickadd>
+          <quickaddtitle>Create Task from Dashboard</quickaddtitle>
+          <settingsheading>Settings</settingsheading>
+          <status>Status</status>
+          <subject>Subject</subject>
+          <title>My Tasks</title>
+          <tooltip>
+            <created>Created</created>
+            <pageid>Page ID</pageid>
+            <pagepath>Path</pagepath>
+          </tooltip>
+          <UnknownUserWarning>Specified user cannot be found</UnknownUserWarning>
+        </mytasks>
+        <notchangedpages>
+          <errors>
+            <monthswithoutchanges>Month number should be an integer greater than zero.</monthswithoutchanges>
+            <numberofitems>Number of items should be an integer greater than zero.</numberofitems>
+          </errors>
+          <gadgettitle>Unchanged Pages</gadgettitle>
+          <indexview>
+            <changedby>Changed By</changedby>
+            <modified>Changed</modified>
+            <name>Name</name>
+            <status>Status</status>
+          </indexview>
+          <settingsview>
+            <invertsorting>Sort descending</invertsorting>
+            <legend>Settings</legend>
+            <monthswithoutchanges>Number of months</monthswithoutchanges>
+            <numberofitems>Number of items to display</numberofitems>
+          </settingsview>
+        </notchangedpages>
+        <notesgadget>
+          <backgroundcolor>Background Color</backgroundcolor>
+          <backgroundcolors>
+            <blue>Blue</blue>
+            <green>Green</green>
+            <orange>Orange</orange>
+            <pink>Pink</pink>
+            <white>White</white>
+            <yellow>Yellow</yellow>
+          </backgroundcolors>
+          <textsize>Text Size</textsize>
+          <textsizes>
+            <big>Large</big>
+            <normal>Normal</normal>
+            <verybig>Largest</verybig>
+          </textsizes>
+          <title>Notes</title>
+        </notesgadget>
+        <pageinfo>
+          <modifiedby>Changed by</modifiedby>
+          <modifieddate>Changed</modifieddate>
+          <pagelink>ID</pagelink>
+          <pagetype>Page Type</pagetype>
+          <path>Path</path>
+        </pageinfo>
+        <quicklinks>
+          <addlink>Add Link</addlink>
+          <cmsedit>
+            <text>Edit</text>
+            <tooltip>Open CMS Edit Mode</tooltip>
+          </cmsedit>
+          <cmslinkcategoryname>CMS</cmslinkcategoryname>
+          <contentguidecategoryname>Quick Publishing</contentguidecategoryname>
+          <deletelink>Delete Link</deletelink>
+          <episerverworldforum>
+            <text>EPiServer World Forum</text>
+            <tooltip>The forum on EPiServer World</tooltip>
+          </episerverworldforum>
+          <linktitle>Title</linktitle>
+          <linkurl>Web Address</linkurl>
+          <managelinks>Manage Links</managelinks>
+          <mylinkscategoryname>My Links</mylinkscategoryname>
+          <nocategory>No Category</nocategory>
+          <title>Quick Links</title>
+        </quicklinks>
+        <recentlychangedpages>
+          <common>
+            <byall>All Changes</byall>
+            <byme>My Changes</byme>
+            <heading>Recently Changed Pages</heading>
+          </common>
+          <configure>
+            <defaultview>Default View</defaultview>
+            <heading>Settings</heading>
+            <numberofitems>Number of items to display</numberofitems>
+          </configure>
+          <index>
+            <changedby>Changed By</changedby>
+            <modified>Saved</modified>
+            <name>Name</name>
+            <status>Status</status>
+          </index>
+          <rss>
+            <description>These are the most recent changed pages on the site {0}</description>
+          </rss>
+        </recentlychangedpages>
+        <rssgadget>
+          <errors>
+            <invalidfeed>The feed could not be read due to XML error in the feed content returned from "{0}".</invalidfeed>
+            <invaliditemstoshow>The number of items shown must be a positive integer.</invaliditemstoshow>
+            <invaliduri>Invalid web address. The web address must be an absolute URL that begins with http:// or https://.</invaliduri>
+            <notafeed>The web address [{0}] does not contain a valid RSS or Atom feed.</notafeed>
+          </errors>
+          <loadingfeedmessage>Loading feed ...</loadingfeedmessage>
+          <settings>
+            <feedurl>Feed URL</feedurl>
+            <itemstoshow>Items to show</itemstoshow>
+            <loadfeedtitle>Fetch title from feed</loadfeedtitle>
+            <title>Title</title>
+          </settings>
+          <title>RSS Feed Reader</title>
+        </rssgadget>
+        <search>
+          <files>
+            <category>Files</category>
+          </files>
+          <pages>
+            <category>Pages</category>
+            <id>ID</id>
+            <linkurl>Link URL</linkurl>
+            <tooltip>
+              <changed>Changed</changed>
+              <created>Created</created>
+              <id>ID</id>
+              <linkurl>Link URL</linkurl>
+              <pagetype>Page Type</pagetype>
+            </tooltip>
+          </pages>
+        </search>
+        <uploadfile>
+          <controller>
+            <noresize>Don't Resize</noresize>
+          </controller>
+          <index>
+            <alttextlabel>Alt Text</alttextlabel>
+            <imagelegend>Image</imagelegend>
+            <imagesizelabel>Resize Image</imagesizelabel>
+            <savetolegend>Save To</savetolegend>
+            <selectlabel>Select File</selectlabel>
+            <uploadbutton>Upload and Insert</uploadbutton>
+          </index>
+        </uploadfile>
+        <visitorgroups>
+          <criteria>
+            <categories>
+              <categories>Categories</categories>
+              <category>Site Criteria</category>
+              <categorylabel>Category:</categorylabel>
+              <description>Match when the visitor has visited a page with a specified category.</description>
+              <displayname>Visited Category</displayname>
+              <numberofpageviewslabel>Viewed at least</numberofpageviewslabel>
+              <required see="/shell/cms/visitorgroups/criteria/userprofile/required" />
+              <totalcountlabel>pages out of a total</totalcountlabel>
+            </categories>
+            <geographiccoordinate>
+              <category>Time and Place Criteria</category>
+              <coordinatepicker>Select Geographic Coordinate</coordinatepicker>
+              <description>Match the location of the visitor with a selected geographic coordinate.</description>
+              <displayname>Geographic Coordinate</displayname>
+              <googlemapsterms>
+                <accepttext>Please accept the Google Maps APIs Terms of Service to use this functionality.</accepttext>
+                <agreecheckbox>I agree to the terms of service</agreecheckbox>
+                <customurltext>If you have a custom URL for the Google Maps API, such as for a Google Maps API Premier account, please set googleMapsApiV3Url in siteSettings in your configuration as appropriate.</customurltext>
+                <reviewlink>Review Google Maps APIs Terms of Service</reviewlink>
+                <thankyoutext>Thank you. You can now use the select location functionality.</thankyoutext>
+                <title>Google Maps API Terms of Service</title>
+              </googlemapsterms>
+              <latitude>Latitude: </latitude>
+              <location>Location: </location>
+              <longitude>Longitude: </longitude>
+              <radius>Radius: </radius>
+              <selectlocation>Select location</selectlocation>
+            </geographiccoordinate>
+            <geographiclocation>
+              <anylocation>Any</anylocation>
+              <category>Time and Place Criteria</category>
+              <continent>Continent</continent>
+              <continents>
+                <AF>Africa</AF>
+                <AN>Antarctica</AN>
+                <AS>Asia</AS>
+                <EU>Europe</EU>
+                <NA>North America</NA>
+                <OC>Oceania</OC>
+                <SA>South America</SA>
+              </continents>
+              <countries>
+                <!-- Exceptional reservations in the ISO 3166 standard-->
+                <AD>Andorra</AD>
+                <AE>United Arab Emirates</AE>
+                <AF>Afghanistan</AF>
+                <AG>Antigua And Barbuda</AG>
+                <AI>Anguilla</AI>
+                <AL>Albania</AL>
+                <AM>Armenia</AM>
+                <AN>Netherlands Antilles</AN>
+                <AO>Angola</AO>
+                <AQ>Antarctica</AQ>
+                <AR>Argentina</AR>
+                <AS>American Samoa</AS>
+                <AT>Austria</AT>
+                <AU>Australia</AU>
+                <AW>Aruba</AW>
+                <AX>Åland Islands</AX>
+                <AZ>Azerbaijan</AZ>
+                <BA>Bosnia And Herzegovina</BA>
+                <BB>Barbados</BB>
+                <BD>Bangladesh</BD>
+                <BE>Belgium</BE>
+                <BF>Burkina Faso</BF>
+                <BG>Bulgaria</BG>
+                <BH>Bahrain</BH>
+                <BI>Burundi</BI>
+                <BJ>Benin</BJ>
+                <BL>Saint Barthélemy</BL>
+                <BM>Bermuda</BM>
+                <BN>Brunei Darussalam</BN>
+                <BO>Bolivia, Plurinational State Of</BO>
+                <BR>Brazil</BR>
+                <BS>Bahamas</BS>
+                <BT>Bhutan</BT>
+                <BV>Bouvet Island</BV>
+                <BW>Botswana</BW>
+                <BY>Belarus</BY>
+                <BZ>Belize</BZ>
+                <CA>Canada</CA>
+                <CC>Cocos (Keeling) Islands</CC>
+                <CD>Congo, The Democratic Republic Of The</CD>
+                <CF>Central African Republic</CF>
+                <CG>Congo</CG>
+                <CH>Switzerland</CH>
+                <CI>Côte D'Ivoire</CI>
+                <CK>Cook Islands</CK>
+                <CL>Chile</CL>
+                <CM>Cameroon</CM>
+                <CN>China</CN>
+                <CO>Colombia</CO>
+                <CR>Costa Rica</CR>
+                <CU>Cuba</CU>
+                <CV>Cape Verde</CV>
+                <CX>Christmas Island</CX>
+                <CY>Cyprus</CY>
+                <CZ>Czech Republic</CZ>
+                <DE>Germany</DE>
+                <DJ>Djibouti</DJ>
+                <DK>Denmark</DK>
+                <DM>Dominica</DM>
+                <DO>Dominican Republic</DO>
+                <DZ>Algeria</DZ>
+                <EC>Ecuador</EC>
+                <EE>Estonia</EE>
+                <EG>Egypt</EG>
+                <EH>Western Sahara</EH>
+                <ER>Eritrea</ER>
+                <ES>Spain</ES>
+                <ET>Ethiopia</ET>
+                <FI>Finland</FI>
+                <FJ>Fiji</FJ>
+                <FK>Falkland Islands (Malvinas)</FK>
+                <FM>Micronesia, Federated States Of</FM>
+                <FO>Faroe Islands</FO>
+                <FR>France</FR>
+                <FX>France, Metropolitan</FX>
+                <GA>Gabon</GA>
+                <GB>United Kingdom</GB>
+                <GD>Grenada</GD>
+                <GE>Georgia</GE>
+                <GF>French Guiana</GF>
+                <GG>Guernsey</GG>
+                <GH>Ghana</GH>
+                <GI>Gibraltar</GI>
+                <GL>Greenland</GL>
+                <GM>Gambia</GM>
+                <GN>Guinea</GN>
+                <GP>Guadeloupe</GP>
+                <GQ>Equatorial Guinea</GQ>
+                <GR>Greece</GR>
+                <GS>South Georgia And The South Sandwich Islands</GS>
+                <GT>Guatemala</GT>
+                <GU>Guam</GU>
+                <GW>Guinea-Bissau</GW>
+                <GY>Guyana</GY>
+                <HK>Hong Kong</HK>
+                <HM>Heard Island And Mcdonald Islands</HM>
+                <HN>Honduras</HN>
+                <HR>Croatia</HR>
+                <HT>Haiti</HT>
+                <HU>Hungary</HU>
+                <ID>Indonesia</ID>
+                <IE>Ireland</IE>
+                <IL>Israel</IL>
+                <IM>Isle Of Man</IM>
+                <IN>India</IN>
+                <IO>British Indian Ocean Territory</IO>
+                <IQ>Iraq</IQ>
+                <IR>Iran, Islamic Republic Of</IR>
+                <IS>Iceland</IS>
+                <IT>Italy</IT>
+                <JE>Jersey</JE>
+                <JM>Jamaica</JM>
+                <JO>Jordan</JO>
+                <JP>Japan</JP>
+                <KE>Kenya</KE>
+                <KG>Kyrgyzstan</KG>
+                <KH>Cambodia</KH>
+                <KI>Kiribati</KI>
+                <KM>Comoros</KM>
+                <KN>Saint Kitts And Nevis</KN>
+                <KP>Korea, Democratic People'S Republic Of</KP>
+                <KR>Korea, Republic Of</KR>
+                <KW>Kuwait</KW>
+                <KY>Cayman Islands</KY>
+                <KZ>Kazakhstan</KZ>
+                <LA>Lao People'S Democratic Republic</LA>
+                <LB>Lebanon</LB>
+                <LC>Saint Lucia</LC>
+                <LI>Liechtenstein</LI>
+                <LK>Sri Lanka</LK>
+                <LR>Liberia</LR>
+                <LS>Lesotho</LS>
+                <LT>Lithuania</LT>
+                <LU>Luxembourg</LU>
+                <LV>Latvia</LV>
+                <LY>Libyan Arab Jamahiriya</LY>
+                <MA>Morocco</MA>
+                <MC>Monaco</MC>
+                <MD>Moldova, Republic Of</MD>
+                <ME>Montenegro</ME>
+                <MF>Saint Martin</MF>
+                <MG>Madagascar</MG>
+                <MH>Marshall Islands</MH>
+                <MK>Macedonia, The Former Yugoslav Republic Of</MK>
+                <ML>Mali</ML>
+                <MM>Myanmar</MM>
+                <MN>Mongolia</MN>
+                <MO>Macao</MO>
+                <MP>Northern Mariana Islands</MP>
+                <MQ>Martinique</MQ>
+                <MR>Mauritania</MR>
+                <MS>Montserrat</MS>
+                <MT>Malta</MT>
+                <MU>Mauritius</MU>
+                <MV>Maldives</MV>
+                <MW>Malawi</MW>
+                <MX>Mexico</MX>
+                <MY>Malaysia</MY>
+                <MZ>Mozambique</MZ>
+                <NA>Namibia</NA>
+                <NC>New Caledonia</NC>
+                <NE>Niger</NE>
+                <NF>Norfolk Island</NF>
+                <NG>Nigeria</NG>
+                <NI>Nicaragua</NI>
+                <NL>Netherlands</NL>
+                <NO>Norway</NO>
+                <NP>Nepal</NP>
+                <NR>Nauru</NR>
+                <NU>Niue</NU>
+                <NZ>New Zealand</NZ>
+                <OM>Oman</OM>
+                <PA>Panama</PA>
+                <PE>Peru</PE>
+                <PF>French Polynesia</PF>
+                <PG>Papua New Guinea</PG>
+                <PH>Philippines</PH>
+                <PK>Pakistan</PK>
+                <PL>Poland</PL>
+                <PM>Saint Pierre And Miquelon</PM>
+                <PN>Pitcairn</PN>
+                <PR>Puerto Rico</PR>
+                <PS>Palestinian Territory, Occupied</PS>
+                <PT>Portugal</PT>
+                <PW>Palau</PW>
+                <PY>Paraguay</PY>
+                <QA>Qatar</QA>
+                <RE>Réunion</RE>
+                <RO>Romania</RO>
+                <RS>Serbia</RS>
+                <RU>Russian Federation</RU>
+                <RW>Rwanda</RW>
+                <SA>Saudi Arabia</SA>
+                <SB>Solomon Islands</SB>
+                <SC>Seychelles</SC>
+                <SD>Sudan</SD>
+                <SE>Sweden</SE>
+                <SG>Singapore</SG>
+                <SH>Saint Helena, Ascension And Tristan Da Cunha</SH>
+                <SI>Slovenia</SI>
+                <SJ>Svalbard And Jan Mayen</SJ>
+                <SK>Slovakia</SK>
+                <SL>Sierra Leone</SL>
+                <SM>San Marino</SM>
+                <SN>Senegal</SN>
+                <SO>Somalia</SO>
+                <SR>Suriname</SR>
+                <ST>Sao Tome And Principe</ST>
+                <SV>El Salvador</SV>
+                <SY>Syrian Arab Republic</SY>
+                <SZ>Swaziland</SZ>
+                <TC>Turks And Caicos Islands</TC>
+                <TD>Chad</TD>
+                <TF>French Southern Territories</TF>
+                <TG>Togo</TG>
+                <TH>Thailand</TH>
+                <TJ>Tajikistan</TJ>
+                <TK>Tokelau</TK>
+                <TL>Timor-Leste</TL>
+                <TM>Turkmenistan</TM>
+                <TN>Tunisia</TN>
+                <TO>Tonga</TO>
+                <TR>Turkey</TR>
+                <TT>Trinidad And Tobago</TT>
+                <TV>Tuvalu</TV>
+                <TW>Taiwan, Province Of China</TW>
+                <TZ>Tanzania, United Republic Of</TZ>
+                <UA>Ukraine</UA>
+                <UG>Uganda</UG>
+                <UM>United States Minor Outlying Islands</UM>
+                <US>United States</US>
+                <UY>Uruguay</UY>
+                <UZ>Uzbekistan</UZ>
+                <VA>Holy See (Vatican City State)</VA>
+                <VC>Saint Vincent And The Grenadines</VC>
+                <VE>Venezuela, Bolivarian Republic Of</VE>
+                <WF>Wallis And Futuna</WF>
+                <VG>Virgin Islands, British</VG>
+                <VI>Virgin Islands, U.S.</VI>
+                <VN>Viet Nam</VN>
+                <WS>Samoa</WS>
+                <VU>Vanuatu</VU>
+                <YE>Yemen</YE>
+                <YT>Mayotte</YT>
+                <ZA>South Africa</ZA>
+                <ZM>Zambia</ZM>
+                <ZW>Zimbabwe</ZW>
+              </countries>
+              <country>Country</country>
+              <description>Match the location of the visitor with a specified geographic location.</description>
+              <displayname>Geographic Location</displayname>
+              <mustselectcontinent>Select a continent</mustselectcontinent>
+              <region>Region</region>
+            </geographiclocation>
+            <numberofvisits>
+              <category>Site Criteria</category>
+              <comparison>Type of Comparison</comparison>
+              <description>Match the number of times the visitor has visited the website.</description>
+              <displayname>Number of Visits</displayname>
+              <fixtime>Date</fixtime>
+              <floattime>Timespan</floattime>
+              <required see="/shell/cms/visitorgroups/criteria/userprofile/required" />
+              <threshold>Threshold</threshold>
+              <thresholdtolargewarning>You cannot compare more than ten visits for a specific time scope as only the last ten visits for each visitor is stored.</thresholdtolargewarning>
+              <timeframe>Time Frame</timeframe>
+            </numberofvisits>
+            <referrer>
+              <category>URL Criteria</category>
+              <description>Match the referring URL with a specified text string.</description>
+              <displayname>Referrer</displayname>
+            </referrer>
+            <required>Please select a value.</required>
+            <searchwordreferrer>
+              <category>URL Criteria</category>
+              <description>Match the search words with a specified text string.</description>
+              <displayname>Search Keyword</displayname>
+            </searchwordreferrer>
+            <starturl>
+              <category>URL Criteria</category>
+              <description>Match the URL to that which the visitor landed on the website.</description>
+              <displayname>Landing URL</displayname>
+              <url>URL: </url>
+            </starturl>
+            <timeofday>
+              <bothornonetime>Either set both the start time and the end time or leave both empty.</bothornonetime>
+              <category>Time and Place Criteria</category>
+              <daysofweek>Day of week</daysofweek>
+              <description>Match a specified time period and day of the week.</description>
+              <displayname>Time of Day</displayname>
+              <endtime>To:</endtime>
+              <friday>Friday</friday>
+              <monday>Monday</monday>
+              <nodayofweekselected>Select at least one day.</nodayofweekselected>
+              <saturday>Saturday</saturday>
+              <starttime>From:</starttime>
+              <starttimeafterendtime>Change the start time so that it occurs before the end time.</starttimeafterendtime>
+              <sunday>Sunday</sunday>
+              <thursday>Thursday</thursday>
+              <tuesday>Tuesday</tuesday>
+              <wednesday>Wednesday</wednesday>
+            </timeofday>
+            <userprofile>
+              <category>Site Criteria</category>
+              <description>Match one of the user profile properties with a specified value.</description>
+              <displayname>User Profile</displayname>
+              <key>
+                <address>Address</address>
+                <company>Company</company>
+                <email>E-mail address</email>
+                <firstname>First name</firstname>
+                <lastname>Last name</lastname>
+                <title>Title</title>
+              </key>
+              <required>Please select a value</required>
+            </userprofile>
+            <viewedpages>
+              <category>Site Criteria</category>
+              <description>Match when the visitor visited a specified page.</description>
+              <displayname>Visited Page</displayname>
+              <notvalidpagereference>The selected page could not be found</notvalidpagereference>
+            </viewedpages>
+            <visitorgroup>
+              <category>Visitor Groups</category>
+              <description>Match membership in an existing visitor group.</description>
+              <displayname>Visitor Group Membership</displayname>
+              <foundcirclereference>Please select a different visitor group as referencing this visitor group leads to a circular reference.</foundcirclereference>
+            </visitorgroup>
+          </criteria>
+          <edit>
+            <acceptrenaming>Accept</acceptrenaming>
+            <addtitle>Create Visitor Group</addtitle>
+            <all>All</all>
+            <allof>All of: </allof>
+            <any>Any</any>
+            <anyof>Any of: </anyof>
+            <cantchangename>This visitor group may have been used to assign access rights to pages and files. If you change its name, any access rights set for this group will no longer work.</cantchangename>
+            <category>
+              <default>Default</default>
+            </category>
+            <criteria>Criteria</criteria>
+            <drophint>Drop new criterion here</drophint>
+            <edittitle>Edit Visitor Group</edittitle>
+            <generalfields>Other Information</generalfields>
+            <info>Adapt content on your website by first creating visitor groups and then using the groups to target the content on pages.</info>
+            <issecurityrole>Security role</issecurityrole>
+            <issecurityroledescription>Make this visitor group available when setting access rights for pages and files.</issecurityroledescription>
+            <match>Match</match>
+            <name>Name</name>
+            <notes>Notes</notes>
+            <points>
+              <required>Required</required>
+              <threshold>Threshold</threshold>
+              <title>Points</title>
+            </points>
+            <pointsfrom>At least {0} points from: </pointsfrom>
+            <statistics>Statistics</statistics>
+            <statisticsdescription>Enable statistics for this visitor group</statisticsdescription>
+            <typenotfound>The type {0} could not be loaded</typenotfound>
+            <undorenaming>Undo</undorenaming>
+          </edit>
+          <index>
+            <copy>Copy</copy>
+            <info>Visitor groups are used to adapt the content on your website to a specific target group.</info>
+            <name>Visitor Groups</name>
+            <sessionstatewarning>This site is not configured to use Session State which is a prerequisite for Visitor Groups. Please contact the administrator for more information.</sessionstatewarning>
+            <table>
+              <action>Action</action>
+              <actions>
+                <copy>Duplicate</copy>
+                <delete>Delete</delete>
+                <edit>Edit</edit>
+                <resetstatistics>Clear statistics</resetstatistics>
+              </actions>
+              <deleteconfirmation>Are you sure you want to delete this visitor group?</deleteconfirmation>
+              <name>Name</name>
+              <notes>Notes</notes>
+              <resetstatisticsconfirmation>Are you sure you want to clear the statistics for this visitor group?</resetstatisticsconfirmation>
+            </table>
+          </index>
+        </visitorgroups>
+        <xformsviewer>
+          <autoupdatelevel>
+            <never>Never</never>
+            <normal>Normal (every 10 minutes)</normal>
+            <often>Often (every 60 seconds)</often>
+            <seldom>Seldom (every 60 minutes)</seldom>
+          </autoupdatelevel>
+          <AutoupdateLevel>Automatically update</AutoupdateLevel>
+          <chartperiodicity>
+            <day>Per day</day>
+            <hour>Per hour</hour>
+            <minute>Per minute</minute>
+            <month>Per month</month>
+            <week>Per week</week>
+          </chartperiodicity>
+          <ChartPeriodicityLabel>Chart periodicity</ChartPeriodicityLabel>
+          <ChartSettings>Chart settings</ChartSettings>
+          <DemoMode>Demo mode</DemoMode>
+          <error>
+            <fields>Fields are not selected</fields>
+            <formfields>Select form fields</formfields>
+            <numberofposts>Number of items should be between 1 and 50</numberofposts>
+            <xformid>Select a form</xformid>
+          </error>
+          <GadgetTitle>Forms Viewer</GadgetTitle>
+          <NoFieldsAvailable>No available fields</NoFieldsAvailable>
+          <NoFormsAvailable>No available forms</NoFormsAvailable>
+          <NumberOfPosts>Number of items to display</NumberOfPosts>
+          <SelectFields>Fields to view</SelectFields>
+          <SelectXForm>Select form</SelectXForm>
+          <settings>Settings</settings>
+          <ShowChart>Display chart</ShowChart>
+          <ShowDate>Display item post date</ShowDate>
+          <TableColumnPostedTime>Posted</TableColumnPostedTime>
+        </xformsviewer>
+      </cms>
+      <common>
+        <buttons>
+          <cancel>Cancel</cancel>
+          <save>Save</save>
+        </buttons>
+      </common>
+    </shell>
+  </language>
+</languages>

@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+  <language name="Dansk" id="da">
+    <admin>
+      <contentchanneledit>
+        <channelname>Kanalnavn</channelname>
+        <channelpageroot>Siderod</channelpageroot>
+        <channelvpproot>Virtuel rod for filer</channelvpproot>
+        <currentmapping>Egenskabstilknytning for sidetype</currentmapping>
+        <defaultpagetype>Standardsidetype</defaultpagetype>
+        <deletemapping>Fjern egenskabstilknytning for sidetype</deletemapping>
+        <heading>Konfigurer indholdskanaler</heading>
+        <info>Hver kanal kan konfigureres til flere sidetyper, og der kan defineres en egenskabstilknytning for hver af disse sidetyper.</info>
+        <mappedpagetypes>Tilknyttede sidetyper</mappedpagetypes>
+        <mappedproperty>Tilknyttet egenskab</mappedproperty>
+        <mappingheader>Tilknyt egenskaber for sidetyper</mappingheader>
+        <missingname>Der skal angives et kanalnavn</missingname>
+        <nonemappedpagetypes>Ikke-tilknyttede sidetyper</nonemappedpagetypes>
+        <novppmapping>Der er ikke konfigureret nogen Virtual Path Provider for den virtuelle søgesti</novppmapping>
+        <pagetypeproperty>Egenskab for sidetype</pagetypeproperty>
+        <saveaction>Gem handling</saveaction>
+        <saveactionoption>
+          <checkin>Tjek ind</checkin>
+          <none>Ingen</none>
+          <publish>Udgiv</publish>
+          <save>Gem</save>
+        </saveactionoption>
+        <savemapping>Tilføj egenskabstilknytning for sidetype</savemapping>
+        <updatemapping>Opdater egenskabstilknytning for sidetype</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>Kanalnavn</channelname>
+        <confirmdelete>Vil du slette indholdskanalen?</confirmdelete>
+        <copy>Kopi</copy>
+        <copyof>Kopi af</copyof>
+        <description>Administrer indholdskanaler</description>
+        <displayname>Indholdskanaler</displayname>
+        <heading>Indholdskanaler</heading>
+        <info>Opret og administrer indholdskanaler.</info>
+        <namenumbercopy>Kopi ({0}) af</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+  <language name="Deutsch" id="de">
+    <admin>
+      <contentchanneledit>
+        <channelname>Kanalname</channelname>
+        <channelpageroot>Seitenstamm</channelpageroot>
+        <channelvpproot>Virtueller Stamm für Dateien</channelvpproot>
+        <currentmapping>Eigenschaftenzuordnung für Seitentyp</currentmapping>
+        <defaultpagetype>Standardseitentyp</defaultpagetype>
+        <deletemapping>Eigenschaftenzuordnung für Seitentyp entfernen</deletemapping>
+        <heading>Inhaltskanal konfigurieren</heading>
+        <info>Jeder Kanal kann für mehrere Seitentypen konfiguriert werden, und für jeden dieser Seitentypen kann eine Eigenschaftenzuordnung definiert werden.</info>
+        <mappedpagetypes>Zugeordnete Seitentypen</mappedpagetypes>
+        <mappedproperty>Zugeordnete Eigenschaft</mappedproperty>
+        <mappingheader>Eigenschaften für Seitentypen zuordnen</mappingheader>
+        <missingname>Kanalname muss angegeben werden</missingname>
+        <nonemappedpagetypes>Nicht zugeordnete Seitentypen</nonemappedpagetypes>
+        <novppmapping>Für den virtuellen Suchpfad ist kein Anbieter für den virtuellen Pfad konfiguriert</novppmapping>
+        <pagetypeproperty>Seitentypeigenschaft</pagetypeproperty>
+        <saveaction>Speicheraktion</saveaction>
+        <saveactionoption>
+          <checkin>Einchecken</checkin>
+          <none>Keine</none>
+          <publish>Veröffentlichen</publish>
+          <save>Speichern</save>
+        </saveactionoption>
+        <savemapping>Eigenschaftenzuordnung für Seitentyp hinzufügen</savemapping>
+        <updatemapping>Eigenschaftenzuordnung für Seitentyp aktualisieren</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>Kanalname</channelname>
+        <confirmdelete>Möchten Sie den Inhaltskanal löschen?</confirmdelete>
+        <copy>Kopieren</copy>
+        <copyof>Kopie von</copyof>
+        <description>Inhaltskanäle verwalten</description>
+        <displayname>Inhaltskanäle</displayname>
+        <heading>Inhaltskanäle</heading>
+        <info>Erstellen und verwalten Sie Inhaltskanäle.</info>
+        <namenumbercopy>Kopie ({0}) von</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+  <language name="English" id="en">
+    <admin>
+      <contentchanneledit>
+        <channelname>Channel Name</channelname>
+        <channelpageroot>Page root</channelpageroot>
+        <channelvpproot>Virtual root for files</channelvpproot>
+        <currentmapping>Property mapping for page type</currentmapping>
+        <defaultpagetype>Default page type</defaultpagetype>
+        <deletemapping>Remove Property Mapping for Page Type</deletemapping>
+        <heading>Configure Content Channel</heading>
+        <info>Each channel can be configured for several page types and a property mapping can be defined for each of these page types.</info>
+        <mappedpagetypes>Mapped page types</mappedpagetypes>
+        <mappedproperty>Mapped Property</mappedproperty>
+        <mappingheader>Map properties for page types</mappingheader>
+        <missingname>Channel name must be given</missingname>
+        <nonemappedpagetypes>Unmapped page types</nonemappedpagetypes>
+        <novppmapping>There is no Virtual Path Provider configured for the virtual search path</novppmapping>
+        <pagetypeproperty>Page Type Property</pagetypeproperty>
+        <saveaction>Save action</saveaction>
+        <saveactionoption>
+          <checkin>Check in</checkin>
+          <none>None</none>
+          <publish>Publish</publish>
+          <save>Save</save>
+        </saveactionoption>
+        <savemapping>Add Property Mapping for Page Type</savemapping>
+        <updatemapping>Update Property Mapping for Page Type</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>Channel name</channelname>
+        <confirmdelete>Do you want to delete content channel?</confirmdelete>
+        <copy>Copy</copy>
+        <copyof>Copy of</copyof>
+        <description>Administer content channels</description>
+        <displayname>Content Channels</displayname>
+        <heading>Content Channels</heading>
+        <info>Create and administer content channels.</info>
+        <namenumbercopy>Copy ({0}) of</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+  <language name="Español" id="es">
+    <admin>
+      <contentchanneledit>
+        <channelname>Nombre del canal</channelname>
+        <channelpageroot>Raíz de página</channelpageroot>
+        <channelvpproot>Raíz virtual para archivos</channelvpproot>
+        <currentmapping>Asignación de propiedades para tipo de página</currentmapping>
+        <defaultpagetype>Tipo de página predeterminado</defaultpagetype>
+        <deletemapping>Eliminar asignación de propiedades para tipo de página</deletemapping>
+        <heading>Configurar canal de contenido</heading>
+        <info>Cada canal se puede configurar para varios tipos de página y se puede definir una asignación de propiedades para cada uno de estos tipos de página.</info>
+        <mappedpagetypes>Tipos de página asignados</mappedpagetypes>
+        <mappedproperty>Propiedad asignada</mappedproperty>
+        <mappingheader>Asignar propiedades para tipos de página</mappingheader>
+        <missingname>Debe especificar un nombre de canal</missingname>
+        <nonemappedpagetypes>Tipos de página no asignados</nonemappedpagetypes>
+        <novppmapping>No hay ningún proveedor de rutas de acceso virtuales configurado para la ruta de búsqueda virtual</novppmapping>
+        <pagetypeproperty>Propiedad de tipo de página</pagetypeproperty>
+        <saveaction>Guardar acción</saveaction>
+        <saveactionoption>
+          <checkin>Proteger</checkin>
+          <none>Ninguno</none>
+          <publish>Publicar</publish>
+          <save>Guardar</save>
+        </saveactionoption>
+        <savemapping>Agregar asignación de propiedades para tipo de página</savemapping>
+        <updatemapping>Actualizar asignación de propiedades para tipo de página</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>Nombre del canal</channelname>
+        <confirmdelete>¿Desea eliminar el canal de contenido?</confirmdelete>
+        <copy>Copiar</copy>
+        <copyof>Copia de</copyof>
+        <description>Administrar canales de contenido</description>
+        <displayname>Canales de contenido</displayname>
+        <heading>Canales de contenido</heading>
+        <info>Crear y administrar canales de contenido.</info>
+        <namenumbercopy>Copia ({0}) de</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+  <language name="Français" id="fr">
+    <admin>
+      <contentchanneledit>
+        <channelname>Nom du canal</channelname>
+        <channelpageroot>Racine de la page</channelpageroot>
+        <channelvpproot>Racine virtuelle des fichiers</channelvpproot>
+        <currentmapping>Mappage de propriété pour le type de page</currentmapping>
+        <defaultpagetype>Type de page par défaut</defaultpagetype>
+        <deletemapping>Supprimer le mappage de propriété pour le type de page</deletemapping>
+        <heading>Configurer le canal de contenu</heading>
+        <info>Chaque canal peut être configuré pour plusieurs types de page et vous pouvez définir un mappage de propriété pour chacun de ces types.</info>
+        <mappedpagetypes>Types de page mappés</mappedpagetypes>
+        <mappedproperty>Propriété mappée</mappedproperty>
+        <mappingheader>Mapper des propriétés pour les types de page</mappingheader>
+        <missingname>Indiquez le nom du canal.</missingname>
+        <nonemappedpagetypes>Types de page non mappés</nonemappedpagetypes>
+        <novppmapping>Aucun fournisseur de chemin virtuel n'est configuré pour le chemin de recherche virtuel</novppmapping>
+        <pagetypeproperty>Propriété du type de page</pagetypeproperty>
+        <saveaction>Enregistrer action</saveaction>
+        <saveactionoption>
+          <checkin>Archiver</checkin>
+          <none>Aucune</none>
+          <publish>Publier</publish>
+          <save>Enregistrer</save>
+        </saveactionoption>
+        <savemapping>Ajouter un mappage de propriété pour le type de page</savemapping>
+        <updatemapping>Mettre à jour le mappage de propriété pour le type de page</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>Nom du canal</channelname>
+        <confirmdelete>Voulez-vous supprimer le canal de contenu ?</confirmdelete>
+        <copy>Copier</copy>
+        <copyof>Copie de</copyof>
+        <description>Gérer les canaux de contenu</description>
+        <displayname>Canaux de contenu</displayname>
+        <heading>Canaux de contenu</heading>
+        <info>Créez et gérez les canaux de contenu.</info>
+        <namenumbercopy>Copie ({0}) de</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+  <language name="Nederlands" id="nl">
+    <admin>
+      <contentchanneledit>
+        <channelname>Kanaalnaam</channelname>
+        <channelpageroot>Hoofdmap voor pagina’s</channelpageroot>
+        <channelvpproot>Virtuele hoofdmap voor bestanden</channelvpproot>
+        <currentmapping>Eigenschappen toewijzen voor paginatype</currentmapping>
+        <defaultpagetype>Standaardpaginatype</defaultpagetype>
+        <deletemapping>Toewijzing eigenschappen voor paginatype verwijderen</deletemapping>
+        <heading>Inhoudkanaal configureren</heading>
+        <info>U kunt elk kanaal configureren voor verschillende paginatypen en een eigenschappentoewijzing definiëren voor elk van deze paginatypen.</info>
+        <mappedpagetypes>Toegewezen paginatypen</mappedpagetypes>
+        <mappedproperty>Toegewezen eigenschap</mappedproperty>
+        <mappingheader>Eigenschappen toewijzen voor paginatypen</mappingheader>
+        <missingname>Kanaalnaam moet worden opgegeven</missingname>
+        <nonemappedpagetypes>Niet-toegewezen paginatypen</nonemappedpagetypes>
+        <novppmapping>Er is geen provider van virtuele paden geconfigureerd voor het virtuele zoekpad</novppmapping>
+        <pagetypeproperty>Eigenschap paginatype</pagetypeproperty>
+        <saveaction>Bewerking opslaan</saveaction>
+        <saveactionoption>
+          <checkin>Inchecken</checkin>
+          <none>Geen</none>
+          <publish>Publiceren</publish>
+          <save>Opslaan</save>
+        </saveactionoption>
+        <savemapping>Toewijzing eigenschappen voor paginatype toevoegen</savemapping>
+        <updatemapping>Toewijzing eigenschappen voor paginatype bijwerken</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>Kanaalnaam</channelname>
+        <confirmdelete>Wilt u het inhoudkanaal verwijderen?</confirmdelete>
+        <copy>Kopie</copy>
+        <copyof>Kopie van</copyof>
+        <description>Inhoudkanalen beheren</description>
+        <displayname>Inhoudkanalen</displayname>
+        <heading>Inhoudkanalen</heading>
+        <info>Inhoudkanalen maken en beheren</info>
+        <namenumbercopy>Kopie ({0}) van</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+  <language name="Norsk" id="no">
+    <admin>
+      <contentchanneledit>
+        <channelname>Kanalnavn</channelname>
+        <channelpageroot>Siderot</channelpageroot>
+        <channelvpproot>Virtuell rot for filer</channelvpproot>
+        <currentmapping>Egenskapstilordning for sidetype</currentmapping>
+        <defaultpagetype>Standard sidetype</defaultpagetype>
+        <deletemapping>Fjern egenskapstilordning for sidetype</deletemapping>
+        <heading>Konfigurer innholdskanal</heading>
+        <info>Hver kanal kan konfigureres for flere sidetyper, og en egenskapstilordning kan defineres for hver av disse sidetypene.</info>
+        <mappedpagetypes>Tilordnede sidetyper</mappedpagetypes>
+        <mappedproperty>Tilordnet egenskap</mappedproperty>
+        <mappingheader>Tilordne egenskaper for sidetyper</mappingheader>
+        <missingname>Kanalnavn må angis</missingname>
+        <nonemappedpagetypes>Ikke tilordnede sidetyper</nonemappedpagetypes>
+        <novppmapping>Det er ingen leverandør av virtuell bane konfigurert for den virtuelle søkebanen</novppmapping>
+        <pagetypeproperty>Egenskap for sidetype</pagetypeproperty>
+        <saveaction>Lagre handling</saveaction>
+        <saveactionoption>
+          <checkin>Sjekk inn</checkin>
+          <none>Ingen</none>
+          <publish>Publiser</publish>
+          <save>Lagre</save>
+        </saveactionoption>
+        <savemapping>Legg til egenskapstilordning for sidetype</savemapping>
+        <updatemapping>Oppdater egenskapstilordning for sidetype</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>Kanalnavn</channelname>
+        <confirmdelete>Vil du slette innholdskanalen?</confirmdelete>
+        <copy>Kopier</copy>
+        <copyof>Kopi av</copyof>
+        <description>Administrer innholdskanaler</description>
+        <displayname>Innholdskanaler</displayname>
+        <heading>Innholdskanaler</heading>
+        <info>Opprett og administrer innholdskanaler.</info>
+        <namenumbercopy>Kopi ({0}) av</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+  <language name="Português" id="pt">
+    <admin>
+      <contentchanneledit>
+        <channelname>Nome do Canal</channelname>
+        <channelpageroot>Raiz da página</channelpageroot>
+        <channelvpproot>Raiz virtual para ficheiros</channelvpproot>
+        <currentmapping>Mapeamento de propriedades para tipo de página</currentmapping>
+        <defaultpagetype>Tipo de página predefinido</defaultpagetype>
+        <deletemapping>Remover Mapeamento de Propriedades para Tipo de Página</deletemapping>
+        <heading>Configurar Canal de Conteúdo</heading>
+        <info>Cada canal pode ser configurado para vários tipos de página e um mapeamento de propriedades pode ser definido para cada um destes tipos de página.</info>
+        <mappedpagetypes>Tipos de página mapeados</mappedpagetypes>
+        <mappedproperty>Propriedade Mapeada</mappedproperty>
+        <mappingheader>Mapear propriedades para tipos de página</mappingheader>
+        <missingname>O nome do canal deve ser fornecido</missingname>
+        <nonemappedpagetypes>Tipos de página não mapeados</nonemappedpagetypes>
+        <novppmapping>Não existe nenhum Fornecedor de Caminho Virtual configurado para o caminho de pesquisa virtual</novppmapping>
+        <pagetypeproperty>Propriedade de Tipo de Página</pagetypeproperty>
+        <saveaction>Guardar acção</saveaction>
+        <saveactionoption>
+          <checkin>Entrada</checkin>
+          <none>Nenhum</none>
+          <publish>Publicar</publish>
+          <save>Guardar</save>
+        </saveactionoption>
+        <savemapping>Adicionar Mapeamento de Propriedades para Tipo de Página</savemapping>
+        <updatemapping>Actualizar Mapeamento de Propriedades para Tipo de Página</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>Nome do canal</channelname>
+        <confirmdelete>Pretende eliminar o canal de conteúdo?</confirmdelete>
+        <copy>Copiar</copy>
+        <copyof>Cópia de</copyof>
+        <description>Administrar canais de conteúdo</description>
+        <displayname>Canais de Conteúdo</displayname>
+        <heading>Canais de Conteúdo</heading>
+        <info>Crie e administre canais de conteúdo.</info>
+        <namenumbercopy>Cópia ({0}) de</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+  <language name="Suomi" id="fi">
+    <admin>
+      <contentchanneledit>
+        <channelname>Kanavan nimi</channelname>
+        <channelpageroot>Sivun juurihakemisto</channelpageroot>
+        <channelvpproot>Tiedostojen virtuaalinen juurihakemisto</channelvpproot>
+        <currentmapping>Sivutyypin ominaisuuskartoitus</currentmapping>
+        <defaultpagetype>Sivun oletustyyppi</defaultpagetype>
+        <deletemapping>Poista sivutyypin ominaisuuskartoitus</deletemapping>
+        <heading>Määritä sisältökanava</heading>
+        <info>Kukin kanava voidaan määrittää useille sivutyypeille ja kullekin sivutyypille voidaan tehdä ominaisuuskartoitus.</info>
+        <mappedpagetypes>Kartoitetut sivutyypit</mappedpagetypes>
+        <mappedproperty>Kartoitettu ominaisuus</mappedproperty>
+        <mappingheader>Kartoita sivutyyppien ominaisuudet</mappingheader>
+        <missingname>Kanavan nimi on määritettävä</missingname>
+        <nonemappedpagetypes>Kartoittamattomat sivutyypit</nonemappedpagetypes>
+        <novppmapping>Virtuaaliselle hakupolulle ei ole määritetty virtuaalipolkujen tuottajaa</novppmapping>
+        <pagetypeproperty>Sivutyypin ominaisuus</pagetypeproperty>
+        <saveaction>Tallennustoiminto</saveaction>
+        <saveactionoption>
+          <checkin>Kuittaa sisään</checkin>
+          <none>Ei mitään</none>
+          <publish>Julkaise</publish>
+          <save>Tallenna</save>
+        </saveactionoption>
+        <savemapping>Lisää sivutyypin ominaisuuskartoitus</savemapping>
+        <updatemapping>Päivitä sivutyypin ominaisuuskartoitus</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>Kanavan nimi</channelname>
+        <confirmdelete>Haluatko poistaa sisältökanavan?</confirmdelete>
+        <copy>Kopioi</copy>
+        <copyof>Kopio:</copyof>
+        <description>Hallitse sisältökanavia</description>
+        <displayname>Sisältökanavat</displayname>
+        <heading>Sisältökanavat</heading>
+        <info>Luo ja hallitse sisältökanavia.</info>
+        <namenumbercopy>Kopio ({0}) /</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+  <language name="Svenska" id="sv">
+    <admin>
+      <contentchanneledit>
+        <channelname>Kanalnamn</channelname>
+        <channelpageroot>Sidrot</channelpageroot>
+        <channelvpproot>Virituell rot för filer</channelvpproot>
+        <currentmapping>Egenskapsmappning för sidtyp</currentmapping>
+        <defaultpagetype>Standard sidtyp</defaultpagetype>
+        <deletemapping>Ta bort egenskapsmappning för sidtyp</deletemapping>
+        <heading>Konfigurera innehållskanal</heading>
+        <info>Varje kanal kan konfigureras för ett antal sidtyper och en egenskaps mappning kan anges för varje sidtyp.</info>
+        <mappedpagetypes>Mappade sidtyper</mappedpagetypes>
+        <mappedproperty>Mappad egenskap</mappedproperty>
+        <mappingheader>Mappa egenskaper för sidtyper</mappingheader>
+        <missingname>Kanalnamn måste anges</missingname>
+        <nonemappedpagetypes>Ej mappade sidtyper</nonemappedpagetypes>
+        <novppmapping>Det finns ingen Virtual Path Provider konfigurerad för given virituell sökväg</novppmapping>
+        <pagetypeproperty>Sidtyps egenskap</pagetypeproperty>
+        <saveaction>Sidsparningshantering</saveaction>
+        <saveactionoption>
+          <checkin>Checka in</checkin>
+          <none>Ingen</none>
+          <publish>Publicera</publish>
+          <save>Spara</save>
+        </saveactionoption>
+        <savemapping>Lägg till egenskapsmappning för sidtyp</savemapping>
+        <updatemapping>Uppdatera egenskapsmappning för sidtyp</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>Kanalnamn</channelname>
+        <confirmdelete>Vill du ta bort kanalen?</confirmdelete>
+        <copy>Kopiera</copy>
+        <copyof>Kopia av</copyof>
+        <description>Administrera Innehållskanaler</description>
+        <displayname>Innehållskanaler</displayname>
+        <heading>Innehållskanaler</heading>
+        <info>Skapa och administrera innehållskanaler.</info>
+        <namenumbercopy>Kopia ({0}) av</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+  <language name="中文 (Chinese)" id="zh-CN">
+    <admin>
+      <contentchanneledit>
+        <channelname>频道名称</channelname>
+        <channelpageroot>页根</channelpageroot>
+        <channelvpproot>文件虚拟根</channelvpproot>
+        <currentmapping>页类型属性映射</currentmapping>
+        <defaultpagetype>默认页类型</defaultpagetype>
+        <deletemapping>移除页类型属性映射</deletemapping>
+        <heading>配置内容频道</heading>
+        <info>每个频道都可针对多个页类型进行配置，并且可为每个页类型定义属性映射。</info>
+        <mappedpagetypes>已映射页类型</mappedpagetypes>
+        <mappedproperty>已映射属性</mappedproperty>
+        <mappingheader>映射页类型属性</mappingheader>
+        <missingname>必须指定频道名称</missingname>
+        <nonemappedpagetypes>未映射页类型</nonemappedpagetypes>
+        <novppmapping>没有为虚拟搜索路径配置虚拟路径提供者</novppmapping>
+        <pagetypeproperty>页类型属性</pagetypeproperty>
+        <saveaction>保存操作</saveaction>
+        <saveactionoption>
+          <checkin>签入</checkin>
+          <none>无</none>
+          <publish>发布</publish>
+          <save>保存</save>
+        </saveactionoption>
+        <savemapping>添加页类型属性映射</savemapping>
+        <updatemapping>更新页类型属性映射</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>频道名称</channelname>
+        <confirmdelete>是否要删除内容频道?</confirmdelete>
+        <copy>复制</copy>
+        <copyof>副本</copyof>
+        <description>管理内容频道</description>
+        <displayname>内容频道</displayname>
+        <heading>内容频道</heading>
+        <info>创建并管理内容频道。</info>
+        <namenumbercopy>副本 ({0})</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+  <language name="日本語 (Japanese)" id="ja">
+    <admin>
+      <contentchanneledit>
+        <channelname>チャネル名</channelname>
+        <channelpageroot>ページ ルート</channelpageroot>
+        <channelvpproot>ファイルの仮想ルート</channelvpproot>
+        <currentmapping>プロパティ マッピング - ページ タイプ</currentmapping>
+        <defaultpagetype>デフォルト ページ タイプ</defaultpagetype>
+        <deletemapping>ページ タイプのプロパティ マッピングを削除</deletemapping>
+        <heading>コンテンツ チャネルの構成</heading>
+        <info>各チャネルを複数のページ タイプに対して構成でき、これらのページ タイプごとにプロパティ マッピングを 1 つ定義できます。</info>
+        <mappedpagetypes>マッピングされたページ タイプ</mappedpagetypes>
+        <mappedproperty>マッピングされたプロパティ</mappedproperty>
+        <mappingheader>ページ タイプのプロパティのマッピング</mappingheader>
+        <missingname>チャネル名を指定する必要があります</missingname>
+        <nonemappedpagetypes>マッピングされていないページ タイプ</nonemappedpagetypes>
+        <novppmapping>仮想検索パスに対して構成された仮想パス プロバイダがありません</novppmapping>
+        <pagetypeproperty>ページ タイプのプロパティ</pagetypeproperty>
+        <saveaction>保存アクション</saveaction>
+        <saveactionoption>
+          <checkin>チェックイン</checkin>
+          <none>なし</none>
+          <publish>公開</publish>
+          <save>保存</save>
+        </saveactionoption>
+        <savemapping>ページ タイプのプロパティ マッピングを追加</savemapping>
+        <updatemapping>ページ タイプのプロパティ マッピングを更新</updatemapping>
+      </contentchanneledit>
+      <contentchannellist>
+        <channelname>チャネル名</channelname>
+        <confirmdelete>コンテンツ チャネルを削除しますか?</confirmdelete>
+        <copy>コピー</copy>
+        <copyof>コピー ～</copyof>
+        <description>コンテンツ チャネルを管理します</description>
+        <displayname>コンテンツ チャネル</displayname>
+        <heading>コンテンツ チャネル</heading>
+        <info>コンテンツ チャネルを作成して管理します。</info>
+        <namenumbercopy>コピー ({0}) ～</namenumbercopy>
+      </contentchannellist>
+    </admin>
+  </language>
+</languages>
