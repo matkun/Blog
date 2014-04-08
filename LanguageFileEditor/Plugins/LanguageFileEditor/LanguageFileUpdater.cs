@@ -139,6 +139,11 @@ namespace EPiServer.Plugins.LanguageFileEditor
                 return;
             }
             xmlNode = root.SelectSingleNode(path);
+			if (xmlNode.LastChild == null)
+			{
+				xmlNode.AppendChild(PatternXmlDocument.CreateTextNode(value));
+				return;
+			}
             xmlNode.LastChild.Value = value;
         }
 
