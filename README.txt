@@ -59,7 +59,17 @@ Adds a custom property to the EPiServer website allowing web editors to create i
 
 LanguageFileEditor
 http://blog.mathiaskunto.com/2011/09/04/allowing-web-administrators-to-dynamically-update-episerver-language-files/
+http://blog.mathiaskunto.com/2014/06/20/security-fix-for-the-language-file-editor-tool-in-episerver-cms-6-r2/
 
+For EPiServer CMS 6 R2
+Allows web administrators to update EPiServer language files through admin mode.
+
+
+
+LanguageFileEditorEPiServer75
+http://blog.mathiaskunto.com/2014/06/20/security-fix-for-the-language-file-editor-tool-in-episerver-7-5/
+
+For EPiServer 7.5
 Allows web administrators to update EPiServer language files through admin mode.
 
 

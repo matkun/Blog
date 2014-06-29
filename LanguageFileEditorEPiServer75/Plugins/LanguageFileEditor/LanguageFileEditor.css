@@ -1,0 +1,99 @@
+﻿#LanguageFileEditor fieldset {
+	border: 1px solid;
+	margin: 10px 0 18px;
+	padding: 3px 16px 17px;
+}
+
+#LanguageFileEditor fieldset input {
+	margin-left: 15px;
+}
+
+#LanguageFileEditor fieldset select {
+	margin-left: 10px;
+}
+
+#LanguageFileEditor fieldset table {
+	width: 100%;
+}
+
+#LanguageFileEditor fieldset table tr th,
+#LanguageFileEditor fieldset table tr.row td {
+	border-bottom: 1px solid;
+	height: 25px;
+	vertical-align: middle;
+}
+
+#LanguageFileEditor fieldset table tr.row:hover {
+	background-color: #808080;
+}
+
+#LanguageFileEditor fieldset table tr.altRow {
+	background-color: #EEEEEE;
+}
+
+#LanguageFileEditor span.message {
+	display: none;
+}
+
+#LanguageFileEditor span.show {
+	display: block;
+}
+
+#LanguageFileEditor #ControlArea fieldset input.hide {
+	display: none;
+}
+
+#LanguageFileEditor #ControlArea fieldset input.show {
+	display: inline;
+}
+
+#LanguageFileEditor #ControlArea fieldset span.errorMessage {
+	color: Red;
+}
+
+#LanguageFileEditor #ControlArea fieldset span.visible {
+	visibility: visible;
+}
+
+#LanguageFileEditor #EditArea fieldset {
+	padding-left: 11px;
+	padding-top: 17px;
+}
+
+#LanguageFileEditor #EditArea fieldset ul {
+	margin-left: 20px;
+}
+
+#LanguageFileEditor #EditArea fieldset ul li div.nodeStart {
+	display: inline;
+	margin-left: -11px;
+}
+
+#LanguageFileEditor #EditArea fieldset ul li div.toggleBlock {
+	display: inline;
+}
+
+#LanguageFileEditor #EditArea fieldset ul li {
+	margin: 5px 0;
+}
+
+#LanguageFileEditor #EditArea fieldset ul li strong {
+	margin-right: 1px;
+}
+
+#LanguageFileEditor #EditArea fieldset ul li input {
+	margin: 0;
+	width: 200px;
+}
+
+#LanguageFileEditor #EditArea fieldset ul li div.attribute {
+	display: inline;
+}
+
+#LanguageFileEditor #EditArea fieldset ul li div.attribute input {
+	width: 85px;
+}
+
+#LanguageFileEditor #EditArea fieldset ul li div.hasChanged input {
+	background-color: #E0FFFA;
+}
