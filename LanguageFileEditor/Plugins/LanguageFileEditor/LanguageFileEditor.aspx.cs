@@ -12,12 +12,13 @@ using EPiServer.UI;
 namespace EPiServer.Plugins.LanguageFileEditor
 {
     [GuiPlugIn(
-        DisplayName = "Language File Editor v1.0",
+        DisplayName = "Language File Editor v1.1",
         Description = "Tool for allowing the EPiServer web administrator create, update and remove language files.",
         Area = PlugInArea.AdminMenu,
         RequiredAccess = Security.AccessLevel.Administer,
         Url = "~/Plugins/LanguageFileEditor/LanguageFileEditor.aspx"
     )]
+    // TODO - Remember to secure your Plugins directory to prevent unauthorized access to the editor.
     public partial class LanguageFileEditor : SystemPageBase
     {
         protected bool ShowMessage { get; set; }
@@ -25,6 +26,8 @@ namespace EPiServer.Plugins.LanguageFileEditor
         protected override void OnPreInit(EventArgs e)
         {
             base.OnPreInit(e);
+            UserValidator.EnsureValidRoles();
+
             Page.MasterPageFile = Configuration.Settings.Instance.UIUrl + "MasterPages/EPiServerUI.Master";
         }
 
@@ -53,8 +56,10 @@ namespace EPiServer.Plugins.LanguageFileEditor
 
         private static IEnumerable<string> GetAllFilenamesFrom(string directory)
         {
+            PathValidator.EnsureValid(directory);
+
             var xmlFilePaths = Directory.GetFiles(directory, "*.xml");
-            return xmlFilePaths.Select(path => path.Split('\\').Last());
+            return xmlFilePaths.Select(path => path.Split(System.IO.Path.DirectorySeparatorChar).Last());
         }
 
         #region Edit view region
@@ -62,8 +67,9 @@ namespace EPiServer.Plugins.LanguageFileEditor
         private void InitEditFor(string filename)
         {
             hfPatternFilename.Value = filename;
-            
-            var filePath = string.Concat(LanguageManager.Instance.Directory, @"\", filename);
+            var filePath = Path.To(filename);
+            PathValidator.EnsureValid(filePath);
+
             var xmlDocument = new XmlDocument();
             using (var fileStream = new FileStream(filePath, FileMode.Open))
             {
@@ -180,10 +186,13 @@ namespace EPiServer.Plugins.LanguageFileEditor
         {
             var backupId = ddlRestoreBackup.SelectedValue;
             var store = typeof(LangFileBackupContainer).GetStore();
-            var backup = store.ItemsAsPropertyBag()
-                .Where(item => backupId.Equals(item["BackupId"] as string)).First();
+            var backup = store
+                            .ItemsAsPropertyBag()
+                            .First(item => backupId.Equals(item["BackupId"] as string));
             var fileContent = backup["Content"] as string;
-            using (var streamWriter = new StreamWriter(string.Concat(LanguageManager.Instance.Directory, @"\", backup["Filename"] as string)))
+            var path = Path.To(backup["Filename"] as string);
+            PathValidator.EnsureValid(path);
+            using (var streamWriter = new StreamWriter(path))
             {
                 streamWriter.Write(fileContent);
             }
@@ -233,7 +242,9 @@ namespace EPiServer.Plugins.LanguageFileEditor
         protected void lbBackUpFile_OnCommand(object sender, CommandEventArgs e)
         {
             var filename = e.CommandArgument.ToString();
-            var filePath = string.Concat(LanguageManager.Instance.Directory, @"\", filename);
+            var filePath = Path.To(filename);
+            PathValidator.EnsureValid(filePath);
+
             var store = typeof(LangFileBackupContainer).GetStore();
             store.Save(new LangFileBackupContainer
                            {
@@ -250,7 +261,9 @@ namespace EPiServer.Plugins.LanguageFileEditor
         protected void lbDeleteFile_OnCommand(object sender, CommandEventArgs e)
         {
             var filename = e.CommandArgument.ToString();
-            File.Delete(string.Concat(LanguageManager.Instance.Directory, @"\", filename));
+            var filePath = Path.To(filename);
+            PathValidator.EnsureValid(filePath);
+            File.Delete(filePath);
             RefreshCreateNewArea();
             RefreshLanguageFileList();
             litMessage.Text = string.Format("File {0} was successfully deleted.", filename);

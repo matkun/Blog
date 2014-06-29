@@ -4,7 +4,6 @@ using System.Text;
 using System.Web;
 using System.Xml;
 using System.Linq;
-using EPiServer.Core;
 using EPiServer.Data.Dynamic;
 using log4net;
 using Newtonsoft.Json.Linq;
@@ -69,15 +68,18 @@ namespace EPiServer.Plugins.LanguageFileEditor
         private void LoadTrackingDictionaryFor(string filename)
         {
             var store = typeof(ChangeTrackingContainer).GetStore();
-            var bags = store.FindAsPropertyBag("Filename", filename);
-            if(bags.Count() <= 0)
+            var bags = store
+                .FindAsPropertyBag("Filename", filename)
+                .ToArray();
+            if(!bags.Any())
             {
                 TrackingDictionary = new Dictionary<string, string>();
                 return;
             }
-            TrackingDictionary = bags.First()
-                .Where(bag => bag.Key.Equals("Content"))
-                .First().Value as Dictionary<string, string>;
+            TrackingDictionary = bags
+                .First()
+                .First(bag => bag.Key.Equals("Content"))
+                .Value as Dictionary<string, string>;
         }
 
         private void SaveTrackingDictionaryFor(string filename)
@@ -100,8 +102,7 @@ namespace EPiServer.Plugins.LanguageFileEditor
 
         private void SaveLanguageFileChangesFor(string filename)
         {
-            var targetFilePath = string.Concat(LanguageManager.Instance.Directory, @"\", filename);
-            using (var xmlTextWriter = new XmlTextWriter(targetFilePath, Encoding.UTF8))
+            using (var xmlTextWriter = new XmlTextWriter(Path.To(filename), Encoding.UTF8))
             {
                 xmlTextWriter.Formatting = Formatting.Indented;
                 PatternXmlDocument.Save(xmlTextWriter);
@@ -149,7 +150,7 @@ namespace EPiServer.Plugins.LanguageFileEditor
 
         private static XmlDocument GetPatternXmlDocument(string patternFilename)
         {
-            var patternFilePath = string.Concat(LanguageManager.Instance.Directory, @"\", patternFilename);
+            var patternFilePath = Path.To(patternFilename);
             if (!File.Exists(patternFilePath)) return null;
             var xmlDocument = new XmlDocument();
             using (var fileStream = new FileStream(patternFilePath, FileMode.Open))

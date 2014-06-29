@@ -8,10 +8,12 @@ namespace EPiServer.Plugins.LanguageFileEditor
 {
     public partial class UpdateLanguageFile : Page
     {
-
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+
+            UserValidator.EnsureValidRoles();
+
             Response.Expires = -1;
             Response.ContentType = "application/json";
             if(!Request.ContentType.Contains("json"))
@@ -25,8 +27,13 @@ namespace EPiServer.Plugins.LanguageFileEditor
             var jsonString = streamReader.ReadToEnd();
             var jObject = JObject.Parse(jsonString);
 
+            var targetFile = (string)jObject["targetFilename"];
+            var patternFile = (string)jObject["patternFilename"];
+            PathValidator.EnsureValid(Path.To(targetFile));
+            PathValidator.EnsureValid(Path.To(patternFile));
+
             var languageFileUpdater = new LanguageFileUpdater { NewContent = (JObject)jObject["xmlContent"] };
-            languageFileUpdater.ExecuteApplyFor((string)jObject["targetFilename"], (string)jObject["patternFilename"]);
+            languageFileUpdater.ExecuteApplyFor(targetFile, patternFile);
             Response.Write("{\"Status\":\"200 OK\"}");
             Response.End();
         }
