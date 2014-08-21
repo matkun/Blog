@@ -64,6 +64,13 @@ A script for automatically downloading and updating the MaxMind GeoIP database (
 
 
 
+NLogBridgeAppenderLog4Net
+http://blog.mathiaskunto.com/2014/08/21/using-nlog-with-episerver-and-log4net/
+
+An appender for log4net bridging the log messages to NLog, along with sample configuration for EPiServer CMS.
+
+
+
 ShowingHiddenEPiServerProperties
 http://blog.mathiaskunto.com/2013/01/16/simple-adapter-for-showing-hidden-episerver-properties-in-edit-mode-for-administrators
 
