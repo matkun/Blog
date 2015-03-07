@@ -1,5 +1,5 @@
 ﻿Language File Editor version 1.1 for EPiServer CMS 6 R2
-http://blog.mathiaskunto.com/rss
+https://blog.mathiaskunto.com/rss
 
 Installation instructions:
 
@@ -12,7 +12,7 @@ Installation instructions:
 * Make sure that you have secured the plugin so that only administrator accounts can access it.
 
 More information at:
-http://blog.mathiaskunto.com/2011/09/04/allowing-web-administrators-to-dynamically-update-episerver-language-files
+https://blog.mathiaskunto.com/2011/09/04/allowing-web-administrators-to-dynamically-update-episerver-language-files
 
 Well formulated bug reports and constructive feedback is always welcome.
 
@@ -30,4 +30,4 @@ Changes in v 1.1
 * Code refactoring.
 
 More information at:
-http://blog.mathiaskunto.com/2014/06/20/security-fix-for-the-language-file-editor-tool-in-episerver-cms-6-r2/
+https://blog.mathiaskunto.com/2014/06/20/security-fix-for-the-language-file-editor-tool-in-episerver-cms-6-r2/

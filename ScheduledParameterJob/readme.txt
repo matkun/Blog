@@ -1,5 +1,5 @@
 Supplying EPiServer scheduled jobs with parameters through Admin Mode
-http://blog.mathiaskunto.com/2012/02/13/supplying-episerver-scheduled-jobs-with-parameters-through-admin-mode
+https://blog.mathiaskunto.com/2012/02/13/supplying-episerver-scheduled-jobs-with-parameters-through-admin-mode
 
 Version 1.1.0.0
 

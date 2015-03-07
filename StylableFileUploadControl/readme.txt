@@ -1,5 +1,5 @@
 This code is described in: "Keeping your hair from turning gray, or: How to style the asp:FileUpload control using control adapters"
-http://blog.mathiaskunto.com/2012/01/28/keeping-your-hair-from-turning-gray-or-how-to-style-the-aspfileupload-control-using-control-adapters
+https://blog.mathiaskunto.com/2012/01/28/keeping-your-hair-from-turning-gray-or-how-to-style-the-aspfileupload-control-using-control-adapters
 
 Version 1.1.0.0
 

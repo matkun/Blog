@@ -1,5 +1,5 @@
 ﻿Language File Editor version 1.1 for EPiServer 7.5
-http://blog.mathiaskunto.com/rss
+https://blog.mathiaskunto.com/rss
 
 Installation instructions:
 
@@ -12,7 +12,7 @@ Installation instructions:
 * Make sure that you have secured the plugin so that only administrator accounts can access it.
 
 More information at:
-http://blog.mathiaskunto.com/2011/09/04/allowing-web-administrators-to-dynamically-update-episerver-language-files/
+https://blog.mathiaskunto.com/2011/09/04/allowing-web-administrators-to-dynamically-update-episerver-language-files/
 
 Well formulated bug reports and constructive feedback is always welcome.
 
@@ -34,5 +34,5 @@ Changes in v 1.1
 * Based on Hannu Hartikainen's move to EPiServer 7 (https://github.com/dancek/EPiServer.Plugins.LanguageFileEditor)
 
 More information on security issue at:
-http://blog.mathiaskunto.com/2014/06/20/security-fix-for-the-language-file-editor-tool-in-episerver-cms-6-r2/
-http://blog.mathiaskunto.com/2014/06/20/security-fix-for-the-language-file-editor-tool-in-episerver-7-5/
+https://blog.mathiaskunto.com/2014/06/20/security-fix-for-the-language-file-editor-tool-in-episerver-cms-6-r2/
+https://blog.mathiaskunto.com/2014/06/20/security-fix-for-the-language-file-editor-tool-in-episerver-7-5/

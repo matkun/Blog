@@ -1,5 +1,5 @@
 Insert links to bookmarks in other EPiServer pages
-http://blog.mathiaskunto.com/2013/12/26/insert-links-to-bookmarks-in-other-episerver-pages/
+https://blog.mathiaskunto.com/2013/12/26/insert-links-to-bookmarks-in-other-episerver-pages/
 
 
 Version 1.0.0.0

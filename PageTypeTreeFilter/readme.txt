@@ -1,8 +1,8 @@
 Allowing web editors to apply PageType based filtering on the EPiServer edit mode PageTree
-http://blog.mathiaskunto.com/2012/02/06/allowing-web-editors-to-apply-pagetype-based-filtering-on-the-episerver-edit-mode-pagetree/
+https://blog.mathiaskunto.com/2012/02/06/allowing-web-editors-to-apply-pagetype-based-filtering-on-the-episerver-edit-mode-pagetree/
 
 Revisited and improved: PageType based filtering of EPiServer’s EditMode PageTree
-http://blog.mathiaskunto.com/2012/03/25/revisited-and-improved-pagetype-based-filtering-of-episervers-editmode-pagetree/
+https://blog.mathiaskunto.com/2012/03/25/revisited-and-improved-pagetype-based-filtering-of-episervers-editmode-pagetree/
 
 
 Version 1.1.3.0

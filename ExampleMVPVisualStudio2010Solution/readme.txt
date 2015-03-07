@@ -1,5 +1,5 @@
 Complete and concrete example of what an ASP.NET WebForms Model-View-Presenter project may look like using StructureMap, NUnit and AutoMoq
-http://blog.mathiaskunto.com/2012/02/27/complete-and-concrete-example-of-what-an-asp-net-webforms-model-view-presenter-project-may-look-like-using-structuremap-nunit-and-automoq
+https://blog.mathiaskunto.com/2012/02/27/complete-and-concrete-example-of-what-an-asp-net-webforms-model-view-presenter-project-may-look-like-using-structuremap-nunit-and-automoq
 
 Version 1.0.0.0
 

@@ -1,5 +1,5 @@
 Embedding EPiServer VPP images in HTML using base64 encoding
-http://blog.mathiaskunto.com/2011/08/21/embedding-episerver-vpp-images-in-html-using-base64-encoding/
+https://blog.mathiaskunto.com/2011/08/21/embedding-episerver-vpp-images-in-html-using-base64-encoding/
 
 Version 1.1.0.0
 

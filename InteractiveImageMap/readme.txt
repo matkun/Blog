@@ -1,11 +1,11 @@
 EPiServer custom property: Allowing web editors to create image maps with flexible hot spot areas
-http://blog.mathiaskunto.com/2012/08/16/episerver-custom-property-allowing-web-editors-to-create-image-maps-with-flexible-hot-spot-areas/
+https://blog.mathiaskunto.com/2012/08/16/episerver-custom-property-allowing-web-editors-to-create-image-maps-with-flexible-hot-spot-areas/
 
 This release is not a stand alone project resulting in a droppable binary nor a NuGet package, you will have to copy it into your EPiServer website project yourself should you wish to try it.
 
 If you would like to use this with EPiServer 5, please see the following article:
 Moving the ImageMap editor custom property to EPiServer 5
-http://blog.mathiaskunto.com/2013/08/23/moving-the-imagemap-editor-custom-property-to-episerver-5/
+https://blog.mathiaskunto.com/2013/08/23/moving-the-imagemap-editor-custom-property-to-episerver-5/
 
 Version 1.0.0.0
 
