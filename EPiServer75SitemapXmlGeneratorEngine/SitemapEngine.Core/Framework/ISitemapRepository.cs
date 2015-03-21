@@ -3,9 +3,9 @@
 namespace SitemapEngine.Core.Framework
 {
 	public interface ISitemapRepository
-	{
-		byte[] ReadSitemapFor(string language);
+    {
+        byte[] ReadSitemapFor(SitemapSelector selector);
         void RefreshSitemapCacheFor(string language);
-		Dictionary<string, int> RebuildSitemap();
+        Dictionary<string, int> RebuildSitemap();
 	}
 }

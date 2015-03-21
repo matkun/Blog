@@ -4,6 +4,7 @@ using EPiServer.Core;
 using EPiServer.Security;
 using SitemapEngine.Core.Domain;
 using SitemapEngine.Core.Extensions;
+using SitemapEngine.Core.Infrastructure;
 using SitemapEngine.Core.Wrappers;
 
 namespace SitemapEngine.Core.Framework.Strategies
@@ -46,7 +47,7 @@ namespace SitemapEngine.Core.Framework.Strategies
         {
             if (ShowInSiteMap(page))
             {
-                add(page.ToSitemapEntry(language));
+                add(page.ToSitemapEntry(language, Constants.Bundles.PageTree));
             }
 
             var children = _contentLoader.GetChildren<PageData>(page.PageLink, language);

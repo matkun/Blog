@@ -5,6 +5,7 @@ namespace SitemapEngine.Core.Framework
 	public interface IEntryConverter
 	{
         byte[] ToBytes(SitemapEntry[] entries);
-	    byte[] EmptyBytes();
+        byte[] EmptyBytes();
+        byte[] IndexBytes(string[] sitemaps);
 	}
 }

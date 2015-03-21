@@ -7,6 +7,7 @@ using EPiServer.ServiceLocation;
 using SitemapEngine.Core.CustomAttributes;
 using SitemapEngine.Core.Domain;
 using SitemapEngine.Core.Framework;
+using SitemapEngine.Core.Infrastructure;
 using SitemapEngine.Core.Wrappers;
 
 namespace SitemapEngine.Core.Extensions
@@ -21,7 +22,7 @@ namespace SitemapEngine.Core.Extensions
 					.Any();
 		}
 
-		public static SitemapEntry ToSitemapEntry(this PageData page, LanguageSelector language)
+		public static SitemapEntry ToSitemapEntry(this PageData page, LanguageSelector language, string bundle)
 		{
 			if (page == null)
 			{
@@ -45,7 +46,8 @@ namespace SitemapEngine.Core.Extensions
                 LastModified = page.Changed,
 				ChangeFrequency = Frequency.Weekly,
 				Priority = 0.5F,
-				Language = language.LanguageBranch
+				Language = language.LanguageBranch,
+                Bundle = !string.IsNullOrWhiteSpace(bundle) ? bundle : Constants.Bundles.Default
 			};
 		}
 	}

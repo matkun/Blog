@@ -47,6 +47,7 @@
     <Compile Include="Framework\Jobs\SitemapGeneratorJob.cs" />
     <Compile Include="Framework\EntryConverter.cs" />
     <Compile Include="Framework\SitemapRepository.cs" />
+    <Compile Include="Framework\SitemapSelector.cs" />
     <Compile Include="Framework\Strategies\ISitemapStrategy.cs" />
     <Compile Include="Framework\Strategies\PageTreeStrategy.cs" />
     <Compile Include="Infrastructure\Bootstrap\Registries\CoreRegistry.cs" />

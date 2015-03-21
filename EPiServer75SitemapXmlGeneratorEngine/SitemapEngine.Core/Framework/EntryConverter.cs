@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -35,6 +36,32 @@ namespace SitemapEngine.Core.Framework
 
                 return memoryStream.ToArray();
             }
+        }
+
+        public byte[] IndexBytes(string[] sitemaps)
+        {
+            using (var memoryStream = new MemoryStream())
+            using (var xmlTextWriter = new XmlTextWriter(memoryStream, Encoding.UTF8))
+            {
+                WriteIndexTo(xmlTextWriter, sitemaps);
+                return memoryStream.ToArray();
+            }
+        }
+
+        private static void WriteIndexTo(XmlWriter writer, IEnumerable<string> sitemaps)
+        {
+            writer.WriteStartDocument();
+            writer.WriteStartElement("sitemapindex", Constants.XmlNamespace);
+
+            foreach (var url in sitemaps)
+            {
+                writer.WriteStartElement("sitemap");
+                writer.WriteElementString("loc", url);
+                writer.WriteElementString("lastmod", DateTime.Now.FormatWithUtc());
+                writer.WriteEndElement();
+            }
+            writer.WriteEndElement();
+            writer.Flush();
         }
 
 		private static void WriteTo(XmlWriter writer, IEnumerable<SitemapEntry> entries)

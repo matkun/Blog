@@ -37,11 +37,12 @@ namespace SitemapEngine.Core.Controllers
 	        _request = request;
 		}
 
-		[Route("sitemap.xml")]
-		public ActionResult Index()
+        [Route("sitemap.xml")]
+        public ActionResult Index(int batch = 0, string bundle = "")
         {
             var language = _hostBindingsService.IetfLanguageTagFor(_request.Url);
-            var ms = new MemoryStream(_sitemapRepository.ReadSitemapFor(language));
+            var selector = new SitemapSelector { Language = language, Bundle = bundle, Batch = batch };
+            var ms = new MemoryStream(_sitemapRepository.ReadSitemapFor(selector));
             var doc = new XmlDocument();
             doc.Load(ms);
             return new XmlActionResult(doc);
