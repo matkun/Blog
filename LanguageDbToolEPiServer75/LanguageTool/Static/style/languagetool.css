@@ -1,0 +1,42 @@
+﻿#status-message {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+p.success {
+    color: #008000;
+}
+p.fail {
+    color: #FF0000;
+}
+div.success {
+    background-color: #008000;
+}
+div.fail {
+    background-color: #FF0000;
+}
+.overlay {
+    position: absolute;
+    z-index: 10000;
+    opacity: 0.5;
+}
+.input-cell {
+    width: 47%;
+}
+.translations input[type='text'] {
+    width: 100%;
+}
+.translations a {
+    cursor: pointer;
+    color: #1A4AA4;
+}
+.translations a:hover {
+    color: #4878D4;
+}
+.translations tr:hover {
+    background-color: #D3D3D3;
+}
+.translations h1 {
+    border-bottom: 1px solid #666;
+    margin-bottom: 0.6em;
+    padding-bottom: 0.3em;
+}

@@ -1,0 +1,38 @@
+﻿@using EPiServer.Framework.Web.Resources
+@using EPiServer.Shell.Navigation
+@using EPiServer.Shell.Web.Mvc.Html
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@ViewBag.Title</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+        <!-- Shell -->
+        @Html.Raw(ClientResources.RenderResources("ShellCore"))
+        @Html.Raw(ClientResources.RenderResources("ShellWidgets"))
+
+        <!-- LightTheme -->
+        @Html.Raw(ClientResources.RenderResources( "ShellCoreLightTheme"))
+
+        <!-- Navigation -->
+        @Html.Raw(ClientResources.RenderResources("Navigation"))
+
+        <!-- Dojo Dashboard -->
+        @Html.Raw(ClientResources.RenderResources( "DojoDashboardCompatibility", new[] { ClientResourceType.Style }))
+		
+        <link rel="stylesheet" type="text/css" href="~/LanguageTool/Static/style/languagetool.css">
+    </head>
+    <body>
+        @Html.Raw(Html.ShellInitializationScript())
+        @Html.Raw(Html.GlobalMenu())
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="~/LanguageTool/Static/js/languagetool.js"></script>
+</html>

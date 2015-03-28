@@ -64,6 +64,13 @@ Adds a custom property to the EPiServer website allowing web editors to create i
 
 
 
+Database persisted translations with edit tools for language file resources in globalized EPiServer websites
+https://blog.mathiaskunto.com/2015/03/10/database-persisted-translations-with-edit-tools-for-language-file-resources-in-globalized-episerver-websites/
+
+Allows web editors to update EPiServer language strings (previously language files but this tool moves them to the database) without worrying about loosing translations during deployment of new code.
+
+
+
 LanguageFileEditor
 https://blog.mathiaskunto.com/2011/09/04/allowing-web-administrators-to-dynamically-update-episerver-language-files/
 https://blog.mathiaskunto.com/2014/06/20/security-fix-for-the-language-file-editor-tool-in-episerver-cms-6-r2/

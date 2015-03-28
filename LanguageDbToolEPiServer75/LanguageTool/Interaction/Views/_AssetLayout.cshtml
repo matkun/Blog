@@ -1,0 +1,26 @@
+﻿@using EPiServer.Framework.Web.Resources
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@ViewBag.Title</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+        <!-- Shell -->
+        @Html.Raw(ClientResources.RenderResources("ShellCore"))
+
+        <!-- LightTheme -->
+        @Html.Raw(ClientResources.RenderResources("ShellCoreLightTheme"))
+		
+        <link rel="stylesheet" type="text/css" href="~/LanguageTool/Static/style/languagetool.css">
+    </head>
+    <body>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="~/LanguageTool/Static/js/languagetool.js"></script>
+</html>

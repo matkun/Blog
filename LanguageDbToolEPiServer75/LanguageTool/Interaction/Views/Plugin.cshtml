@@ -1,0 +1,53 @@
+﻿@using EPiServer.ServiceLocation
+@using EPiServer.Templates.Alloy.LanguageTool.Infrastructure.AntiForgery
+@using EPiServer.Templates.Alloy.LanguageTool.Wrappers
+@model EPiServer.Templates.Alloy.LanguageTool.Interaction.Models.SingleTranslationsViewModel
+@{
+	var antiForgeryService = ServiceLocator.Current.GetInstance<IAntiForgeryValidationService>();
+    var service = ServiceLocator.Current.GetInstance<ILocalizationServiceWrapper>();
+    var title = string.Format("{0} {1}", service.GetString("/plugins/languagetool/plugin/title"), Model.ContentTypeName);
+	Layout = "_AssetLayout.cshtml";
+}
+
+<div class="epi-contentContainer epi-padding">
+    <div class="epi-contentArea">
+        <h1 class="EP-prefix">@title</h1>
+        <p class=EP-systemInfo>@service.GetString("/plugins/languagetool/plugin/description")</p>
+        <p id="status-message">&nbsp;</p>
+        <table class="translations" data-url="/customtool/translationsplugin/update" data-token="@antiForgeryService.TokenHeaderValue()" data-no-id-error='@service.GetString("/plugins/languagetool/errors/noid")'>
+            <thead>
+                <tr>
+                    <th>@service.GetString("/plugins/languagetool/resourcekey")</th>
+                    <th>@service.GetString("/plugins/languagetool/text")</th>
+                    <th>&nbsp;</th>
+                    <th>@service.GetString("/plugins/languagetool/updated")</th>
+                    <th>@service.GetString("/plugins/languagetool/updatedby")</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach(var translation in Model.Translations)
+                {
+                    <tr id="@translation.Id">
+                        <td>@translation.ResourceKey</td>
+                        <td><input type="text" value="@translation.Text" /></td>
+                        <td><a class="update-button">@service.GetString("/plugins/languagetool/update")</a></td>
+                        <td class="updated">@translation.Updated.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                        <td class="updated-by">@translation.UpdatedBy</td>
+                    </tr>
+                }
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th>@service.GetString("/plugins/languagetool/resourcekey")</th>
+                    <th>@service.GetString("/plugins/languagetool/text")</th>
+                    <th>&nbsp;</th>
+                    <th>@service.GetString("/plugins/languagetool/updated")</th>
+                    <th>@service.GetString("/plugins/languagetool/updatedby")</th>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="overlay"></div>
+    </div>
+</div>
