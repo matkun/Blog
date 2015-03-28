@@ -1,0 +1,37 @@
+using System.Collections.Generic;
+using {0}.LanguageTool.Domain;
+using {0}.LanguageTool.Extensions;
+
+namespace {0}.LanguageTool.Resources
+{{
+    public class {1} : IInitialTranslations
+    {{
+        private TranslationGroup[] _initialArray;
+        public string IetfLanguageTag {{ get {{ return "{2}"; }} }}
+
+        public TranslationGroup[] Initials
+        {{
+            get
+            {{
+                if (_initialArray != null)
+                {{
+                    return _initialArray;
+                }}
+                var initials = new List<TranslationGroup>();
+                
+                var group = new TranslationGroup
+                    {{
+                        // ContentTypeName = typeof(ArticlePage).Name, // TODO - Split group up and assign content type accordingly; this is an example.
+                        Translations = new[]
+                        {{
+{3}                        }}
+                    }};
+                initials.SetupAndAdd(group, IetfLanguageTag);
+
+                _initialArray = initials.ToArray();
+                throw new System.Exception("You did not go through your generated language files and follow the instructions.");
+                return _initialArray;
+            }}
+        }}
+    }}
+}}

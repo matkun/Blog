@@ -1,0 +1,3 @@
+Placeholder file.
+
+Output translation initialization files are generated in this directory.

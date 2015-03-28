@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<languages>
+	<language name="English"
+			  id="en">
+			  
+		<articlepage>
+			<relatedlinks>
+				<title>Related links</title>
+			</relatedlinks>
+			<share>
+				<share>Share</share>
+				<titles>
+					<facebook>Facebook</facebook>
+					<googleplus>Google+</googleplus>
+					<linkedin>LinkedIn</linkedin>
+					<twitter>Twitter</twitter>
+				</titles>
+			</share>
+		</articlepage>
+
+		<startpage>
+			<quicklinks>
+				<label>Quick links</label>
+				<sometext>Some interesting text</sometext>
+			</quicklinks>
+		</startpage>
+		
+	</language>
+</languages>
