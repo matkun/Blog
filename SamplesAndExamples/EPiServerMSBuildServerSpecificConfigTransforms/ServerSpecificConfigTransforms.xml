@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/MsBuild/2003"
+		 ToolsVersion="4.0">
+	<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v12.0\WebApplications\Microsoft.WebApplication.targets" />
+
+	<PropertyGroup>
+		<Configuration Condition="'$(Configuration)' == ''">Local</Configuration>
+
+		<HasServerSpecificTransforms>false</HasServerSpecificTransforms> <!-- TODO - here you may want to put your own solution configurations -->
+		<HasServerSpecificTransforms Condition="'$(Configuration)' == 'Production' OR '$(Configuration)' == 'AccTest' OR '$(Configuration)' == 'SysTest'">true</HasServerSpecificTransforms>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ServerNames Include="$([System.IO.Directory]::GetDirectories('..\[Configuration]\$(Configuration)'))" />
+
+		<!-- We do not use EPiServer's transformation result for SysTest AccTest Production, so these will be removed from siteroot as they just add noise -->
+		<TemporaryFiles Include="$(ProjectDir)..\Web.config" />
+		<TemporaryFiles Include="$(ProjectDir)..\connectionStrings.config" />
+		<TemporaryFiles Include="$(ProjectDir)..\episerver.config" />
+		<TemporaryFiles Include="$(ProjectDir)..\EPiServerFramework.config" />
+		<TemporaryFiles Include="$(ProjectDir)..\EPiServerLog.config" />
+		<TemporaryFiles Include="$(ProjectDir)..\FileSummary.config" />
+		<TemporaryFiles Include="$(ProjectDir)..\NLog.config" />
+		<TemporaryFiles Include="$(ProjectDir)..\imagevault.client.config" />
+	</ItemGroup>
+
+	<Target Name="Build">
+		<Message Condition="$(HasServerSpecificTransforms)"
+				 Text="------ Generating configuration files for $(Configuration) server specific configurations ------" />
+
+		<!-- Calls DoTransforms foreach server in ServerNames -->
+		<MSBuild Condition="$(HasServerSpecificTransforms)"
+				 Projects="$(MSBuildProjectFile)"
+				 Properties="CurrentServerName=%(ServerNames.Identity)"
+				 Targets="DoTransforms">
+		</MSBuild>
+
+		<CallTarget Condition="$(HasServerSpecificTransforms)"
+					Targets="DeleteTemporaryFiles" />
+
+		<Message Condition="$(HasServerSpecificTransforms)"
+				 Text="------ Done generating server specific files for $(Configuration) environment. ------" />
+	</Target>
+
+	<Target Name="DeleteTemporaryFiles">
+		<Message Text="--- Deleting EPiServer's transformation results as server specific ones should be used ---"/>
+		<Delete Files="@(TemporaryFiles)">
+			<Output TaskParameter="DeletedFiles"
+					PropertyName="deleted" />
+		</Delete>
+		<Message Text="--- Done deleting EPiServer's transformation results ---" />
+	</Target>
+
+	<Target Name="DoTransforms">
+		<PropertyGroup> <!-- This regex will remove the parts of the path we do not need leaving only the server name -->
+			<CurrentServerName>$([System.Text.RegularExpressions.Regex]::Replace($(CurrentServerName), '\.\.\\\[Configuration\]\\$(Configuration)\\', '', System.Text.RegularExpressions.RegexOptions.IgnoreCase))</CurrentServerName>
+		</PropertyGroup>
+
+		<Message Text="--- Processing transforms for server: $(CurrentServerName) ---" />
+
+		<!-- EPiServer MSBuild transform puts config files in site root, that's our source. -->
+
+		<!-- Transform Web.config -->
+		<TransformXml
+			Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\Web.$(CurrentServerName).config')"
+			Source="$(ProjectDir)..\Web.config"
+			Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\Web.$(CurrentServerName).config"
+			Destination="$(ProjectDir)..\Web.$(CurrentServerName).config" />
+
+		<!-- Transform connectionStrings.config -->
+		<TransformXml
+			Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\connectionStrings.$(CurrentServerName).config')"
+			Source="$(ProjectDir)..\connectionStrings.config"
+			Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\connectionStrings.$(CurrentServerName).config"
+			Destination="$(ProjectDir)..\connectionStrings.$(CurrentServerName).config" />
+
+		<!-- Transform episerver.config -->
+		<TransformXml
+			Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\episerver.$(CurrentServerName).config')"
+			Source="$(ProjectDir)..\episerver.config"
+			Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\episerver.$(CurrentServerName).config"
+			Destination="$(ProjectDir)..\episerver.$(CurrentServerName).config" />
+
+		<!-- Transform EPiServerFramework.config -->
+		<TransformXml
+			Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\EPiServerFramework.$(CurrentServerName).config')"
+			Source="$(ProjectDir)..\EPiServerFramework.config"
+			Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\EPiServerFramework.$(CurrentServerName).config"
+			Destination="$(ProjectDir)..\EPiServerFramework.$(CurrentServerName).config" />
+
+		<!-- Transform EPiServerLog.config -->
+		<TransformXml
+			Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\EPiServerLog.$(CurrentServerName).config')"
+			Source="$(ProjectDir)..\EPiServerLog.config"
+			Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\EPiServerLog.$(CurrentServerName).config"
+			Destination="$(ProjectDir)..\EPiServerLog.$(CurrentServerName).config" />
+
+		<!-- Transform FileSummary.config -->
+		<TransformXml
+			Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\FileSummary.$(CurrentServerName).config')"
+			Source="$(ProjectDir)..\FileSummary.config"
+			Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\FileSummary.$(CurrentServerName).config"
+			Destination="$(ProjectDir)..\FileSummary.$(CurrentServerName).config" />
+
+		<!-- Transform NLog.config -->
+		<TransformXml
+			Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\NLog.$(CurrentServerName).config')"
+			Source="$(ProjectDir)..\NLog.config"
+			Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\NLog.$(CurrentServerName).config"
+			Destination="$(ProjectDir)..\NLog.$(CurrentServerName).config" />
+
+		<!-- Transform imagevault.client.config -->
+		<TransformXml
+			Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\imagevault.client.$(CurrentServerName).config')"
+			Source="$(ProjectDir)..\imagevault.client.config"
+			Transform="$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\imagevault.client.$(CurrentServerName).config"
+			Destination="$(ProjectDir)..\imagevault.client.$(CurrentServerName).config" />
+
+		<!-- Copy EPiServer License.config -->
+		<Copy
+			Condition="Exists('$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\License.$(CurrentServerName).config')"
+			SourceFiles="$(ProjectDir)..\[Configuration]\$(Configuration)\$(CurrentServerName)\License.$(CurrentServerName).config"
+			DestinationFiles="$(ProjectDir)..\License.$(CurrentServerName).config" />
+
+	</Target>
+</Project>
