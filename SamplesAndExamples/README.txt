@@ -8,6 +8,13 @@ Descriptions:
 
 *****************************************************************************
 
+ConfigFileCopyPowerShellScript
+https://blog.mathiaskunto.com/2015/04/11/powershell-script-example-for-copying-correct-configs-based-on-server-machine-name-in-multi-server-environment/
+
+PowerShell script example for copying the correct configuration files for the proper server based on server machine name.
+
+
+
 EmbeddedEPiServerResources
 https://blog.mathiaskunto.com/2012/02/27/how-to-embed-episerver-resources-such-as-guiplugins-and-pages-together-with-images-javascripts-and-stylesheets-in-droppable-assembly-binaries/
 
