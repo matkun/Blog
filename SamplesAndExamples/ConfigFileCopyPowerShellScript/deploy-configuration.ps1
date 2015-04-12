@@ -4,9 +4,6 @@ $currentServer = $env:computername
 $pathToConfigs = ".\source"
 $pathToWebRoot = ".\target"
 
-$escapedPathToConfigs = [Regex]::Escape($pathToConfigs)
-$escapedPathToWebRoot = [Regex]::Escape($pathToWebRoot)
-
 $currentServerConfigFiles = Get-ChildItem $pathToConfigs -Force | Where-Object {$_.Name -match $currentServer}
 
 foreach ($sourceFile in $currentServerConfigFiles) {
