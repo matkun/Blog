@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.Adapters;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using EPiServer.ClientScript;
 using EPiServer.Data.Dynamic;
+using EPiServer.DataAbstraction;
 using EPiServer.PlugIn;
 using EPiServer.UI;
 using EPiServer.UI.Admin;
@@ -26,8 +29,8 @@ namespace ScheduledParameterJob
         private string PluginId { get { return _pluginId ?? (_pluginId = ((DatabaseJob) Control).Request.QueryString["pluginId"]); } }
 
         private Dictionary<string, object> _persistedValues;
-        private Dictionary<string, object> PersistedValues { get { return _persistedValues ?? (_persistedValues = typeof(ScheduledJobParameters).GetStore().LoadPersistedValuesFor(PluginId)); } } 
-        
+        private Dictionary<string, object> PersistedValues { get { return _persistedValues ?? (_persistedValues = typeof(ScheduledJobParameters).GetStore().LoadPersistedValuesFor(PluginId)); } }
+
         private ScheduledPlugInWithParametersAttribute _attribute;
         private ScheduledPlugInWithParametersAttribute Attribute
         {
@@ -68,27 +71,51 @@ namespace ScheduledParameterJob
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);
-
-            if (Attribute == null)
+            if (string.IsNullOrWhiteSpace(Page.Request.QueryString["GetRunningState"]) &&
+                !Page.Request.ContentType.Contains("application/json"))
             {
-                // Not a job with parameters
-                return;
+                if (Attribute == null)
+                {
+                    // Not a job with parameters
+                    return;
+                }
+                Attribute.Validate();
+                Initialization();
             }
-            Attribute.Validate();
-            Initialization();
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(Page.Request.QueryString["GetRunningState"]) &&
+                Page.Request.ContentType.Contains("application/json"))
+            {
+                string g = Page.Request.QueryString["GetRunningState"];
+                Page.Response.Clear();
+                Page.Response.ContentType = "application/json";
+                Page.Response.Write(GetJSONJobRunningState(new Guid(g)));
+                Page.Response.End();
+            }
+            else
+            {
+                base.OnLoad(e);
+            }
         }
 
         protected override void OnPreRender(EventArgs e)
         {
             base.OnPreRender(e);
-            if (Attribute == null)
+            if (string.IsNullOrWhiteSpace(Page.Request.QueryString["GetRunningState"]) &&
+                !Page.Request.ContentType.Contains("application/json"))
             {
-                // Not a job with parameters
-                return;
-            }
-            foreach (var control in ParameterControls)
-            {
-                control.DataBind();
+                if (Attribute == null)
+                {
+                    // Not a job with parameters
+                    return;
+                }
+                foreach (var control in ParameterControls)
+                {
+                    control.DataBind();
+                }
             }
         }
 
@@ -143,18 +170,18 @@ namespace ScheduledParameterJob
             fieldset.Controls.Add(SaveAndResetValuesButtons());
             return fieldset;
         }
-        
+
         private Control SaveAndResetValuesButtons()
         {
             var container = new HtmlGenericControl("div");
             container.Attributes.Add("class", "save-and-reset-button-container");
 
             var resetButton = new Button
-                {
-                    Text = "Reset values",
-                    ToolTip = "Resets all parameters for this scheduled job to their default values.",
-                    CssClass = "reset-button"
-                };
+            {
+                Text = "Reset values",
+                ToolTip = "Resets all parameters for this scheduled job to their default values.",
+                CssClass = "reset-button"
+            };
             resetButton.Click += new EventHandler(ResetValues_Click);
             var resetButtonOutline = new HtmlGenericControl("span");
             resetButtonOutline.Attributes.Add("class", "epi-cmsButton");
@@ -162,17 +189,17 @@ namespace ScheduledParameterJob
             container.Controls.Add(resetButtonOutline);
 
             var saveButton = new Button
-                {
-                    Text = "Save values",
-                    ToolTip = "Saves all parameters for this scheduled job.",
-                    CssClass = "epi-cmsButton-tools save-button"
-                };
+            {
+                Text = "Save values",
+                ToolTip = "Saves all parameters for this scheduled job.",
+                CssClass = "epi-cmsButton-tools save-button"
+            };
             saveButton.Click += new EventHandler(SaveValues_Click);
             var saveButtonOutline = new HtmlGenericControl("span");
             saveButtonOutline.Attributes.Add("class", "epi-cmsButton");
             saveButtonOutline.Controls.Add(saveButton);
             container.Controls.Add(saveButtonOutline);
-            
+
             return container;
         }
 
@@ -206,11 +233,11 @@ namespace ScheduledParameterJob
             if(parameterControlDto.ShowLabel)
             {
                 var label = new Label
-                                {
-                                    AssociatedControlID = parameterControlDto.Id,
-                                    Text = parameterControlDto.LabelText,
-                                    ToolTip = parameterControlDto.Description
-                                };
+                {
+                    AssociatedControlID = parameterControlDto.Id,
+                    Text = parameterControlDto.LabelText,
+                    ToolTip = parameterControlDto.Description
+                };
                 rowContainer.Controls.Add(label);
             }
             else
@@ -246,6 +273,29 @@ namespace ScheduledParameterJob
             cssLink.Attributes.Add("type", "text/css");
             cssLink.Attributes.Add("media", "screen");
             Page.Header.Controls.Add(cssLink);
+        }
+
+        private string GetJSONJobRunningState(Guid scheduledJobId)
+        {
+            var isRunning = false;
+            var statusMessage = string.Empty;
+            var scheduledJob = ScheduledJob.Load(scheduledJobId);
+            if (scheduledJob != null)
+            {
+                isRunning = scheduledJob.IsRunning;
+                statusMessage = scheduledJob.CurrentStatusMessage;
+            }
+            var stringBuilder = new StringBuilder();
+            stringBuilder.Append("{'IsRunning': ");
+            stringBuilder.Append(isRunning.ToString().ToLower());
+            if (!string.IsNullOrEmpty(statusMessage))
+            {
+                stringBuilder.Append(", 'CurrentStatusMessage': '");
+                stringBuilder.Append(ClientScriptUtility.ToScriptSafeString(statusMessage));
+                stringBuilder.Append("'");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
         }
     }
 }
