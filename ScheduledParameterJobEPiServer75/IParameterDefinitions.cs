@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Web.UI;
 
-namespace EPiServer.Templates.Alloy.ScheduledParameterJob
+namespace ScheduledParameterJobEPiServer75
 {
     public interface IParameterDefinitions
     {
