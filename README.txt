@@ -89,7 +89,8 @@ Allows web administrators to update EPiServer language files through admin mode.
 
 
 NuGet
-httpss://github.com/matkun/Blog/tree/master/NuGet
+https://github.com/matkun/Blog/tree/master/NuGet
+
 NuGet packages mostly for the EPiServer functionality listed below; like PageTypeTreeFilter and ScheduledParameterJob.
 
 
@@ -105,6 +106,13 @@ PageTypeTreeFilter
 https://blog.mathiaskunto.com/2012/02/06/allowing-web-editors-to-apply-pagetype-based-filtering-on-the-episerver-edit-mode-pagetree/
 
 Adds a DropDownList above the EPiServer Edit Mode page tree allowing web editors to filter the pages on PageType while keeping the structure intact.
+
+
+
+RabbitMqTester
+https://blog.mathiaskunto.com/2022/02/20/rabbitmq-connection-tester-application/
+
+Tester application for RabbitMQ.
 
 
 
