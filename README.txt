@@ -10,6 +10,7 @@ Descriptions:
 
 ActiveMqTester
 https://blog.mathiaskunto.com/2022/06/10/activemq-connection-tester-application/
+https://blog.mathiaskunto.com/2023/03/16/activemq-tester-application-with-topic-support/
 
 Tester application for ActiveMQ.
 

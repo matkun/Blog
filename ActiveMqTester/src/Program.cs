@@ -5,11 +5,11 @@ using System.IO;
 
 namespace ActiveMqTester
 {
-    class Program
+    internal class Program
     {
-        private const string _help = "Usage:\r\nActiveMqTester.exe sender (the app will act as a sender).\r\nActiveMqTester.exe reciever (the app will act as a receiver).";
+        private const string _help = "Usage:\r\nActiveMqTester.exe sender (the app will act as a sender).\r\nActiveMqTester.exe reciever (the app will act as a receiver).\r\n\r\nIf Queue is empty in config Topic will be used instead.";
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             if (args.Length != 1)
             {

@@ -9,10 +9,11 @@ namespace ActiveMqTester
 {
     internal class Settings
     {
-        public static (ConnectionFactory factory, string queue, string username, string password, MsgDeliveryMode deliveryMode, AcknowledgementMode acknowledgementMode) GetValues(IConfigurationSection section)
+        public static (ConnectionFactory factory, string queue, string topic, string username, string password, MsgDeliveryMode deliveryMode, AcknowledgementMode acknowledgementMode) GetValues(IConfigurationSection section)
         {
             string hostName = section.GetSection("HostName").Value;
             string queue = section.GetSection("Queue").Value;
+            string topic = section.GetSection("Topic").Value;
             int port = int.Parse(section.GetSection("Port").Value);
             string username = section.GetSection("Username").Value;
             string password = section.GetSection("Password").Value;
@@ -26,6 +27,7 @@ namespace ActiveMqTester
             Console.WriteLine($"Username:     {username}");
             Console.WriteLine($"Password:     Not shown");
             Console.WriteLine($"Queue:        {queue}");
+            Console.WriteLine($"Topic:        {topic}");
             Console.WriteLine($"Del.Mode:     {delMode}");
             Console.WriteLine($"Ack.Mode:     {ackMode}");
             Console.WriteLine($"Broker Url:   {brokerAddress}");
@@ -33,7 +35,7 @@ namespace ActiveMqTester
             var brokerUri = new Uri(brokerAddress);
             var factory = new ConnectionFactory(brokerUri);
 
-            return (factory, queue, username, password, delMode, ackMode);
+            return (factory, queue, topic, username, password, delMode, ackMode);
         }
     }
 }
