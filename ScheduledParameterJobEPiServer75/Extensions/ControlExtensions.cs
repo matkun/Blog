@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Web.UI;
 
-namespace EPiServer.Templates.Alloy.ScheduledParameterJob.Extensions
+namespace ScheduledParameterJobEPiServer75.Extensions
 {
     public static class ControlExtensions
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web.UI;
 using EPiServer.Data.Dynamic;
 
-namespace EPiServer.Templates.Alloy.ScheduledParameterJob.Extensions
+namespace ScheduledParameterJobEPiServer75.Extensions
 {
     public static class DynamicDataStoreExtensions
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using EPiServer.PlugIn;
 
-namespace EPiServer.Templates.Alloy.ScheduledParameterJob
+namespace ScheduledParameterJobEPiServer75
 {
     public class ScheduledPlugInWithParametersAttribute : ScheduledPlugInAttribute
     {
